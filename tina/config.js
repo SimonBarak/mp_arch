@@ -9,12 +9,12 @@ import publication from "./collections/publication";
 import news from "./collections/news";
 
 export const config = defineConfig({
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  branch:
-    process.env.NEXT_PUBLIC_TINA_BRANCH || // custom branch env override
-    process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF || // Vercel branch env
-    process.env.HEAD, // Netlify branch env
-  token: process.env.TINA_TOKEN,
+  clientId: "c2fd4b33-76f5-4264-bd79-87290b8cc5b8", //process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  branch: "main",
+  //process.env.NEXT_PUBLIC_TINA_BRANCH || // custom branch env override
+  //process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF || // Vercel branch env
+  //process.env.HEAD, // Netlify branch env
+  token: "faa28d2ec1cb3b18b9eb04b76e7db34c387e7317", //,
   media: {
     // If you wanted cloudinary do this
     // loadCustomStore: async () => {
