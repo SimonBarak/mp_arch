@@ -9,14 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tinacms/auth": "^1.0.4",
+    "mapbox-gl": "^3.0.1",
     "next": "^12.0.4",
+    "next-tinacms-cloudinary": "^4.4.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "tinacms": "^1.5.24"
+    "sass": "^1.69.7",
+    "swiper": "^11.0.5",
+    "tinacms": "^1.5.28"
   },
   "devDependencies": {
     "@tinacms/cli": "^1.5.34",
+    "@types/node": "20.11.0",
+    "autoprefixer": "^10.4.16",
     "eslint": "7",
-    "eslint-config-next": "12.0.3"
+    "eslint-config-next": "12.0.3",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1"
   }
 }

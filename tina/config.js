@@ -1,6 +1,12 @@
 import { defineConfig } from "tinacms";
 import page from "./collections/page";
 import post from "./collections/post";
+import realisation from "./collections/realisation";
+import project from "./collections/project";
+import movie from "./collections/movie";
+import book from "./collections/book";
+import publication from "./collections/publication";
+import news from "./collections/news";
 
 export const config = defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
@@ -16,9 +22,13 @@ export const config = defineConfig({
     //   return pack.TinaCloudCloudinaryMediaStore;
     // },
     // this is the config for the tina cloud media store
-    tina: {
-      publicFolder: "public",
-      mediaRoot: "uploads",
+    // tina: {
+    //   publicFolder: "public",
+    //   mediaRoot: "uploads",
+    // },
+    loadCustomStore: async () => {
+      const pack = await import("next-tinacms-cloudinary");
+      return pack.TinaCloudCloudinaryMediaStore;
     },
   },
   build: {
@@ -26,7 +36,16 @@ export const config = defineConfig({
     outputFolder: "admin", // within the public folder
   },
   schema: {
-    collections: [page, post],
+    collections: [
+      page,
+      post,
+      realisation,
+      project,
+      movie,
+      book,
+      publication,
+      news,
+    ],
   },
 });
 

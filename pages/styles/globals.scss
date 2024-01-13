@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS */
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+header {
+  background: linear-gradient(
+    rgba(242, 242, 242, 1) 80%,
+    rgba(242, 242, 242, 0) 100%
+  );
+
+  @media (min-width: 720px) {
+    background: linear-gradient(
+      to bottom,
+      rgba(242, 242, 242, 0.8) 60%,
+      rgba(242, 242, 242, 0) 100%
+    );
+  }
+}
+
+.btn-1 {
+  background-color: rgb(197, 210, 221);
+}
+
+.h-half {
+  height: 75vh;
+  min-height: 500px;
+}
+
+.mapboxgl-marker > .entrie {
+  display: none;
+}
+
+.mapboxgl-marker.active > .entrie {
+  display: block;
+}
+
+.mapboxgl-marker > .pin {
+  background-color: whitesmoke;
+}
+
+.mapboxgl-marker.active > .pin {
+  background-color: rgb(122, 80, 240);
+}
+
+/* CSS for desktop */
+@media (min-width: 1024px) {
+  .swiper-container {
+    height: calc(100vh - 50px);
+    /* Full screen height minus padding for pagination */
+    padding-bottom: 50px;
+    /* Padding for pagination */
+  }
+
+  .swiper-container-img {
+    height: calc(100vh - 100px);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* Full height */
+    width: auto;
+    /* Full width */
+    max-width: none;
+    /* Override max-width: 100% */
+    max-height: none;
+    /* Override max-height: 100% */
+    object-fit: cover;
+    /* Fit to cover */
+  }
+
+  .hero-img {
+    height: 90vh;
+    width: 100%;
+    /* Full width */
+    max-width: none;
+    /* Override max-width: 100% */
+    max-height: none;
+    /* Override max-height: 100% */
+    object-fit: cover;
+    /* Fit to cover */
+  }
+}
+
+.menu-is-open {
+  filter: blur(10px);
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* CSS for mobile */
+@media (max-width: 1023px) {
+  .swiper-container {
+    height: 100vw;
+    /* Square ratio */
+  }
+}
+
+.nav-hamburger.open {
+  div:nth-child(1) {
+    top: 10%;
+    left: 15%;
+    transform: rotate(45deg);
+  }
+
+  div:nth-child(2) {
+    width: 0;
+    opacity: 0;
+  }
+
+  div:nth-child(3) {
+    transform-origin: left center;
+    left: 15%;
+    top: 80%;
+    transform: rotate(-45deg);
+  }
+}
+
+/* icon */
+.nav-hamburger {
+  display: inline-block;
+  z-index: 100;
+  width: 2.5em;
+  height: 2.5em;
+  position: fixed;
+  right: 1rem;
+  top: 1.5rem;
+  margin: auto 0.1rem;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+
+  div {
+    position: absolute;
+    height: 0.3em;
+    width: 100%;
+    background: #4a5568;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+
+  div:nth-child(1) {
+    top: 15%;
+    transform-origin: left center;
+  }
+
+  div:nth-child(2) {
+    top: 45%;
+  }
+
+  div:nth-child(3) {
+    top: 75%;
+    transform-origin: left center;
+  }
+}

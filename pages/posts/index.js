@@ -11,6 +11,7 @@ export default function PostList(props) {
     data: props.data,
   });
   const postsList = data.postConnection.edges;
+
   return (
     <Layout>
       <h1>Posts</h1>
