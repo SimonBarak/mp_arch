@@ -6,7 +6,7 @@ import Gallery from "../../components/Gallery";
 import TableRow from "../../components/TableRow";
 import Map from "../../components/Mapbox";
 import Label from "../../components/Label-md";
-import RowCard from "../../components/RowCard";
+import RowCard from "../../components/RowCard.js";
 
 export default function Home(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
