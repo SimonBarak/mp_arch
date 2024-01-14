@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useTina } from "tinacms/dist/react";
 import { client } from "../../tina/__generated__/client.js";
 import BtnMd from "../../components/btn-md.js";
-import RowCard from "../../components/rowCard.js";
+import RowCard from "../../components/RowCard.js";
 
 export default function News(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
