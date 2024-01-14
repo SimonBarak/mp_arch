@@ -1,5 +1,4 @@
 import { Layout } from "../../components/Layout.js";
-import Link from "next/link";
 import { useTina } from "tinacms/dist/react";
 import { client } from "../../tina/__generated__/client.js";
 import BtnMd from "../../components/btn-md.js";
