@@ -21,9 +21,9 @@ export default function Home(props) {
   const { images, description } = data.realisation;
   const table = data.realisation;
   const project = data.realisation.project;
-  const news = data.realisation?.testnews.map((x) => x.news);
+  const news = data.realisation?.testnews?.map((x) => x.news);
 
-  console.log();
+  console.log(news);
 
   return (
     <Layout>
@@ -54,8 +54,7 @@ export default function Home(props) {
           </tbody>
         </table>
       </section>
-
-      {project != null && (
+      {project != undefined && (
         <section className="max-w-xl px-5 mx-auto pb-16">
           <Label title={"Návrh"} />
           <EntryCard
@@ -83,7 +82,6 @@ export default function Home(props) {
           </div>
         </section>
       )}
-
       <Map items={pins} />
     </Layout>
   );
