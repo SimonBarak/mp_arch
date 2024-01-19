@@ -2,15 +2,12 @@ import { Layout } from "../components/Layout";
 import { useTina } from "tinacms/dist/react";
 import { client } from "../tina/__generated__/client";
 import Link from "next/link";
-import GalleryProjects from "../components/GalleryProjects";
 import Map from "../components/Mapbox";
-import PostsSection from "../components/PostsSection";
 import AwardsSection from "../components/AwardsSection";
 import BooksSection from "../components/BooksSection";
 import NewsSection from "../components/NewsSection";
 import MovieSection from "../components/MovieSection";
 import BtnXl from "../components/btn-xl";
-import Label from "../components/Label-md";
 import Image from "../components/Image-hero";
 
 export default function Home(props) {
@@ -35,9 +32,7 @@ export default function Home(props) {
             <br /> naší tvorby.
           </h1>
           <div className="max-w-xl text-gray-700 text-xl">
-            Opakovaně se pokoušíme přečíst prostor, nalézat významy, neničit,
-            citlivě zacházet. Jsme architekti, kteří se prioritně věnují
-            krajinářské architektuře.
+            {data.page.subtitle}
           </div>
         </div>
       </section>
@@ -98,16 +93,6 @@ export const getStaticProps = async () => {
     sort: "weight",
   });
 
-  const realisationsFetch =
-    realisationConnection.data.realisationConnection.edges.map((edge) => {
-      return {
-        images: edge.node.images || [],
-        title: edge.node.title,
-        slug: "/" + edge.node._sys.filename,
-        year: edge.node.year,
-      };
-    });
-
   const projectConnection = await client.queries.projectConnection();
 
   const projectPins = projectConnection.data.projectConnection.edges.map(
@@ -138,19 +123,6 @@ export const getStaticProps = async () => {
     });
 
   const pins = [...realisationPins, ...projectPins];
-
-  const realisationsWithImage = realisationsFetch.map((realisation) => {
-    return {
-      image: addTransformationToCloudinaryURL(
-        realisation.images[0],
-        "/w_400,h_400,c_scale/"
-      ),
-      title: realisation.title,
-      slug: "/realizace/" + realisation.slug,
-      year: realisation.year,
-    };
-  });
-  const realisations = realisationsWithImage.slice(0, 4);
 
   // GET BOOKS
   const bookConnection = await client.queries.bookConnection();

@@ -9,9 +9,17 @@ export default {
   format: "md",
   fields: [
     {
-      name: "Title",
+      name: "Nadpis",
       label: "title",
       type: "string",
+    },
+    {
+      name: "Podnadpis",
+      label: "title",
+      type: "string",
+      ui: {
+        component: "textarea",
+      },
     },
     {
       name: "presentation",
