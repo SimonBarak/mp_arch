@@ -49,12 +49,12 @@ awards:
     link: ''
     year: 2015
 awardsx:
+  - award: content/awards/park-4Dvory-6.yaml
+  - award: content/awards/park-4Dvory-5.yaml
+  - award: content/awards/park-4Dvory-4.yaml
+  - award: content/awards/park-4Dvory-3.yaml
   - award: content/awards/park-4Dvory-1.yaml
   - award: content/awards/park-4Dvory-2.yaml
-  - award: content/awards/park-4Dvory-3.yaml
-  - award: content/awards/park-4Dvory-4.yaml
-  - award: content/awards/park-4Dvory-5.yaml
-  - award: content/awards/park-4Dvory-6.yaml
 testnews:
   - news: content/news/clanek-10.yaml
   - news: content/news/clanek-16.yaml
