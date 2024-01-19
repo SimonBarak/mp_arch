@@ -25,8 +25,8 @@ export default function Home(props) {
 
   return (
     <Layout>
-      <section class="pb-32">
-        <div class="max-w-xl mx-auto px-4">
+      <section className="pb-32">
+        <div className="max-w-xl mx-auto px-4">
           {/* Render awards by year */}
           {Object.entries(awardsByYear).map(([year, awards]) => (
             <div key={year}>

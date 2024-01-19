@@ -9,13 +9,13 @@ export default {
   format: "md",
   fields: [
     {
-      name: "Nadpis",
-      label: "title",
+      name: "title",
+      label: "Nadpis",
       type: "string",
     },
     {
-      name: "Podnadpis",
-      label: "title",
+      name: "subtitle",
+      label: "Podnadpis",
       type: "string",
       ui: {
         component: "textarea",

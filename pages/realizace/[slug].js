@@ -109,10 +109,13 @@ export default function Home(props) {
           <Label title={"Ocenění projektu"} />
           <div className="grid grid-cols-1">
             {awards.map((item) => (
-              <div class="border-b border-gray-400 mb-4">
-                <div class="text-gray-500 my-2">{item.placement}</div>
-                <div class="mb-2">
-                  <a class="inline-block hover:text-blue-400 " href={item.link}>
+              <div className="border-b border-gray-400 mb-4" key={item?.title}>
+                <div className="text-gray-500 my-2">{item.placement}</div>
+                <div className="mb-2">
+                  <a
+                    className="inline-block hover:text-blue-400 "
+                    href={item.link}
+                  >
                     {item.title}, {item.year}
                   </a>
                 </div>

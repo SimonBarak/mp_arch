@@ -27,59 +27,60 @@ export default function Home(props) {
   return (
     <Layout>
       <Page>
-        <section class="pb-10">
-          <div class="max-w-lg mx-auto px-4">
-            <p class="text-2xl text-gray-600">M&P architekti</p>
-            <p class="text-2xl text-gray-600">
+        <section className="pb-10">
+          <div className="max-w-lg mx-auto px-4">
+            <p className="text-2xl text-gray-600">M&P architekti</p>
+            <p className="text-2xl text-gray-600">
               Ateliér krajinářské architektury
             </p>
           </div>
         </section>
-        <section class="pb-10">
-          <div class="max-w-lg mx-auto px-4">
-            <h4 class="font-medium text-xs text-gray-500 border-b border-gray-500 mb-2 uppercase">
+        <section className="pb-10">
+          <div className="max-w-lg mx-auto px-4">
+            <h4 className="font-medium text-xs text-gray-500 border-b border-gray-500 mb-2 uppercase">
               E-mail
             </h4>
 
-            <p class="text-lg">
+            <p className="text-lg">
               <a
                 href="mailto:{{ site.data.contact.email }}"
-                class="text-purple-700 hover:text-blue-800"
+                className="text-purple-700 hover:text-blue-800"
               >
                 {contact.email}
               </a>
             </p>
           </div>
         </section>
-        <section class="pb-10">
-          <div class="max-w-lg mx-auto px-4">
-            <h4 class="font-medium text-xs text-gray-500 border-b border-gray-500 mb-2 uppercase">
+        <section className="pb-10">
+          <div className="max-w-lg mx-auto px-4">
+            <h4 className="font-medium text-xs text-gray-500 border-b border-gray-500 mb-2 uppercase">
               Telefon
             </h4>
 
             {contact.phones.map((phone) => (
-              <p class="text-lg">
-                <span class="text-gray-500">{phone.person}</span> {phone.phone}
+              <p className="text-lg">
+                <span className="text-gray-500">{phone.person}</span>{" "}
+                {phone.phone}
               </p>
             ))}
           </div>
         </section>
-        <section class="pb-20">
-          <div class="max-w-lg mx-auto px-4">
-            <h4 class="font-medium text-xs text-gray-500 border-b border-gray-500 mb-2 uppercase">
+        <section className="pb-20">
+          <div className="max-w-lg mx-auto px-4">
+            <h4 className="font-medium text-xs text-gray-500 border-b border-gray-500 mb-2 uppercase">
               Adresa
             </h4>
             <ul>
-              <li class="text-lg">{contact.street}</li>
-              <li class="text-lg">
+              <li className="text-lg">{contact.street}</li>
+              <li className="text-lg">
                 {contact.city}, {contact.post_code}
               </li>
-              <li class="text-lg">{contact.county}</li>
+              <li className="text-lg">{contact.county}</li>
             </ul>
           </div>
         </section>
-        <section class="pb-20">
-          <img class="container mx-auto" src={contact.image} />
+        <section className="pb-20">
+          <img className="container mx-auto" src={contact.image} />
         </section>
         <Map items={pins} />
       </Page>
