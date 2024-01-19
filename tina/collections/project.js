@@ -27,12 +27,6 @@ export default {
     },
     {
       type: "string",
-      name: "category",
-      label: "Category",
-      options: ["Stavba", "Film", "Navrh"],
-    },
-    {
-      type: "string",
       name: "odkaz_na_navrh",
       label: "Odkaz na realizaci/návrh",
     },
@@ -142,7 +136,7 @@ export default {
   ],
   ui: {
     router: ({ document }) => {
-      return `/projects/${document._sys.filename}`;
+      return `/projekty/${document._sys.filename}`;
     },
   },
 };

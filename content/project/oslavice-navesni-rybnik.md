@@ -11,7 +11,7 @@ description: >-
   Prostor je doplněn o třístupňové dřevěné molo založené klasickým způsobem na
   dřevěných dubových pilotech.
 category: Stavba
-odkaz_na_navrh: "https://mparch.cz/projects/ve%C5%99ejn%C3%A1-prostranstv%C3%AD.html"
+odkaz_na_navrh: "https://mparch.cz/projekty/ve%C5%99ejn%C3%A1-prostranstv%C3%AD.html"
 awards: []
 media: []
 size: "0,27"

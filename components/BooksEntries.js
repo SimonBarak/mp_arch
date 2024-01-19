@@ -10,7 +10,6 @@ const ProjectEntries = ({ type, itemsList }) => {
           <Book
             key={item.title}
             title={item.title}
-            subtitle={item.subtitle}
             slug={`${item.slug}`}
             image={item.image}
           />

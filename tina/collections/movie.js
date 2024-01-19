@@ -8,12 +8,6 @@ export default {
   format: "md",
   fields: [
     {
-      type: "string",
-      name: "category",
-      label: "Category",
-      options: ["Publikace", "Stavba", "Návrh", "Film"],
-    },
-    {
       type: "number",
       name: "weight",
       label: "Weight",
@@ -63,7 +57,7 @@ export default {
   ],
   ui: {
     router: ({ document }) => {
-      return `/movies/${document._sys.filename}`;
+      return `/filmy/${document._sys.filename}`;
     },
   },
 };

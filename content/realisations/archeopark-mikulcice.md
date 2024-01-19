@@ -1,10 +1,11 @@
 ---
 weight: 1
-title: 'Mikulčice, Archeopark'
-description: >-
+title: Mikulčice, Archeopark
+subtitle: >-
   Pocit dříve prožitého, viděného, slyšeného. Východiskem je samotné místo.
-  Koncept podporuje dodnes zachovanou historii. Tam, kde nám viditelné známky
-  vymizely, je připomíná pomocí symbolu řeky, bývalého opevnění, skic zaniklého
+  Koncept podporuje dodnes zachovanou historii.
+description: >-
+  Tam, kde nám viditelné známky vymizely, je připomíná pomocí symbolu řeky, bývalého opevnění, skic zaniklého
   obrazu místa… Doplňujeme to, co místu vždy chybělo - rozhled z ptačí
   perspektivy nutný k plnému pochopení významu místa. Účelné řešení provozu je
   stejně důležité jako řešení detailů. Navrh má ambici vytvořit srozumitelnou
@@ -14,8 +15,10 @@ awards:
       Urbanisticko-architektonická soutěž „Archeopark Mikulčice – Kopčany –
       česká část“
     placement: 1. místo
-    link: 'https://www.cka.cz/cs/souteze/vysledky/mikulcice_archeopark090807'
+    link: "https://www.cka.cz/cs/souteze/vysledky/mikulcice_archeopark090807"
     year: 2009
+awardsx:
+  - award: content/awards/archeopark-mikulcice-1.yaml
 year: 2015
 size: 135 ha
 price: "46\_mil. Kč"
@@ -51,7 +54,4 @@ longitude: 17.08574
 authors: Markéta & Petr Veličkovi a Jan Cyrany
 investor: Jihomoravský kraj
 visualization: Jan Cyrany Jitka Daňková
-collaborations:
-  - Test
 ---
-

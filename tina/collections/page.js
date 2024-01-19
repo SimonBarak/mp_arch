@@ -2,24 +2,61 @@
  * @type {import('tinacms').Collection}
  */
 export default {
-  label: "Page Content",
+  label: "Home Page",
+  type: "object",
   name: "page",
   path: "content/page",
-  format: "mdx",
+  format: "md",
   fields: [
     {
-      name: "body",
-      label: "Main Content",
-      type: "rich-text",
-      isBody: true,
+      name: "Title",
+      label: "title",
+      type: "string",
+    },
+    {
+      name: "presentation",
+      label: "Projekty",
+      type: "object",
+      list: true,
+      ui: {
+        itemProps: (item) => {
+          // Field values are accessed by item?.<Field name>
+          return { label: item?.realisation };
+        },
+      },
+      fields: [
+        {
+          type: "reference",
+          name: "realisation",
+          label: "Realisation",
+          collections: ["realisation"],
+        },
+      ],
     },
   ],
   ui: {
-    router: ({ document }) => {
-      if (document._sys.filename === "home") {
-        return `/`;
-      }
-      return undefined;
+    router: () => {
+      return `/`;
+    },
+    allowedActions: {
+      create: false,
+      delete: false,
     },
   },
+  // fields: [
+  //   {
+  //     name: "index",
+  //     label: "Pořadí",
+  //     type: "object",
+  //     list: true,
+  //     fields: [
+  //       {
+  //         type: "reference",
+  //         name: "realisation",
+  //         label: "Realisation",
+  //         collections: ["realisation"],
+  //       },
+  //     ],
+  //   },
+  // ],
 };

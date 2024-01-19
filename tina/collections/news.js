@@ -7,6 +7,11 @@ export default {
   path: "content/news",
   name: "news",
   label: "Ve zprávách",
+  ui: {
+    router: () => {
+      return `/zpravy`;
+    },
+  },
   fields: [
     {
       type: "string",

@@ -1,5 +1,7 @@
 import { Layout } from "../components/Layout";
+import { useTina } from "tinacms/dist/react";
 import { client } from "../tina/__generated__/client";
+import Link from "next/link";
 import GalleryProjects from "../components/GalleryProjects";
 import Map from "../components/Mapbox";
 import PostsSection from "../components/PostsSection";
@@ -12,7 +14,17 @@ import Label from "../components/Label-md";
 import Image from "../components/Image-hero";
 
 export default function Home(props) {
-  const { realisations, books, movies, publications, pins, news } = props;
+  const { data } = useTina({
+    query: props.query,
+    variables: props.variables,
+    data: props.data,
+  });
+
+  const allrealisations = data.page.presentation.slice(0, 4);
+
+  const realisations = allrealisations.map((x) => x.realisation);
+
+  const { books, movies, publications, pins, news } = props;
 
   return (
     <Layout>
@@ -34,23 +46,25 @@ export default function Home(props) {
           <Label title={"Stavby"} />
         </div> */}
         {/* <GalleryProjects items={realisations} /> */}
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-2 gap-5">
           {realisations.map((item) => (
-            <div className="" key={item.title}>
-              <Image url={item.image} />
-              <div className="py-5 px-3">
-                <p className="text-lg">{item.title}</p>
+            <Link href={"/realizace/" + item._sys.filename}>
+              <div className="" key={item.title}>
+                <Image url={item.images[0]} />
+                <div className="py-5 px-3">
+                  <p className="text-xl h-16">{item.title}</p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <BtnXl url={"/realisations"} text={"Projekty"} />
       </section>
       <p className="text-gray-700 mb-4 px-4 uppercase">Mapa projektů</p>
       <Map items={pins} />
-      <NewsSection items={news} />
       {/* <PostsSection /> */}
-
+      <NewsSection items={news} />
+      <AwardsSection />
       <BooksSection items={books} title={"Kinhy"} slug={"/books"} />
       <MovieSection items={movies} />
       <BooksSection
@@ -58,14 +72,25 @@ export default function Home(props) {
         title={"Publikace"}
         slug={"/publications"}
       />
-      <AwardsSection />
     </Layout>
   );
 }
 
 export const getStaticProps = async () => {
+  function addTransformationToCloudinaryURL(url, transformation) {
+    const parts = url.split("/upload/");
+
+    if (parts.length === 2) {
+      const modifiedURL = parts[0] + "/upload/" + transformation + parts[1];
+      return modifiedURL;
+    } else {
+      // Handle invalid URL format
+      return url;
+    }
+  }
+
   const { data, query, variables } = await client.queries.page({
-    relativePath: "home.mdx",
+    relativePath: "home.md",
   });
 
   // GET REALISATIONS
@@ -79,6 +104,7 @@ export const getStaticProps = async () => {
         images: edge.node.images || [],
         title: edge.node.title,
         slug: "/" + edge.node._sys.filename,
+        year: edge.node.year,
       };
     });
 
@@ -89,8 +115,11 @@ export const getStaticProps = async () => {
       return {
         coordinates: [edge.node.longitude, edge.node.latitude],
         title: edge.node.title,
-        slug: "/projects/" + edge.node._sys.filename,
-        image: edge.node.images[0] || "",
+        slug: "/projekty/" + edge.node._sys.filename,
+        image: addTransformationToCloudinaryURL(
+          edge.node.images[0],
+          "/w_400,h_200,c_scale/"
+        ),
       };
     }
   );
@@ -100,8 +129,11 @@ export const getStaticProps = async () => {
       return {
         coordinates: [edge.node.longitude, edge.node.latitude],
         title: edge.node.title,
-        slug: "/realisations/" + edge.node._sys.filename,
-        image: "",
+        slug: "/realizace/" + edge.node._sys.filename,
+        image: addTransformationToCloudinaryURL(
+          edge.node.images[0],
+          "/w_400,h_200,c_scale/"
+        ),
       };
     });
 
@@ -109,12 +141,16 @@ export const getStaticProps = async () => {
 
   const realisationsWithImage = realisationsFetch.map((realisation) => {
     return {
-      image: realisation.images[0] || "",
+      image: addTransformationToCloudinaryURL(
+        realisation.images[0],
+        "/w_400,h_400,c_scale/"
+      ),
       title: realisation.title,
-      slug: "/realisations/" + realisation.slug,
+      slug: "/realizace/" + realisation.slug,
+      year: realisation.year,
     };
   });
-  const realisations = realisationsWithImage.slice(0, 6);
+  const realisations = realisationsWithImage.slice(0, 4);
 
   // GET BOOKS
   const bookConnection = await client.queries.bookConnection();
@@ -123,7 +159,7 @@ export const getStaticProps = async () => {
       return {
         title: edge.node.title,
         image: edge.node.images[0],
-        slug: "/books/" + edge.node._sys.filename,
+        slug: "/knihy/" + edge.node._sys.filename,
       };
     })
     .slice(0, 4);
@@ -137,7 +173,7 @@ export const getStaticProps = async () => {
         image: edge.node.images[0],
         source: edge.node.source,
         year: edge.node.year,
-        slug: "/movies/" + edge.node._sys.filename,
+        slug: "/filmy/" + edge.node._sys.filename,
       };
     })
     .slice(0, 4);
@@ -163,7 +199,7 @@ export const getStaticProps = async () => {
       return {
         title: edge.node.title,
         image: edge.node.images[0],
-        slug: "/books/" + edge.node._sys.filename,
+        slug: "/knihy/" + edge.node._sys.filename,
       };
     })
     .slice(0, 4);
@@ -173,7 +209,6 @@ export const getStaticProps = async () => {
       data,
       query,
       variables,
-      realisations,
       books,
       movies,
       publications,

@@ -63,4 +63,9 @@ awards:
     placement: 1. místo
     year: 2015
     link: ""
+awardsx:
+  - award: content/awards/masarykovo-namesti-1.yaml
+  - award: content/awards/masarykovo-namesti-2.yaml
+  - award: content/awards/masarykovo-namesti-3.yaml
+  - award: content/awards/masarykovo-namesti-4.yaml
 ---

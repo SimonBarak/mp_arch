@@ -1,6 +1,10 @@
 ---
 weight: 2
-title: 'České Budějovice, Park 4Dvory'
+title: České Budějovice, Park 4Dvory
+subtitle:
+  Přirozená obnova je logickým pokračováním. Park na místě bývalého vojenského prostoru je
+  zvoleným konceptem přirozeně propojen s bezprostředním i vzdálenějším
+  prostorem přírodě blízkých společenstev i ekosystémem nedalekých rybníků.
 description: >-
   Vzhledem ke geologickým podmínkám území (jílovitosti půdy, která udusí novou
   výsadbu nepředpěstovanou v těchto podmínkách) byl jako vůdčí koncept práce s
@@ -24,32 +28,39 @@ awards:
       https://www.german-design-award.com/en/the-winners/gallery/detail/27983-4courts-park.html
     year: 2020
   - title: Park roku 2017
-    placement: 'ocenění IFLA, Ocenění děkana ZF Mendelu, Brno'
-    link: ''
+    placement: "ocenění IFLA, Ocenění děkana ZF Mendelu, Brno"
+    link: ""
     year: 2017
-  - title: 'Česká cena za architekturu - Park 4Dvory, České Budějovice'
+  - title: "Česká cena za architekturu - Park 4Dvory, České Budějovice"
     placement: nominace
-    link: 'https://ceskacenazaarchitekturu.cz/projekty/2016/park-4dvory/'
+    link: "https://ceskacenazaarchitekturu.cz/projekty/2016/park-4dvory/"
     year: 2016
   - title: Grand Prix Obce Architektů
     placement: čestné uznání
-    link: ''
+    link: ""
     year: 2015
   - title: BIGMAT 2015
     placement: nominace
-    link: ''
+    link: ""
     year: null
   - title: PRESTA JIŽNÍ ČECHY
     placement: čestné uznání
-    link: ''
+    link: ""
     year: 2015
-news: content/news/clanek-12.yaml
+awardsx:
+  - award: content/awards/park-4Dvory-1.yaml
+  - award: content/awards/park-4Dvory-2.yaml
+  - award: content/awards/park-4Dvory-3.yaml
+  - award: content/awards/park-4Dvory-4.yaml
+  - award: content/awards/park-4Dvory-5.yaml
+  - award: content/awards/park-4Dvory-6.yaml
+
 testnews:
-  - news: content/news/clanek-4.yaml
+  - news: content/news/clanek-10.yaml
   - news: content/news/clanek-16.yaml
   - news: content/news/clanek-14.yaml
 year: 2014
-size: '2,84 ha'
+size: "2,84 ha"
 price: 30 mil. Kč
 images:
   - >-
@@ -88,4 +99,3 @@ authors: Markéta & Petr Veličkovi a David Prudík
 investor: Město České Budějovice
 visualization: Jan Cyrany
 ---
-

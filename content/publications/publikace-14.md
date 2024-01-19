@@ -14,5 +14,3 @@ publisher: ""
 link: ""
 isbn: ""
 ---
-
-https://res.cloudinary.com/dhxmg9p4i/image/uploadhttps://res.cloudinary.com/dhxmg9p4i/image/upload/v1628431625/archweb/scan-44.jpg

@@ -5,10 +5,10 @@ const NavMenu = ({}) => {
   const navurl = false;
 
   const navigation = [
-    { title: "Projekty", url: "/realisations" },
-    { title: "O studiu", url: "/about" },
-    { title: "Studio ve zprávách", url: "/news" },
-    { title: "Kontakt", url: "/contanct" },
+    { title: "Projekty", url: "/realizace" },
+    { title: "O studiu", url: "/studio" },
+    { title: "Studio ve zprávách", url: "/zpravy" },
+    { title: "Kontakt", url: "/kontakt" },
   ];
 
   return (

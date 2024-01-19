@@ -18,7 +18,7 @@ const Gallery = ({ images, type = "fullscreen" }) => {
     >
       {images.map((image, index) => (
         <SwiperSlide key={index}>
-          <div className="flex justify-center">
+          <div className="container">
             <Image url={image} />
           </div>
         </SwiperSlide>

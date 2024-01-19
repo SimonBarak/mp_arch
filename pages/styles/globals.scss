@@ -63,9 +63,10 @@ header {
   }
 
   .swiper-container-img {
-    height: calc(100vh - 100px);
-    margin-top: 50px;
-    margin-bottom: 50px;
+    ///height: 90vh;
+    //width: 100%;
+    //margin-top: 50px;
+    //margin-bottom: 50px;
     /* Full height */
     width: auto;
     /* Full width */
@@ -73,12 +74,12 @@ header {
     /* Override max-width: 100% */
     max-height: none;
     /* Override max-height: 100% */
-    object-fit: cover;
+    object-fit: contain;
     /* Fit to cover */
   }
 
   .hero-img {
-    height: 90vh;
+    height: 70vh;
     width: 100%;
     /* Full width */
     max-width: none;

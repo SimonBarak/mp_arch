@@ -8,7 +8,7 @@ export default {
   format: "md",
   ui: {
     router: ({ document }) => {
-      return `/realisations/${document._sys.filename}`;
+      return `/realizace/${document._sys.filename}`;
     },
   },
   indexes: [
@@ -33,18 +33,17 @@ export default {
     },
     {
       type: "string",
+      name: "subtitle",
+      label: "Podtitulek",
+    },
+    {
+      type: "string",
       name: "description",
       label: "Description",
       ui: {
         component: "textarea",
       },
     },
-    // {
-    //   type: "string",
-    //   name: "category",
-    //   label: "Category",
-    //   options: ["Stavba", "Film", "Navrh"],
-    // },
     {
       name: "project",
       label: "Návrh projektu",
@@ -80,10 +79,18 @@ export default {
       ],
     },
     {
-      name: "news",
-      label: "Projektu ve zpávách",
-      type: "reference",
-      collections: ["news"],
+      name: "awardsx",
+      label: "Oceneni",
+      type: "object",
+      list: true,
+      fields: [
+        {
+          type: "reference",
+          name: "award",
+          label: "Award",
+          collections: ["award"],
+        },
+      ],
     },
     {
       name: "testnews",

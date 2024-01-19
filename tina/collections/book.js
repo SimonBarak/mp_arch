@@ -8,7 +8,7 @@ export default {
   format: "md",
   ui: {
     router: ({ document }) => {
-      return `/books/${document._sys.filename}`;
+      return `/knihy/${document._sys.filename}`;
     },
   },
   fields: [
@@ -61,12 +61,6 @@ export default {
       type: "string",
       name: "isbn",
       label: "ISBN",
-    },
-    {
-      type: "string",
-      name: "category",
-      label: "Kategorie",
-      options: ["Kniha"],
     },
     {
       type: "number",

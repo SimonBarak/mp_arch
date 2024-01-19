@@ -1,9 +1,7 @@
 ---
 weight: 8
-authors: Markéta a Petr Veličkovi
 title: Zahrady
-description: Fotografie zahrad pro soukromé investory.
-
+subtitle: Fotografie zahrad pro soukromé investory
 category: Stavba
 size: ""
 price: ""

@@ -1,0 +1,15 @@
+image: >-
+  https://res.cloudinary.com/dhxmg9p4i/image/upload/v1705612844/Contact/contactImage_cjwz6t.jpg
+email: mp@mparch.cz
+street: U Vody 1194/10
+city: Velké Meziříčí
+post_code: 594 01
+county: Czech Republic
+studiopin:
+  longitude: 16.01411
+  latitude: 49.35634
+phones:
+  - person: Petr Velička
+    phone: +420 731 477 608
+  - person: Markéta Veličková
+    phone: +420 603 713 838

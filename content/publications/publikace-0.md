@@ -1,7 +1,5 @@
 ---
 weight: 900
-category: Text
-
 title: Česká cena za architekturu 2016
 year: 2016
 description:

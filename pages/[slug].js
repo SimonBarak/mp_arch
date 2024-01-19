@@ -25,7 +25,7 @@ export default function Home(props) {
 // This can be switched to a static page by using getStaticProps
 export const getServerSideProps = async ({ params }) => {
   const { data, query, variables } = await client.queries.page({
-    relativePath: `${params.slug}.mdx`,
+    relativePath: `${params.slug}.md`,
   });
 
   return {

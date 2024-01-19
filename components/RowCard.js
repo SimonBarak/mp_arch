@@ -16,9 +16,7 @@ const RowCard = ({ title, source, link, image, date }) => {
           transition"
         href={`${link}`}
       >
-        {/* src={`${img_url}c_thumb,h_600,w_800${image}`} */}
-
-        <div className="py-2 px-3 min-h-20 w-full flex flex-col justify-between">
+        <div className="p-5 min-h-20 flex flex-col justify-between w-2/3">
           <p className="text-xl h-full">{title}</p>
           <div className="text-md text-gray-500">
             <p className="mb-2">{source}</p>
@@ -27,7 +25,7 @@ const RowCard = ({ title, source, link, image, date }) => {
         </div>
         <img
           loading="lazy"
-          className="object-cover h-60 w-60"
+          className="object-cover h-60 w-1/3"
           src={`${image}`}
           alt={`${title}, ${source}`}
         />

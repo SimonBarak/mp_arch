@@ -15,7 +15,7 @@ const Image = ({ url, alt = "" }) => {
       src={`${url}`}
       sizes=""
       alt={`${alt}, MP architekti`}
-      className="swiper-container-img"
+      className="w-full h-full object-cover object-center"
     />
   );
 };

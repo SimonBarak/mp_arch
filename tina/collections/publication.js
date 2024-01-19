@@ -8,7 +8,7 @@ export default {
   format: "md",
   ui: {
     router: ({ document }) => {
-      return `/publications/${document._sys.filename}`;
+      return `/publikace/${document._sys.filename}`;
     },
   },
   fields: [
@@ -60,12 +60,6 @@ export default {
       type: "string",
       name: "isbn",
       label: "isbn",
-    },
-    {
-      type: "string",
-      name: "category",
-      label: "category",
-      required: true,
     },
   ],
 };
