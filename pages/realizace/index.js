@@ -11,7 +11,6 @@ export default function Realisation(props) {
     data: props.data,
   });
 
-  const type = "realisations";
   const itemsList = data.realisationConnection.edges.map((item) => {
     return {
       title: item.node.title,

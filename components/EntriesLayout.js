@@ -7,11 +7,11 @@ const ProjectLayout = (props) => {
     <div className="container mx-auto">
       <div className="mt-40 mb-8">
         <div className="flex">
-          <BtnLg content={"Realizace"} href={"/realisations"} />
-          <BtnLg content={"Projekty"} href={"/projects"} />
-          <BtnLg content={"Filmy"} href={"/movies"} />
-          <BtnLg content={"Knihy"} href={"/books"} />
-          <BtnLg content={"Publikace"} href={"/publications"} />
+          <BtnLg content={"Realizace"} href={"/realizace"} />
+          <BtnLg content={"Projekty"} href={"/projekty"} />
+          <BtnLg content={"Filmy"} href={"/filmy"} />
+          <BtnLg content={"Knihy"} href={"/knihy"} />
+          <BtnLg content={"Publikace"} href={"/publikace"} />
         </div>
         <div className="flex">
           <BtnMd content={"Prioritně"} />

@@ -6,7 +6,6 @@ const AwardsSection = () => {
   return (
     <section className="pb-10 pt-10">
       <div className="max-w-4xl mx-auto">
-        <Label title={"Ocenění"} />
         <div className="max-w-xl mx-auto">
           <div className="flex justify-between mx-10">
             <a

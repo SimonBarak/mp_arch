@@ -11,8 +11,15 @@ export default function Books(props) {
     variables: props.variables,
     data: props.data,
   });
-  const type = "books";
-  const itemsList = data.bookConnection.edges.map((item) => { return { title: item.node.title, subtitle: item.node.subtitle, slug: `/${type}/${item.node._sys.filename}`, image: item.node.images[0] } });
+  const type = "knihy";
+  const itemsList = data.bookConnection.edges.map((item) => {
+    return {
+      title: item.node.title,
+      subtitle: item.node.subtitle,
+      slug: `/${type}/${item.node._sys.filename}`,
+      image: item.node.images[0],
+    };
+  });
 
   return (
     <Layout>

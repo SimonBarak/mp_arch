@@ -18,8 +18,19 @@ const Gallery = ({ images, type = "fullscreen" }) => {
     >
       {images.map((image, index) => (
         <SwiperSlide key={index}>
-          <div className="container">
-            <Image url={image} />
+          <div className="w-screen h-screen">
+            <img
+              // srcSet={`
+              //   ${img_url}w_500${url} 500w,
+              //   ${img_url}w_1420${url} 710w,
+              //   ${img_url}w_1000${url} 1000w,
+              //   ${img_url}w_1420${url} 1420w
+              // `}
+              src={image}
+              sizes=""
+              alt={`MP architekti`}
+              className="w-full h-full object-contain object-center"
+            />
           </div>
         </SwiperSlide>
       ))}

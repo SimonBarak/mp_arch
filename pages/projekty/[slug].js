@@ -41,17 +41,6 @@ export default function Project(props) {
           </tbody>
         </table>
       </section>
-      <section className="pb-16">
-        <div className="max-w-xl px-5 mx-auto">
-          <a
-            className="flex px-4 py-4 rounded bg-gray-200 hover:bg-blue-200 text-xl"
-            href="{{page.odkaz_na_navrh}}"
-          >
-            <div className="flex-grow">TODO Navrh projektu</div>
-            <div>⟶</div>
-          </a>
-        </div>
-      </section>
       <Map items={pins} />
     </Layout>
   );
