@@ -12,6 +12,9 @@ export default {
       name: "title",
       label: "Nadpis",
       type: "string",
+      ui: {
+        component: "textarea",
+      },
     },
     {
       name: "subtitle",
