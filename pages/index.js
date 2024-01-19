@@ -41,7 +41,7 @@ export default function Home(props) {
           <Label title={"Stavby"} />
         </div> */}
         {/* <GalleryProjects items={realisations} /> */}
-        <div className="grid grid-cols-2 gap-5">
+        <div className="container mx-auto grid grid-cols-2 gap-5">
           {realisations.map((item) => (
             <Link href={"/realizace/" + item._sys.filename}>
               <div className="" key={item.title}>
