@@ -57,8 +57,8 @@ awardsx:
   - award: content/awards/park-4Dvory-2.yaml
 testnews:
   - news: content/news/clanek-10.yaml
-  - news: content/news/clanek-16.yaml
   - news: content/news/clanek-14.yaml
+  - news: content/news/clanek-6.yaml
 year: 2014
 size: '2,84 ha'
 price: 30 mil. Kč
