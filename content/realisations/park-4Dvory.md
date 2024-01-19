@@ -56,6 +56,7 @@ awardsx:
   - award: content/awards/park-4Dvory-1.yaml
   - award: content/awards/park-4Dvory-2.yaml
 testnews:
+  - news: content/news/clanek-12.yaml
   - news: content/news/clanek-10.yaml
   - news: content/news/clanek-14.yaml
   - news: content/news/clanek-6.yaml
