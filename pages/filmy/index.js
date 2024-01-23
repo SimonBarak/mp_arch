@@ -13,14 +13,17 @@ export default function Movie(props) {
   });
 
   const type = "movies";
-  const itemsList = data.movieConnection.edges.map((item) => {
-    return {
-      title: item.node.title,
-      subtitle: item.node.subtitle,
-      slug: `/${type}/${item.node._sys.filename}`,
-      image: item.node.images[0],
-    };
-  });
+  const itemsList = data.movieConnection.edges
+    .map((item) => {
+      return {
+        title: item.node.title,
+        year: item.node.year,
+        subtitle: item.node.subtitle,
+        slug: `/${type}/${item.node._sys.filename}`,
+        image: item.node.images[0],
+      };
+    })
+    .reverse();
 
   return (
     <Layout>
@@ -30,7 +33,9 @@ export default function Movie(props) {
 }
 
 export const getStaticProps = async () => {
-  const { data, query, variables } = await client.queries.movieConnection();
+  const { data, query, variables } = await client.queries.movieConnection({
+    sort: "year",
+  });
 
   return {
     props: {

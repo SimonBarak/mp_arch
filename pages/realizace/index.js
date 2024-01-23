@@ -11,14 +11,17 @@ export default function Realisation(props) {
     data: props.data,
   });
 
-  const itemsList = data.realisationConnection.edges.map((item) => {
-    return {
-      title: item.node.title,
-      subtitle: item.node.subtitle,
-      slug: `/realizace/${item.node._sys.filename}`,
-      image: item.node.images[0],
-    };
-  });
+  const itemsList = data.realisationConnection.edges
+    .map((item) => {
+      return {
+        title: item.node.title,
+        subtitle: item.node.subtitle,
+        slug: `/realizace/${item.node._sys.filename}`,
+        image: item.node.images[0],
+        year: item.node.year,
+      };
+    })
+    .reverse();
 
   return (
     <Layout>
@@ -30,7 +33,7 @@ export default function Realisation(props) {
 export const getStaticProps = async () => {
   const { data, query, variables } = await client.queries.realisationConnection(
     {
-      sort: "weight",
+      sort: "year",
     }
   );
 

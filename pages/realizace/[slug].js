@@ -25,16 +25,17 @@ export default function Home(props) {
   const { images, description, title, subtitle } = data.realisation;
   const table = data.realisation;
   const project = data.realisation.project;
-  const news = data.realisation?.testnews?.map((x) => x.news);
+
+  const allnews = data.realisation.testnews?.map((x) => x.news);
+  const news = allnews ? allnews.sort((a, b) => b.year - a.year) : null;
+
+  console.log(allnews);
+  console.log(news);
 
   const allawards = data.realisation?.awardsx?.map((x) => x.award);
   const awards = allawards ? allawards.sort((a, b) => b.year - a.year) : null;
 
   const [showModal, setShowModal] = useState(false);
-
-  const openModal = (url) => {
-    setShowModal(true);
-  };
 
   const closeModal = () => {
     setShowModal(false);
@@ -53,7 +54,7 @@ export default function Home(props) {
         </div>
       </section>
       <section className="pb-16 lg:pb-28">
-        <div className="w-screen h-screen mx-auto mb-5">
+        <div className="container mx-auto mb-5">
           <img
             src={images[0]}
             sizes=""
@@ -61,7 +62,7 @@ export default function Home(props) {
             className="w-full h-full object-cover object-center"
           />
         </div>
-        <div className="grid grid-cols-4 gap-5 m-5">
+        <div className="container grid grid-cols-4 gap-5 m-5 mx-auto">
           {images.map((image, index) => (
             <div key={index} className="relative">
               <Modal imageUrl={image} onClose={closeModal} />
@@ -128,15 +129,15 @@ export default function Home(props) {
       {news != null && (
         <section className="max-w-4xl mx-auto pb-20">
           <Label title={"Ve zprávách"} />
-          <div className="grid grid-cols-2 gap-8 items-stretch">
+          <div className="grid grid-cols-2 gap-4">
             {news.map((item) => (
               <RowCard
-                key={item?.slug}
-                title={item?.title}
-                source={item?.source}
-                link={item?.link}
-                image={item?.thumb}
-                date={item?.year}
+                key={item.slug}
+                title={item.title}
+                source={item.source}
+                link={item.link}
+                image={item.thumb}
+                year={new Date(item.date).getFullYear()}
               />
             ))}
           </div>

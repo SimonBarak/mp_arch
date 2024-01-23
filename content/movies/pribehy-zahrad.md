@@ -1,9 +1,8 @@
 ---
 title: Příběhy zahrad
 category: Film
-
 weight: 900
-
+source: Česká televize
 description:
   Vypovídají o nás víc, než si myslíme. Jsou součástí života i historie.
   Nejkrásnějšími zahradami Čech a Moravy nás v dokumentárním filmu režisérky Ljuby

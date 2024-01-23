@@ -18,12 +18,13 @@ export default function Books(props) {
       subtitle: item.node.subtitle,
       slug: `/${type}/${item.node._sys.filename}`,
       image: item.node.images[0],
+      year: item.node.year,
     };
   });
 
   return (
     <Layout>
-      <BooksEntries type="books" itemsList={itemsList} />
+      <BooksEntries type={type} itemsList={itemsList} />
     </Layout>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const RowCard = ({ title, source, link, image, date }) => {
+const RowCard = ({ title, source, link, image, year }) => {
   const baseurl = process.env.NEXT_PUBLIC_BASE_URL;
 
   return (
@@ -20,7 +20,7 @@ const RowCard = ({ title, source, link, image, date }) => {
           <p className="text-xl h-full">{title}</p>
           <div className="text-md text-gray-500">
             <p className="mb-2">{source}</p>
-            <p className="">{date}</p>
+            <p className="">{year}</p>
           </div>
         </div>
         <img

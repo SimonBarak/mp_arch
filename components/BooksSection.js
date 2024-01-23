@@ -16,6 +16,7 @@ const BooksSection = ({ items, title, slug }) => {
               subtitle={item.subtitle}
               slug={item.slug}
               image={item.image}
+              year={item.year}
             />
           ))}
         </div>

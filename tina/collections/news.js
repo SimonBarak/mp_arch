@@ -26,6 +26,11 @@ export default {
       collections: ["realisation", "project"],
     },
     {
+      type: "number",
+      name: "year",
+      label: "Year",
+    },
+    {
       type: "image",
       name: "thumb",
       label: "Obrázek",

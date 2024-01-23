@@ -1,8 +1,8 @@
 ---
 weight: 5
-title: 'Hrdějovice, zastávka'
+title: "Hrdějovice, zastávka"
+subtitle: Stavba atypické zastávky se zelenou střechou před místní základní školou.
 description: >-
-  Stavba atypické zastávky se zelenou střechou před místní základní školou.
   Zastávka je řešena jako jednoduchý přístřešek, který díky vykonzolování na tři
   stojny je dostatečně prostupný a jeho výška a měřítko umožňuje prostorový
   dialog s budovou školy. Střecha s vegetací má hlavně edukativní funkci při
@@ -30,6 +30,5 @@ latitude: 49.014512
 longitude: 14.477067
 authors: Markéta & Petr Veličkovi
 investor: Obec Hrdějovice
-visualization: ''
+visualization: ""
 ---
-

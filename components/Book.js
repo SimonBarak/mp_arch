@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const Book = ({ slug, image, title }) => {
+const Book = ({ slug, image, title, year }) => {
   const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
   const baseurl = NEXT_PUBLIC_BASE_URL;
   return (
@@ -13,7 +13,10 @@ const Book = ({ slug, image, title }) => {
           src={`${image}`}
           alt={`M&P architekti, books`}
         />
-        <p className="h-16">{title}</p>
+        <div className="h-20">
+          <p>{title}</p>
+          <p className="text-gray-500">{year}</p>
+        </div>
       </div>
     </Link>
   );

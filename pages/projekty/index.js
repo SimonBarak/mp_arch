@@ -13,14 +13,17 @@ export default function Plan(props) {
   });
 
   const type = "projects";
-  const itemsList = data.projectConnection.edges.map((item) => {
-    return {
-      title: item.node.title,
-      subtitle: item.node.subtitle,
-      slug: `/projekty/${item.node._sys.filename}`,
-      image: item.node.images[0],
-    };
-  });
+  const itemsList = data.projectConnection.edges
+    .map((item) => {
+      return {
+        title: item.node.title,
+        year: item.node.year,
+        subtitle: item.node.subtitle,
+        slug: `/projekty/${item.node._sys.filename}`,
+        image: item.node.images[0],
+      };
+    })
+    .reverse();
 
   return (
     <Layout>
@@ -30,7 +33,9 @@ export default function Plan(props) {
 }
 
 export const getStaticProps = async () => {
-  const { data, query, variables } = await client.queries.projectConnection();
+  const { data, query, variables } = await client.queries.projectConnection({
+    sort: "year",
+  });
 
   return {
     props: {

@@ -12,25 +12,30 @@ export default function Books(props) {
     data: props.data,
   });
   const type = "publikace";
-  const itemsList = data.publicationConnection.edges.map((item) => {
-    return {
-      title: item.node.title,
-      subtitle: item.node.subtitle,
-      slug: `/publikace/${item.node._sys.filename}`,
-      image: item.node.images[0],
-    };
-  });
+
+  const itemsList = data.publicationConnection.edges
+    .map((item) => {
+      return {
+        title: item.node.title,
+        subtitle: item.node.subtitle,
+        slug: `/publikace/${item.node._sys.filename}`,
+        image: item.node.images[0],
+        year: item.node.year,
+      };
+    })
+    .sort((a, b) => b.year - a.year);
 
   return (
     <Layout>
-      <BooksEntries type="publications" itemsList={itemsList} />
+      <BooksEntries type={type} itemsList={itemsList} />
     </Layout>
   );
 }
 
 export const getStaticProps = async () => {
-  const { data, query, variables } =
-    await client.queries.publicationConnection();
+  const { data, query, variables } = await client.queries.publicationConnection(
+    { sort: "year" }
+  );
 
   return {
     props: {

@@ -13,6 +13,7 @@ const ProjectEntries = ({ type, itemsList }) => {
             subtitle={item.subtitle}
             slug={item.slug}
             image={item.image}
+            year={item.year}
           />
         ))}
       </div>

@@ -11,26 +11,29 @@ export default function News(props) {
     variables: props.variables,
     data: props.data,
   });
-  const type = "news";
-  const itemsList = data.newsConnection.edges.map((item) => {
-    return {
-      title: item.node.title,
-      source: item.node.source,
-      link: item.node.link,
-      image: item.node.thumb,
-    };
-  });
+
+  const itemsList = data.newsConnection.edges
+    .map((item) => {
+      return {
+        title: item.node.title,
+        source: item.node.source,
+        link: item.node.link,
+        image: item.node.thumb,
+        year: new Date(item.node.date).getFullYear(),
+      };
+    })
+    .reverse();
 
   return (
     <Layout>
       <div className="container mx-auto">
-        <div className="mt-40 mb-8">
+        {/* <div className="mt-40 mb-8">
           <div className="flex">
             <BtnMd content={"Prioritně"} />
             <BtnMd content={"Chonologicky"} />
           </div>
-        </div>
-        <div className="grid grid-cols-2 gap-8 items-stretch">
+        </div> */}
+        <div className="mt-60 grid grid-cols-2 gap-8">
           {itemsList.map((item) => (
             <RowCard
               key={item.slug}
@@ -38,7 +41,7 @@ export default function News(props) {
               source={item.source}
               link={item.link}
               image={item.image}
-              date={"2013"}
+              year={item.year}
             />
           ))}
         </div>
@@ -48,7 +51,9 @@ export default function News(props) {
 }
 
 export const getStaticProps = async () => {
-  const { data, query, variables } = await client.queries.newsConnection();
+  const { data, query, variables } = await client.queries.newsConnection({
+    sort: "date",
+  });
 
   return {
     props: {

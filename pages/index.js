@@ -17,8 +17,6 @@ export default function Home(props) {
     data: props.data,
   });
 
-  console.log(data.page);
-
   const allrealisations = data.page.presentation.slice(0, 4);
 
   const realisations = allrealisations.map((x) => x.realisation);
@@ -61,7 +59,7 @@ export default function Home(props) {
       <Map items={pins} />
       {/* <PostsSection /> */}
       <NewsSection items={news} />
-      <AwardsSection />
+      {/* <AwardsSection /> */}
       <BooksSection items={books} title={"Kinhy"} slug={"/books"} />
       <MovieSection items={movies} />
       <BooksSection
@@ -103,10 +101,7 @@ export const getStaticProps = async () => {
         coordinates: [edge.node.longitude, edge.node.latitude],
         title: edge.node.title,
         slug: "/projekty/" + edge.node._sys.filename,
-        image: addTransformationToCloudinaryURL(
-          edge.node.images[0],
-          "/w_400,h_200,c_scale/"
-        ),
+        image: edge.node.images[0],
       };
     }
   );
@@ -117,29 +112,30 @@ export const getStaticProps = async () => {
         coordinates: [edge.node.longitude, edge.node.latitude],
         title: edge.node.title,
         slug: "/realizace/" + edge.node._sys.filename,
-        image: addTransformationToCloudinaryURL(
-          edge.node.images[0],
-          "/w_400,h_200,c_scale/"
-        ),
+        image: edge.node.images[0],
       };
     });
 
   const pins = [...realisationPins, ...projectPins];
 
   // GET BOOKS
-  const bookConnection = await client.queries.bookConnection();
+  const bookConnection = await client.queries.bookConnection({ sort: "year" });
   const books = bookConnection.data.bookConnection.edges
     .map((edge) => {
       return {
         title: edge.node.title,
+        year: edge.node.year,
         image: edge.node.images[0],
         slug: "/knihy/" + edge.node._sys.filename,
       };
     })
+    .reverse()
     .slice(0, 4);
 
   // GET MOVIES
-  const movieConnection = await client.queries.movieConnection();
+  const movieConnection = await client.queries.movieConnection({
+    sort: "year",
+  });
   const movies = movieConnection.data.movieConnection.edges
     .map((edge) => {
       return {
@@ -150,10 +146,14 @@ export const getStaticProps = async () => {
         slug: "/filmy/" + edge.node._sys.filename,
       };
     })
+    .reverse()
     .slice(0, 4);
 
   // GET NEWS
-  const newsConnection = await client.queries.newsConnection();
+  const newsConnection = await client.queries.newsConnection({
+    sort: "date",
+  });
+
   const news = newsConnection.data.newsConnection.edges
     .map((edge) => {
       return {
@@ -164,10 +164,14 @@ export const getStaticProps = async () => {
         slug: edge.node.link,
       };
     })
+    .reverse()
     .slice(0, 4);
 
   // GET PUBLICATIONS
-  const publicationConnection = await client.queries.publicationConnection();
+  const publicationConnection = await client.queries.publicationConnection({
+    sort: "year",
+  });
+
   const publications = publicationConnection.data.publicationConnection.edges
     .map((edge) => {
       return {
