@@ -26,9 +26,9 @@ export default function Home(props) {
   const table = data.realisation;
   const project = data.realisation.project;
   const news = data.realisation?.testnews?.map((x) => x.news);
-  const awards = data.realisation?.awardsx?.map((x) => x.award);
 
-  console.log(subtitle);
+  const allawards = data.realisation?.awardsx?.map((x) => x.award);
+  const awards = allawards ? allawards.sort((a, b) => b.year - a.year) : null;
 
   const [showModal, setShowModal] = useState(false);
 
@@ -61,24 +61,12 @@ export default function Home(props) {
             className="w-full h-full object-cover object-center"
           />
         </div>
-
-        <div className="grid grid-cols-2 gap-5">
-          <div className="h-70">
-            <img
-              src={images[1]}
-              sizes=""
-              alt={`${data.realisation.title}, MP architekti`}
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
-          <div className="h-70">
-            <img
-              src={images[2]}
-              sizes=""
-              alt={`${data.realisation.title}, MP architekti`}
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
+        <div className="grid grid-cols-4 gap-5 m-5">
+          {images.map((image, index) => (
+            <div key={index} className="relative">
+              <Modal imageUrl={image} onClose={closeModal} />
+            </div>
+          ))}
         </div>
       </section>
 
@@ -155,18 +143,9 @@ export default function Home(props) {
         </section>
       )}
 
-      {pins?.lenght > 0 && (
-        <section className="">
-          <Map items={pins} />
-        </section>
-      )}
-      <div className="grid grid-cols-4 gap-5 m-5">
-        {images.map((image, index) => (
-          <div key={index} className="relative">
-            <Modal imageUrl={image} onClose={closeModal} />
-          </div>
-        ))}
-      </div>
+      <section className="">
+        <Map items={pins} />
+      </section>
     </Layout>
   );
 }

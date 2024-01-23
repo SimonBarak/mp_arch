@@ -1,6 +1,6 @@
 ---
 title: Konkrétní místo je vždy základem naší tvorby.
-subtitile: Opakovaně se pokoušíme přečíst prostor, nalézat významy, neničit, citlivě zacházet. Jsme architekti, kteří se prioritně věnují krajinářské architektuře.
+subtitle: Opakovaně se pokoušíme přečíst prostor, nalézat významy, neničit, citlivě zacházet. Jsme architekti, kteří se prioritně věnují krajinářské architektuře.
 presentation:
   - realisation: content/realisations/Žďár nad Sázavou.md
   - realisation: content/realisations/park-4Dvory.md

@@ -52,7 +52,7 @@ const Map = ({ items }) => {
         });
       };
 
-      new mapboxgl.Marker(el).setLngLat(item.coordinates).addTo(map.current);
+      //new mapboxgl.Marker(el).setLngLat(item.coordinates).addTo(map.current);
     });
   });
 

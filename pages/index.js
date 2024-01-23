@@ -17,6 +17,8 @@ export default function Home(props) {
     data: props.data,
   });
 
+  console.log(data.page);
+
   const allrealisations = data.page.presentation.slice(0, 4);
 
   const realisations = allrealisations.map((x) => x.realisation);
