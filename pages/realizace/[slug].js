@@ -10,6 +10,7 @@ import RowCard from "../../components/RowCard.js";
 import ImageGallery from "../../components/ImageGallery.js";
 import Modal from "../../components/Modal.js";
 import { CldImage } from "next-cloudinary";
+import Hero from "../../components/hero";
 
 export default function Home(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
@@ -41,24 +42,18 @@ export default function Home(props) {
 
   return (
     <Layout>
-      <section className="h-half flex items-center">
-        <div className="max-w-2xl mx-auto text-gray-700 px-4">
-          <h1 className="text-2xl lg:text-4xl">{data.realisation.title}</h1>
-          {subtitle ? (
-            <div className="max-w-xl text-gray-700 text-xl mt-10">
-              {subtitle}
-            </div>
-          ) : null}
-        </div>
-      </section>
+      <Hero
+        title={data.realisation.title}
+        subtitle={data.realisation.subtitle}
+      />
       {/* <section className="pb-16 lg:pb-28">
         <ImageGallery images={images} />
       </section> */}
       <section className="pb-16 lg:pb-28">
-        <div className="">
+        <div className="bg-gray-200">
           <CldImage
-            width={2000}
-            height={1200}
+            width={1600}
+            height={1000}
             crop="fill"
             src={images[0]}
             size="100w"

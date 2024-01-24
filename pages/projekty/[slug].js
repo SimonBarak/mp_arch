@@ -1,9 +1,13 @@
 import { Layout } from "../../components/Layout";
+import { useState } from "react";
 import { useTina } from "tinacms/dist/react";
 import { client } from "../../tina/__generated__/client";
 import Gallery from "../../components/Gallery";
 import TableRow from "../../components/TableRow";
 import Map from "../../components/Mapbox";
+import Hero from "../../components/hero";
+import Modal from "../../components/Modal.js";
+import { CldImage } from "next-cloudinary";
 
 export default function Project(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
@@ -13,13 +17,36 @@ export default function Project(props) {
     data: props.data,
   });
   const { pins } = props;
-  const { images, description } = data.project;
+  const { title, images, description, subtitle } = data.project;
   const table = data.project;
+
+  const [showModal, setShowModal] = useState(false);
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
   return (
     <Layout>
-      <section className="pb-16 lg:pb-24">
-        <Gallery images={images} />
+      <Hero title={title} subtitle={subtitle} />
+      <section className="pb-16 lg:pb-28">
+        <div className="bg-gray-200">
+          <CldImage
+            width={2000}
+            height={1200}
+            crop="fill"
+            src={images[0]}
+            size="100w"
+            alt={title}
+          />
+        </div>
+        <div className="container grid grid-cols-4 gap-5 m-5 mx-auto">
+          {images.map((image, index) => (
+            <div key={index} className="relative">
+              <Modal imageUrl={image} onClose={closeModal} />
+            </div>
+          ))}
+        </div>
       </section>
       <section className="pb-16">
         <div className="max-w-xl mx-auto text-lg px-5">{description}</div>

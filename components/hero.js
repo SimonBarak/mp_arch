@@ -14,16 +14,19 @@ const Hero = ({ title, subtitle }) => {
             ))}
           </p>
         </h1>
-        <h2 className="text-lg lg:text-xl 2xl:text-2xl max-w-xl text-gray-700">
-          <p>
-            {subtitle.split("\\n").map((line, i) => (
-              <React.Fragment key={i}>
-                {line}
-                <br />
-              </React.Fragment>
-            ))}
-          </p>
-        </h2>
+
+        {subtitle && (
+          <h2 className="text-lg lg:text-xl 2xl:text-2xl max-w-xl text-gray-700">
+            <p>
+              {subtitle.split("\\n").map((line, i) => (
+                <React.Fragment key={i}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
+            </p>
+          </h2>
+        )}
       </div>
     </section>
   );
