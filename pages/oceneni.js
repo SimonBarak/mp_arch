@@ -37,9 +37,7 @@ export default function Home(props) {
       <Page>
         <section className="pt-32 mb-20">
           <div className="max-w-2xl 2xl:max-w-4xl mx-auto text-gray-700 px-4">
-            <h1 className="text-2xl lg:text-4xl 2xl:text-6xl mb-8">
-              Udělená ocenění
-            </h1>
+            <h1 className="text-2xl lg:text-4xl 2xl:text-6xl mb-8">Ocenění</h1>
           </div>
         </section>
         <section className="pb-32">

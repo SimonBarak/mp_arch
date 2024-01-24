@@ -11,12 +11,12 @@ const ProjectLayout = (props) => {
       <div className="mt-40 mb-8">
         <div className="flex">
           <BtnLg
-            content={"Realizace"}
+            content={"Stavby"}
             href={"/realizace"}
             active={router.pathname === "/realizace"}
           />
           <BtnLg
-            content={"Projekty"}
+            content={"Návrhy"}
             href={"/projekty"}
             active={router.pathname === "/projekty"}
           />

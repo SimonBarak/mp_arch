@@ -60,7 +60,7 @@ export default function Home(props) {
             alt={title}
           />
         </div>
-        <div className="container grid grid-cols-4 gap-5 m-5 mx-auto">
+        <div className="container grid md:grid-cols-4 gap-5 m-5 mx-auto">
           {images.map((image, index) => (
             <div key={index} className="relative">
               <Modal imageUrl={image} onClose={closeModal} />
@@ -127,7 +127,7 @@ export default function Home(props) {
       {news != null && (
         <section className="max-w-4xl mx-auto pb-20">
           <Label title={"Ve zprávách"} />
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 gap-4">
             {news.map((item) => (
               <RowCard
                 key={item.slug}
