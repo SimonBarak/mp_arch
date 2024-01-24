@@ -54,7 +54,7 @@ export default function Home(props) {
       {/* <PostsSection /> */}
       <NewsSection items={news} />
       <AwardsSection />
-      <BooksSection items={books} title={"Kinhy"} slug={"/books"} />
+      <BooksSection items={books} title={"Knihy"} slug={"/books"} />
       <MovieSection items={movies} />
       <BooksSection
         items={publications}
