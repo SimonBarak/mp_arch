@@ -3,6 +3,7 @@ import { Layout } from "../components/Layout";
 import { Page } from "../components/Page";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { client } from "../tina/__generated__/client";
+import { CldImage } from "next-cloudinary";
 
 export default function Home(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
@@ -36,11 +37,13 @@ export default function Home(props) {
             {data.about.member.map((member) => (
               <div className="">
                 <div>
-                  <img
-                    loading="lazy"
+                  <CldImage
+                    width={1200}
+                    height={1800}
+                    crop="fill"
                     src={member.photo}
-                    alt={member.name}
-                    className="max-h-70 object-contain"
+                    size="50w"
+                    alt={title}
                   />
                 </div>
 

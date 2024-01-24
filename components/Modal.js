@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { CldImage } from "next-cloudinary";
 
 const Modal = ({ imageUrl, onClose }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,15 +16,24 @@ const Modal = ({ imageUrl, onClose }) => {
   return (
     <div>
       <img
+        loading="lazy"
         src={imageUrl}
-        alt="Image"
+        alt="Obrazek projektu"
         onClick={openModal}
         className="cursor-pointer"
       />
+      {/* <div className="relative h-64 w-full bg-slate-200 " onClick={openModal}>
+        <CldImage
+          src={imageUrl} // Cloudinary URL
+          layout="fill"
+          objectFit="cover"
+          alt="Obrazek projektu"
+        />
+      </div> */}
       {isOpen && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center"
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+          style={{ backgroundColor: "rgba(255, 255, 255, 0.7)" }}
         >
           <div className="modal-container">
             <div className="modal-content max-h-full h-screen p-10">

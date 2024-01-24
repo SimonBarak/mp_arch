@@ -4,6 +4,7 @@ import { Page } from "../components/Page";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { client } from "../tina/__generated__/client";
 import Map from "../components/Mapbox";
+import { CldImage } from "next-cloudinary";
 
 export default function Home(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
@@ -80,7 +81,16 @@ export default function Home(props) {
           </div>
         </section>
         <section className="pb-20">
-          <img className="container mx-auto" src={contact.image} />
+          <div className="container mx-auto">
+            <CldImage
+              width={2400}
+              height={1800}
+              crop="fill"
+              src={contact.image}
+              size="100w"
+              alt={"Fotka studia"}
+            />
+          </div>
         </section>
         <Map items={pins} />
       </Page>

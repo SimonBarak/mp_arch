@@ -30,8 +30,8 @@ const Map = ({ items }) => {
     items.forEach((item) => {
       // create a HTML element for each feature
       const el = document.createElement("div");
-      el.innerHTML = `<div className="z-20 entrie absolute bottom-10"><a className="block w-60 overflow-hidden rounded bg-white hover:text-blue-500 transition" href="${item.slug}"><img loading="lazy" className="w-full object-cover" src="${item.image}"><div className="py-2 px-3"><p className="text-lg">${item.title}</p></div></a></div>
-                      <div className="z-10 h-5 w-5 rounded-full cursor-pointer border border-gray-800 shadow-md pin"></div>`;
+      el.innerHTML = `<div class="z-20 entrie absolute bottom-10"><a class="block w-60 overflow-hidden rounded bg-white hover:text-blue-500 transition" href="${item.slug}"><img loading="lazy" class="w-full object-cover" src="${item.image}"><div class="py-2 px-3"><p class="text-lg">${item.title}</p></div></a></div>
+                      <div class="z-10 h-5 w-5 rounded-full cursor-pointer border border-gray-800 shadow-md pin"></div>`;
       el.className = "";
 
       el.onclick = () => {
@@ -52,7 +52,7 @@ const Map = ({ items }) => {
         });
       };
 
-      //new mapboxgl.Marker(el).setLngLat(item.coordinates).addTo(map.current);
+      new mapboxgl.Marker(el).setLngLat(item.coordinates).addTo(map.current);
     });
   });
 

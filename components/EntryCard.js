@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { CldImage } from "next-cloudinary";
 
 const EntryCard = ({ title, slug, image, year }) => {
   return (
@@ -17,11 +18,13 @@ const EntryCard = ({ title, slug, image, year }) => {
           flex-col"
         >
           <div>
-            <img
-              loading="lazy"
-              className="w-full object-cover h-60 block"
-              src={`${image}`}
-              alt={`${title}`}
+            <CldImage
+              width={1200}
+              height={700}
+              crop="fill"
+              src={image}
+              size="100w"
+              alt={title}
             />
           </div>
           <div className="py-2 px-3 min-h-20 flex flex-col justify-between h-full">

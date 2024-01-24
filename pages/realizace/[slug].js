@@ -7,8 +7,9 @@ import TableRow from "../../components/TableRow.js";
 import Map from "../../components/Mapbox.js";
 import Label from "../../components/Label-md.js";
 import RowCard from "../../components/RowCard.js";
-import Gallery from "../../components/Gallery.js";
+import ImageGallery from "../../components/ImageGallery.js";
 import Modal from "../../components/Modal.js";
+import { CldImage } from "next-cloudinary";
 
 export default function Home(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
@@ -28,9 +29,6 @@ export default function Home(props) {
 
   const allnews = data.realisation.testnews?.map((x) => x.news);
   const news = allnews ? allnews.sort((a, b) => b.year - a.year) : null;
-
-  console.log(allnews);
-  console.log(news);
 
   const allawards = data.realisation?.awardsx?.map((x) => x.award);
   const awards = allawards ? allawards.sort((a, b) => b.year - a.year) : null;
@@ -53,13 +51,18 @@ export default function Home(props) {
           ) : null}
         </div>
       </section>
+      {/* <section className="pb-16 lg:pb-28">
+        <ImageGallery images={images} />
+      </section> */}
       <section className="pb-16 lg:pb-28">
-        <div className="container mx-auto mb-5">
-          <img
+        <div className="">
+          <CldImage
+            width={2000}
+            height={1200}
+            crop="fill"
             src={images[0]}
-            sizes=""
-            alt={`${data.realisation.title}, MP architekti`}
-            className="w-full h-full object-cover object-center"
+            size="100w"
+            alt={title}
           />
         </div>
         <div className="container grid grid-cols-4 gap-5 m-5 mx-auto">

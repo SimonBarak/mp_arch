@@ -1,6 +1,7 @@
 import { Layout } from "../components/Layout";
 import { useTina } from "tinacms/dist/react";
 import { client } from "../tina/__generated__/client";
+import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 import Map from "../components/Mapbox";
 import AwardsSection from "../components/AwardsSection";
@@ -8,7 +9,7 @@ import BooksSection from "../components/BooksSection";
 import NewsSection from "../components/NewsSection";
 import MovieSection from "../components/MovieSection";
 import BtnXl from "../components/btn-xl";
-import Image from "../components/Image-hero";
+import Hero from "../components/hero";
 
 export default function Home(props) {
   const { data } = useTina({
@@ -25,27 +26,20 @@ export default function Home(props) {
 
   return (
     <Layout>
-      <section className="h-half flex items-center">
-        <div className="max-w-2xl mx-auto text-gray-700 px-4">
-          <h1 className="text-2xl lg:text-4xl mb-8">
-            Konkrétní místo je vždy základem
-            <br /> naší tvorby.
-          </h1>
-          <div className="max-w-xl text-gray-700 text-xl">
-            {data.page.subtitle}
-          </div>
-        </div>
-      </section>
+      <Hero title={data.page.title} subtitle={data.page.subtitle} />
       <section>
-        {/* <div className="container mx-auto">
-          <Label title={"Stavby"} />
-        </div> */}
-        {/* <GalleryProjects items={realisations} /> */}
-        <div className="container mx-auto grid grid-cols-2 gap-5">
+        <div className="container-xl mx-auto grid grid-cols-2 gap-5">
           {realisations.map((item) => (
             <Link href={"/realizace/" + item._sys.filename}>
               <div className="" key={item.title}>
-                <Image url={item.images[0]} />
+                <CldImage
+                  width={1200}
+                  height={1200}
+                  crop="fill"
+                  src={item.images[0]}
+                  size="50w"
+                  alt={item.title}
+                />
                 <div className="py-5 px-3">
                   <p className="text-xl h-16">{item.title}</p>
                 </div>
@@ -59,7 +53,7 @@ export default function Home(props) {
       <Map items={pins} />
       {/* <PostsSection /> */}
       <NewsSection items={news} />
-      {/* <AwardsSection /> */}
+      <AwardsSection />
       <BooksSection items={books} title={"Kinhy"} slug={"/books"} />
       <MovieSection items={movies} />
       <BooksSection
@@ -178,8 +172,10 @@ export const getStaticProps = async () => {
         title: edge.node.title,
         image: edge.node.images[0],
         slug: "/knihy/" + edge.node._sys.filename,
+        year: edge.node.year,
       };
     })
+    .reverse()
     .slice(0, 4);
 
   return {
