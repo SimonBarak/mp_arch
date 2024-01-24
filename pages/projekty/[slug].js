@@ -30,10 +30,10 @@ export default function Project(props) {
     <Layout>
       <Hero title={title} subtitle={subtitle} />
       <section className="pb-16 lg:pb-28">
-        <div className="bg-gray-200">
+        <div className="bg-gray-200 container mx-auto">
           <CldImage
-            width={2000}
-            height={1200}
+            width={1600}
+            height={1000}
             crop="fill"
             src={images[0]}
             size="100w"

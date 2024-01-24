@@ -50,7 +50,7 @@ export default function Home(props) {
         <ImageGallery images={images} />
       </section> */}
       <section className="pb-16 lg:pb-28">
-        <div className="bg-gray-200">
+        <div className="bg-gray-200 container mx-auto">
           <CldImage
             width={1600}
             height={1000}
