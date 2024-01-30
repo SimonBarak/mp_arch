@@ -48,12 +48,17 @@ export default function Home(props) {
                   <h2 className="mr-5">{year}</h2>
                   <div className="w-full">
                     {groupedData[year].map((item, index) => (
-                      <div class="border-b border-gray-400 mb-10 " key={index}>
-                        <div class="text-gray-500 mb-4">{item.placement}</div>
-                        <div class="mb-4">{item.title}</div>
+                      <div
+                        className="border-b border-gray-400 mb-10 "
+                        key={index}
+                      >
+                        <div className="text-gray-500 mb-4">
+                          {item.placement}
+                        </div>
+                        <div className="mb-4">{item.title}</div>
 
                         <a
-                          class="block text-blue-300 hover:text-blue-400 mb-4"
+                          className="block text-blue-300 hover:text-blue-400 mb-4"
                           href={item.link}
                         >
                           Stránky ocenění

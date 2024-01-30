@@ -7,9 +7,9 @@ const ProjectLayout = (props) => {
   const router = useRouter();
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-2">
       <div className="mt-40 mb-8">
-        <div className="flex">
+        <div className="flex flex-wrap">
           <BtnLg
             content={"Stavby"}
             href={"/realizace"}
@@ -36,7 +36,7 @@ const ProjectLayout = (props) => {
             active={router.pathname === "/filmy"}
           />
         </div>
-        <div className="flex">
+        <div className="hidden md:flex">
           <BtnMd content={"Prioritně"} />
           <BtnMd content={"Chonologicky"} />
         </div>

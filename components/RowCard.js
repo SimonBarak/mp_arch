@@ -19,7 +19,7 @@ const RowCard = ({ title, source, link, image, year }) => {
       >
         <div className="p-5 min-h-20 flex flex-col justify-between w-3/5">
           <p className="text-xl h-full">{title}</p>
-          <div className="text-md text-gray-500">
+          <div className="text-gray-500 md:text-md">
             <p className="mb-2">{source}</p>
             <p className="">{year}</p>
           </div>

@@ -28,7 +28,7 @@ export default function Home(props) {
     <Layout>
       <Hero title={data.page.title} subtitle={data.page.subtitle} />
       <section>
-        <div className="container-xl mx-auto grid grid-cols-2 gap-5">
+        <div className="container-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
           {realisations.map((item) => (
             <Link href={"/realizace/" + item._sys.filename}>
               <div className="" key={item.title}>
@@ -47,10 +47,12 @@ export default function Home(props) {
             </Link>
           ))}
         </div>
-        <BtnXl url={"/realisations"} text={"Projekty"} />
+        <div className="mx-2">
+          <BtnXl url={"/realisations"} text={"Projekty"} />
+        </div>
       </section>
-      <p className="text-gray-700 mb-4 px-4 uppercase">Mapa projektů</p>
-      <Map items={pins} />
+      {/* <p className="text-gray-700 mb-4 px-4 uppercase">Mapa projektů</p> */}
+      {/* <Map items={pins} /> */}
       {/* <PostsSection /> */}
       <NewsSection items={news} />
       <AwardsSection />
@@ -59,7 +61,7 @@ export default function Home(props) {
       <BooksSection
         items={publications}
         title={"Publikace"}
-        slug={"/publications"}
+        slug={"/publikace"}
       />
     </Layout>
   );

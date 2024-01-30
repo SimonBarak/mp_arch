@@ -5,7 +5,7 @@ import RowCard from "./RowCard";
 
 const NewsSection = ({ items }) => {
   return (
-    <section className="pb-32 pt-32">
+    <section className="pb-32 pt-32 px-2">
       <div className="max-w-4xl mx-auto">
         <Label title={"Studio ve zprávách"} />
         <div className="grid grid-cols-1 md:grid-cols-2 mx-auto gap-4">

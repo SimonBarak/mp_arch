@@ -20,55 +20,92 @@ export default function Project(props) {
   const { title, images, description, subtitle } = data.project;
   const table = data.project;
 
-  const [showModal, setShowModal] = useState(false);
+  const [slide, setSlide] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   const closeModal = () => {
-    setShowModal(false);
+    setIsOpen(false);
+  };
+
+  const openModal = (index) => {
+    setIsOpen(true);
+    setSlide(index);
   };
 
   return (
     <Layout>
-      <Hero title={title} subtitle={subtitle} />
-      <section className="pb-16 lg:pb-28">
-        <div className="bg-gray-200 container mx-auto">
-          <CldImage
-            width={1600}
-            height={1000}
-            crop="fill"
-            src={images[0]}
-            size="100w"
-            alt={title}
-          />
-        </div>
-        <div className="container grid grid-cols-4 gap-5 m-5 mx-auto">
-          {images.map((image, index) => (
-            <div key={index} className="relative">
-              <Modal imageUrl={image} onClose={closeModal} />
+      <div className={isOpen ? "menu-is-open" : ""}>
+        <Hero title={title} subtitle={subtitle} />
+        <section className="pb-16 lg:pb-28">
+          <div className="bg-gray-200 container mx-auto">
+            <CldImage
+              width={1600}
+              height={1000}
+              crop="fill"
+              src={images[0]}
+              size="100w"
+              alt={title}
+            />
+          </div>
+
+          <div className="container grid md:grid-cols-4 gap-5 m-5 mx-auto">
+            {images.map((image, index) => (
+              <div key={index} className="relative">
+                <img
+                  loading="lazy"
+                  src={image}
+                  alt="Obrazek projektu"
+                  onClick={() => openModal(index)}
+                  className="cursor-pointer"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className="pb-16">
+          <div className="max-w-xl mx-auto text-lg px-5">{description}</div>
+        </section>
+        <section className="pb-16">
+          <table className="max-w-xl mx-auto px-5 align-top table-auto w-full text-lg">
+            <tbody>
+              <TableRow title="Název" value={table.title} />
+              <TableRow title="Lokace" value={table.location} />
+              <TableRow title="Cena" value={table.price} />
+              <TableRow title="Rozloha" value={table.size} />
+              <TableRow title="Investor" value={table.investor} />
+              <TableRow title="Rok" value={table.year} />
+              <TableRow title="Autoři" value={table.authors} />
+              <TableRow title="Spolupráce" value={table.collaborations} />
+              <TableRow title="Režisér" value={table.director} />
+              <TableRow title="Vydavatel" value={table.publisher} />
+              <TableRow title="ISBN" value={table.isbn} />
+            </tbody>
+          </table>
+        </section>
+        <Map items={pins} />
+
+      </div>
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-50"
+          style={{ backgroundColor: "rgba(255, 255, 255, 0.7)" }}
+        >
+          <div className="modal-container">
+            <Gallery images={images} currentSlide={slide} />
+            <div className="absolute right-0">
+              <button
+                id="main-nav__button"
+                className={`nav-hamburger bg-white ${isOpen ? "open" : "closed"}`}
+                onClick={closeModal}
+              >
+                <div></div>
+                <div></div>
+                <div></div>
+              </button>
             </div>
-          ))}
+          </div>
         </div>
-      </section>
-      <section className="pb-16">
-        <div className="max-w-xl mx-auto text-lg px-5">{description}</div>
-      </section>
-      <section className="pb-16">
-        <table className="max-w-xl mx-auto px-5 align-top table-auto w-full text-lg">
-          <tbody>
-            <TableRow title="Název" value={table.title} />
-            <TableRow title="Lokace" value={table.location} />
-            <TableRow title="Cena" value={table.price} />
-            <TableRow title="Rozloha" value={table.size} />
-            <TableRow title="Investor" value={table.investor} />
-            <TableRow title="Rok" value={table.year} />
-            <TableRow title="Autoři" value={table.authors} />
-            <TableRow title="Spolupráce" value={table.collaborations} />
-            <TableRow title="Režisér" value={table.director} />
-            <TableRow title="Vydavatel" value={table.publisher} />
-            <TableRow title="ISBN" value={table.isbn} />
-          </tbody>
-        </table>
-      </section>
-      <Map items={pins} />
+      )}
     </Layout>
   );
 }

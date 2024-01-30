@@ -5,7 +5,7 @@ import ProjectLayout from "./EntriesLayout";
 const ProjectEntries = ({ type, itemsList }) => {
   return (
     <ProjectLayout>
-      <div className="grid grid-cols-3 gap-8 items-stretch">
+      <div className="grid grid-cols-3 md:gap-2 lg:gap-5 xl:gap-10 items-stretch">
         {itemsList.map((item) => (
           <EntryCard
             key={item.slug}

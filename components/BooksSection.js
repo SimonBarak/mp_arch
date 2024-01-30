@@ -8,7 +8,7 @@ const BooksSection = ({ items, title, slug }) => {
     <section className="pb-32 pt-32">
       <div className="max-w-4xl mx-auto">
         <Label title={title} />
-        <div className="grid grid-cols-4 gap-5 items-end">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-7 lg:gap-8 items-end">
           {items.map((item) => (
             <Book
               key={item.title}

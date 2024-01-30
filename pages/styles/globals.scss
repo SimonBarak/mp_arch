@@ -33,7 +33,7 @@ header {
 }
 
 .h-half {
-  height: 75vh;
+  height: 70vh;
   min-height: 500px;
 }
 
@@ -93,6 +93,7 @@ header {
 
 .menu-is-open {
   filter: blur(10px);
+  overflow-y: hidden;
 }
 
 nav {
