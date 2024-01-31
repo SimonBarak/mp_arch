@@ -9,4 +9,3 @@ presentation:
   - realisation: content/realisations/archeopark-mikulcice.md
   - realisation: content/realisations/masarykovo-namesti.md
 ---
-

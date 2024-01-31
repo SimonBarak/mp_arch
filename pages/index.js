@@ -31,7 +31,7 @@ export default function Home(props) {
         <div className="container-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
           {realisations.map((item) => (
             <Link href={"/realizace/" + item._sys.filename}>
-              <div className="" key={item.title}>
+              <a className="" key={item.title}>
                 <CldImage
                   width={1200}
                   height={1200}
@@ -43,7 +43,7 @@ export default function Home(props) {
                 <div className="py-5 px-3">
                   <p className="text-xl h-16">{item.title}</p>
                 </div>
-              </div>
+              </a>
             </Link>
           ))}
         </div>
@@ -51,8 +51,8 @@ export default function Home(props) {
           <BtnXl url={"/realisations"} text={"Projekty"} />
         </div>
       </section>
-      {/* <p className="text-gray-700 mb-4 px-4 uppercase">Mapa projektů</p> */}
-      {/* <Map items={pins} /> */}
+      <p className="text-gray-700 mb-4 px-4 uppercase">Mapa projektů</p>
+      <Map items={pins} />
       {/* <PostsSection /> */}
       <NewsSection items={news} />
       <AwardsSection />

@@ -33,7 +33,7 @@ header {
 }
 
 .h-half {
-  height: 70vh;
+  height: 65vh;
   min-height: 500px;
 }
 
@@ -51,6 +51,44 @@ header {
 
 .mapboxgl-marker.active > .pin {
   background-color: rgb(122, 80, 240);
+}
+
+.swiper-next {
+  right: 0;
+  cursor: pointer;
+  //cursor: url("/assets/font-files/arrow-right.svg"), e-resize;
+}
+
+.swiper-prev {
+  cursor: pointer;
+  //cursor: url("/assets/font-files/arrow-left.svg"), w-resize;
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: 0.2;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 0.7;
+}
+
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 4px;
+}
+
+.swiper-pagination {
+  text-align: center;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
 }
 
 /* CSS for desktop */

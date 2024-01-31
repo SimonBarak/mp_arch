@@ -37,7 +37,7 @@ export default function Project(props) {
       <div className={isOpen ? "menu-is-open" : ""}>
         <Hero title={title} subtitle={subtitle} />
         <section className="pb-16 lg:pb-28">
-          <div className="bg-gray-200 container mx-auto">
+          <div className="container mx-auto">
             <CldImage
               width={1600}
               height={1000}
@@ -45,6 +45,7 @@ export default function Project(props) {
               src={images[0]}
               size="100w"
               alt={title}
+              className="bg-gray-200 "
             />
           </div>
 
@@ -83,7 +84,6 @@ export default function Project(props) {
           </table>
         </section>
         <Map items={pins} />
-
       </div>
       {isOpen && (
         <div
@@ -95,7 +95,9 @@ export default function Project(props) {
             <div className="absolute right-0">
               <button
                 id="main-nav__button"
-                className={`nav-hamburger bg-white ${isOpen ? "open" : "closed"}`}
+                className={`nav-hamburger bg-white ${
+                  isOpen ? "open" : "closed"
+                }`}
                 onClick={closeModal}
               >
                 <div></div>

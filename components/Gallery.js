@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import Image from "./Image-gallery";
 
 const Gallery = ({ images, type = "fullscreen", currentSlide }) => {
   const slidesPerView = type === "fullscreen" ? 1 : 2.33;
@@ -17,14 +16,14 @@ const Gallery = ({ images, type = "fullscreen", currentSlide }) => {
 
   const goToSlide = (slideIndex) => {
     if (swiperRef.current) {
-      swiperRef.current.swiper.slideTo(slideIndex);
+      //swiperRef.current.swiper.slideTo(slideIndex);
       //swiperRef.current.slideTo(slideIndex);
     }
   };
 
-  useEffect(() => {
-    goToSlide(currentSlide);
-  }, [currentSlide]);
+  // useEffect(() => {
+  //   goToSlide(currentSlide);
+  // }, [currentSlide]);
 
   return (
     <>
@@ -35,7 +34,6 @@ const Gallery = ({ images, type = "fullscreen", currentSlide }) => {
         spaceBetween={50}
         slidesPerView={slidesPerView}
         mousewheel={true}
-        pagination={{ clickable: true }}
         modules={[Pagination]}
         initialSlide={currentSlide} // Set the initial slide based on the currentSlide prop
       >
@@ -51,6 +49,24 @@ const Gallery = ({ images, type = "fullscreen", currentSlide }) => {
             </div>
           </SwiperSlide>
         ))}
+
+        <div class="swiper-next swiper-button-next outline-none absolute inset-y-0 right-0 bottom-0 z-10 flex justify-center items-center">
+          <button
+            class="text-4xl px-4 text-gray-700 "
+            onClick={() => swiperRef.current.swiper.slideNext()}
+          >
+            <span class="arrow hover:text-blue-500"> ⟶ </span>
+          </button>
+        </div>
+
+        <div className="swiper-prev  swiper-button-next outline-none absolute inset-y-0 left-0 bottom-0 z-10 flex justify-center items-center">
+          <button
+            class="text-4xl px-4 text-gray-700 "
+            onClick={() => swiperRef.current.swiper.slidePrev()}
+          >
+            <span class="arrow"> ⟵ </span>
+          </button>
+        </div>
       </Swiper>
     </>
   );

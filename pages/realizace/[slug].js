@@ -53,7 +53,7 @@ export default function Home(props) {
           subtitle={data.realisation.subtitle}
         />
         <section className="pb-16 lg:pb-28">
-          <div className="bg-gray-200 container mx-auto">
+          <div className="container mx-auto">
             <CldImage
               width={1600}
               height={1000}
@@ -61,6 +61,7 @@ export default function Home(props) {
               src={images[0]}
               size="100w"
               alt={title}
+              className="bg-gray-200 "
             />
           </div>
 
@@ -77,7 +78,6 @@ export default function Home(props) {
               </div>
             ))}
           </div>
-
         </section>
 
         {description && (
@@ -107,7 +107,10 @@ export default function Home(props) {
             <Label title={"Ocenění projektu"} />
             <div className="grid grid-cols-1">
               {awards.map((item) => (
-                <div className="border-b border-gray-400 mb-4" key={item?.title}>
+                <div
+                  className="border-b border-gray-400 mb-4"
+                  key={item?.title}
+                >
                   <div className="text-gray-500 my-2">{item.placement}</div>
                   <div className="mb-2">
                     <a
@@ -167,7 +170,9 @@ export default function Home(props) {
             <div className="absolute right-0">
               <button
                 id="main-nav__button"
-                className={`nav-hamburger bg-white ${isOpen ? "open" : "closed"}`}
+                className={`nav-hamburger bg-white ${
+                  isOpen ? "open" : "closed"
+                }`}
                 onClick={closeModal}
               >
                 <div></div>

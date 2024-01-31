@@ -56,7 +56,7 @@ export default function Home(props) {
           </div>
         </section>
 
-        <section className="pb-12">
+        {/* <section className="pb-12">
           <div className="max-w-2xl px-4 mx-auto text-xl">
             <div className="border-2 rounded border-gray-400">
               <a
@@ -84,7 +84,7 @@ export default function Home(props) {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="pb-20">
           <div className="max-w-2xl mx-auto text-lg px-4 text-block">
