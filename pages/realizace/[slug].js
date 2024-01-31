@@ -132,7 +132,7 @@ export default function Home(props) {
             <EntryCard
               key={project.slug}
               title={project.title}
-              slug={"/"}
+              slug={project.slug}
               image={project.images[0]}
             />
           </section>
