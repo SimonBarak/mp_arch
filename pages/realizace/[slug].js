@@ -36,6 +36,10 @@ export default function Home(props) {
   const [slide, setSlide] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
+  console.log("HEllo");
+
+  console.log(data.realisation.project._sys.filename);
+
   const closeModal = () => {
     setIsOpen(false);
   };
@@ -130,9 +134,9 @@ export default function Home(props) {
           <section className="max-w-xl mx-auto pb-20">
             <Label title={"Návrh"} />
             <EntryCard
-              key={project.slug}
+              key={project.title}
               title={project.title}
-              slug={project.slug}
+              slug={`/projekty/${project._sys.filename}`}
               image={project.images[0]}
             />
           </section>
