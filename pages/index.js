@@ -53,7 +53,6 @@ export default function Home(props) {
       </section>
       <p className="text-gray-700 mb-4 px-4 uppercase">Mapa projektů</p>
       <Map items={pins} />
-      {/* <PostsSection /> */}
       <NewsSection items={news} />
       <AwardsSection />
       <BooksSection items={books} title={"Knihy"} slug={"/books"} />

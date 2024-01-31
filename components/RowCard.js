@@ -3,10 +3,8 @@ import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 
 const RowCard = ({ title, source, link, image, year }) => {
-  const baseurl = process.env.NEXT_PUBLIC_BASE_URL;
-
   return (
-    <Link href={link}>
+    <Link href={"/"}>
       <div
         className="flex bg-white rounded-lg border-2 border-gray-300
           hover:border-blue-300  overflow-hidden cursor-pointer"

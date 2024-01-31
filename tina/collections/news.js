@@ -8,8 +8,8 @@ export default {
   name: "news",
   label: "Ve zprávách",
   ui: {
-    router: () => {
-      return `/zpravy`;
+    router: ({ document }) => {
+      return `/zpravy/${document._sys.filename}`;
     },
   },
   fields: [
