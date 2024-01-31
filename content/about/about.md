@@ -16,7 +16,9 @@ description: >-
   významně pomoci a naše služba pozitivně ovlivňovat životy lidí. Věříme, že
   krása je nutnou součástí života každého z nás.
 member:
-  - name: Petr Velička
+  - photo: >-
+      https://res.cloudinary.com/dhxmg9p4i/image/upload/v1600366995/archweb/petr-1_tpcdcl.jpg
+    name: Petr Velička
     position: >-
       Autorizovaný architekt - architektura, územní plánování, krajinářská
       architektura
@@ -40,11 +42,48 @@ member:
       dozorčí rady ČKA. V roce 2015 byl zvolen do představenstva ČKA a v roce
       2019 byl zvolen místopředsedou ČKA. S kolegy dne 27. 2. 2017 vydali
       Manifest Krajinářské architektury.
-    photo: https://res.cloudinary.com/dhxmg9p4i/image/upload/v1600366995/archweb/petr-1_tpcdcl.jpg
-
-  - name: Markéta Veličková
+  - photo: >-
+      https://res.cloudinary.com/dhxmg9p4i/image/upload/v1600366939/archweb/markera_blgze4.jpg
+    name: Markéta Veličková
     position: Autorizovaná architektka - krajinářská architektura
     phone: +420 603 713 838
     resume: "Markéta Veličková (1978, Třebíč) absolventka Gymnázia Třebíč, vystudovala krajinářskou architekturu na Mendelově univerzitě v\_Brně, Od roku 2008 autorizovaná architektka A3. V\_roce 2004 spoluzaložila s\_P. Veličkou ateliér M&P architekti–krajinářská architektura, ve kterém působí dodnes. K\_jejím realizovaným stavbám patří např. archeopark Mikulčice (s P. Veličkou a J. Cyranym, 2013), náměstí v\_Černošíně (s P. Veličkou a D. Prudíkem, 2010), Park 4Dvory v\_Českých Budějovicích (s P. Veličkou a D. Prudíkem, 2014), obnova náměstí ve Stříbře (s P. Veličkou, 2018) a další. Nositelka několika ocenění, např. Ceny kraje Vysočina za kulturní počin 2014, Nominace Česká cena za architekturu 2016 a 2019, German Design Awards 2020. Spoluautorka knih a filmových dokumentů ČT o krajině a zahradách v\_České republice. Spoluautorka Manifestu Krajinářské architektury (2017)."
-    photo: https://res.cloudinary.com/dhxmg9p4i/image/upload/v1600366939/archweb/markera_blgze4.jpg
+collaborations:
+  - name: Kateřina Sapáková Záleská
+    profession: krajinářská architektka
+  - name: Tomáš Popelínský
+    profession: krajinářský architekt
+    link: https://tpopelinsky.blogspot.com/
+  - name: Adam Kořistka
+    profession: krajinářský architekt
+  - name: Kateřina Nečasová
+    profession: krajinářská architektka
+  - name: Tomáš Bílek
+    profession: projektant pozemní stavby
+  - name: Aleš Dittert
+    profession: projektant pozemní stavby
+  - name: Daniel Chvoj
+    profession: projektant pozemní stavby
+  - name: Linda Smítalová
+    profession: dopravní inženýrka
+  - name: Petr Smítal
+    profession: dopravní inženýr
+  - name: David Prudík
+    profession: architekt
+  - name: Jan Cyrany
+    profession: architekt
+  - name: Josef Válek
+    profession: grafik
+  - name: Jitka Daňková
+    profession: grafička
+  - name: Ljuba Václavová
+    profession: režisérka
+  - name: Jiří Václav
+    profession: hudební skladatel
+  - name: Jan Zemánek
+    profession: sochař
+  - name: Pavla Drbalová
+    profession: krajinářská architektka
+  - name: Eva Teplická
+    profession: krajinářská architektka
 ---

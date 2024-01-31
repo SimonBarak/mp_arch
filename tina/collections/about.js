@@ -10,7 +10,7 @@ export default {
   fields: [
     {
       name: "title",
-      label: "title",
+      label: "Title",
       type: "string",
     },
     {
@@ -60,6 +60,30 @@ export default {
           ui: {
             component: "textarea",
           },
+        },
+      ],
+    },
+    {
+      name: "collaborations",
+      label: "Collaborations",
+      type: "object",
+      ui: {
+        itemProps: (item) => {
+          // Field values are accessed by item?.<Field name>
+          return { label: `${item?.name}` };
+        },
+      },
+      list: true,
+      fields: [
+        {
+          name: "name",
+          label: "Jméno",
+          type: "string",
+        },
+        {
+          name: "profession",
+          label: "Profese",
+          type: "string",
         },
       ],
     },
