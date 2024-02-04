@@ -30,7 +30,7 @@ const Header = () => {
             </a>
           </Link>
         </div>
-        {isOpen && "HELLO"}
+        {isOpen}
         <div className="fixed md:w-1/5 md:text-right right-0 mx-2">
           <button
             id="main-nav__button"

@@ -138,7 +138,7 @@ export const getStaticProps = async () => {
         image: edge.node.images[0],
         source: edge.node.source,
         year: edge.node.year,
-        slug: "/filmy/" + edge.node._sys.filename,
+        link: "/filmy/" + edge.node._sys.filename,
       };
     })
     .reverse()
@@ -156,7 +156,7 @@ export const getStaticProps = async () => {
         image: edge.node.thumb,
         source: edge.node.source,
         year: new Date(edge.node.date).getFullYear(),
-        slug: edge.node.link,
+        link: edge.node.link,
       };
     })
     .reverse()

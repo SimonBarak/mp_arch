@@ -14,7 +14,7 @@ const NewsSection = ({ items }) => {
               key={item.title}
               title={item.title}
               source={null}
-              link={null}
+              link={item.link}
               image={item.image}
               year={item.year}
             />

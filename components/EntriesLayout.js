@@ -36,10 +36,10 @@ const ProjectLayout = (props) => {
             active={router.pathname === "/filmy"}
           />
         </div>
-        <div className="hidden md:flex">
+        {/* <div className="hidden md:flex">
           <BtnMd content={"Prioritně"} />
           <BtnMd content={"Chonologicky"} />
-        </div>
+        </div> */}
       </div>
       {props.children}
     </div>

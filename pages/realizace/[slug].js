@@ -32,13 +32,8 @@ export default function Home(props) {
   const allawards = data.realisation?.awardsx?.map((x) => x.award);
   const awards = allawards ? allawards.sort((a, b) => b.year - a.year) : null;
 
-  const [showModal, setShowModal] = useState(false);
   const [slide, setSlide] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
-
-  console.log("HEllo");
-
-  console.log(data.realisation.project._sys.filename);
 
   const closeModal = () => {
     setIsOpen(false);
