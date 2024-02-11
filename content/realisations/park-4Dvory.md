@@ -56,7 +56,7 @@ awardsx:
   - award: content/awards/park-4Dvory-1.yaml
   - award: content/awards/park-4Dvory-2.yaml
 testnews:
-  - news: content/news/budejovicky-park-4dvory-nabidne-pristi-rok-bistro-i-posilovnu.yaml.yaml
+  - news: content/news/budejovicky-park-4dvory-nabidne-pristi-rok-bistro-i-posilovnu.yaml
   - news: content/news/vitezny-navrh-architektonicka-soutez.yaml
   - news: content/news/z-tankodromu-udelali-park.yaml
   - news: content/news/zijeme-zde-v-dokonalem-meritku.yaml
