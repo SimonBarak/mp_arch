@@ -60,7 +60,7 @@ export default function Home(props) {
               src={images[0]}
               size="100w"
               alt={title}
-              className="bg-gray-200 "
+              className="bg-gray-200"
             />
           </div>
 
@@ -72,7 +72,7 @@ export default function Home(props) {
                   src={image}
                   alt="Obrazek projektu"
                   onClick={() => openModal(index)}
-                  className="cursor-pointer"
+                  className="cursor-pointer bg-gray-200"
                 />
               </div>
             ))}
@@ -155,9 +155,11 @@ export default function Home(props) {
           </section>
         )}
 
-        <section className="">
-          <Map items={pins} />
-        </section>
+        {pins.length != 0 && (
+          <section className="">
+            <Map items={pins} />
+          </section>
+        )}
       </div>
       {isOpen && (
         <div
@@ -199,8 +201,6 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (ctx) => {
-  const transformation = "/w_700,h_530,c_scale/";
-
   function addTransformationToCloudinaryURL(url, transformation) {
     const parts = url.split("/upload/");
 
@@ -217,22 +217,27 @@ export const getStaticProps = async (ctx) => {
     relativePath: ctx.params.slug + ".md",
   });
 
-  const pin = {
-    coordinates: [data.realisation.longitude, data.realisation.latitude],
-    title: data.realisation.title,
-    slug: "/realizace/" + data.realisation._sys.filename,
-    image: addTransformationToCloudinaryURL(
-      data.realisation.images[0],
-      "/w_400,h_200,c_scale/"
-    ),
-  };
+  const pins =
+    data.realisation.longitude != null
+      ? [
+          {
+            coordinates: [
+              data.realisation.longitude,
+              data.realisation.latitude,
+            ],
+            title: data.realisation.title,
+            slug: "/realizace/" + data.realisation._sys.filename,
+            image: null,
+          },
+        ]
+      : [];
 
   return {
     props: {
       data,
       query,
       variables,
-      pins: [pin],
+      pins,
     },
   };
 };

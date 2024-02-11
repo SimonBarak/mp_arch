@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { client } from "../tina/__generated__/client";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 const mapboxAccessToken =
@@ -13,54 +12,93 @@ mapboxgl.accessToken = mapboxAccessToken;
 const Map = ({ items }) => {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [zoom, setZoom] = useState(5);
 
-  useEffect(async () => {
+  useEffect(() => {
     if (map.current) return; // initialize map only once
+
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: mapStyle,
+      style: mapStyle, // replace with your map style
       center: [15.565441, 49.984897],
-      zoom: zoom,
+      zoom: 5,
+      zoomControl: true,
       scrollZoom: false,
     });
 
-    map.current.addControl(new mapboxgl.NavigationControl());
-
     items.forEach((item) => {
-      // create a HTML element for each feature
-      const el = document.createElement("div");
-      el.innerHTML = `<div class="z-20 entrie absolute bottom-10"><a class="block w-60 overflow-hidden rounded bg-white hover:text-blue-500 transition" href="${item.slug}"><div class="py-2 px-3"><p class="text-lg">${item.title}</p></div></a></div>
-                      <div class="z-0 h-5 w-5 rounded-full cursor-pointer border border-gray-800 shadow-md pin"></div>`;
-      el.className = "";
+      // create a marker for each item
+      const markerElement = document.createElement("div");
+      markerElement.innerHTML = `
+        <div class="z-0 h-5 w-5 rounded-full cursor-pointer border border-gray-800 shadow-md pin"></div>
+      `;
 
-      el.onclick = () => {
-        document.querySelectorAll(".mapboxgl-marker").forEach((item) => {
-          item.classList.remove("active");
-        });
+      const marker = new mapboxgl.Marker({ element: markerElement })
+        .setLngLat(item.coordinates)
+        .addTo(map.current);
 
-        el.classList.add("active");
+      // create a popup for each item
+      const popup = new mapboxgl.Popup({ offset: 40 }).setHTML(
+        `<a class="block text-blue-500 hover:text-blue-600 text-xl px-2 py-4 border-0" href="${item.slug}">${item.title}</a>`
+      );
 
-        map.current.flyTo({
-          center: item.coordinates,
-          zoom: 7.5,
-          speed: 1.5,
-          curve: 1,
-          easing(t) {
-            return t;
-          },
-        });
-      };
-
-      new mapboxgl.Marker(el).setLngLat(item.coordinates).addTo(map.current);
+      // add the popup to the marker
+      marker.setPopup(popup);
     });
-  });
+  }, [items]);
 
-  return (
-    <section>
-      <div ref={mapContainer} className="h-half" />
-    </section>
-  );
+  return <div ref={mapContainer} style={{ width: "100%", height: "100vh" }} />;
 };
+// const Map = ({ items }) => {
+//   const mapContainer = useRef(null);
+//   const map = useRef(null);
+//   const [zoom, setZoom] = useState(5);
+
+//   useEffect(async () => {
+//     if (map.current) return; // initialize map only once
+//     map.current = new mapboxgl.Map({
+//       container: mapContainer.current,
+//       style: mapStyle,
+//       center: [15.565441, 49.984897],
+//       zoom: zoom,
+//       scrollZoom: false,
+//     });
+
+//     map.current.addControl(new mapboxgl.NavigationControl());
+
+//     items.forEach((item) => {
+//       // create a HTML element for each feature
+//       const el = document.createElement("div");
+//       el.innerHTML = `<div class="z-20 entrie absolute bottom-10"><a class="block w-60 overflow-hidden rounded bg-white hover:text-blue-500 transition" href="${item.slug}"><div class="py-2 px-3"><p class="text-lg">${item.title}</p></div></a></div>
+//                       <div class="z-0 h-5 w-5 rounded-full cursor-pointer border border-gray-800 shadow-md pin"></div>`;
+//       el.className = "";
+
+//       el.onclick = () => {
+//         document.querySelectorAll(".mapboxgl-marker").forEach((item) => {
+//           item.classList.remove("active");
+//         });
+
+//         el.classList.add("active");
+
+//         map.current.flyTo({
+//           center: item.coordinates,
+//           zoom: 7.5,
+//           speed: 1.5,
+//           curve: 1,
+//           easing(t) {
+//             return t;
+//           },
+//         });
+//       };
+
+//       new mapboxgl.Marker(el).setLngLat(item.coordinates).addTo(map.current);
+//     });
+//   });
+
+//   return (
+//     <section>
+//       <div ref={mapContainer} className="h-half" />
+//     </section>
+//   );
+// };
 
 export default Map;

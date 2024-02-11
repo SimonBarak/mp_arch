@@ -9,22 +9,6 @@ const Gallery = ({ images, type = "fullscreen", currentSlide }) => {
 
   const swiperRef = useRef(null);
 
-  const handleSlideChange = (swiper) => {
-    // Handle slide change here
-    console.log("Current slide index:", swiper.realIndex);
-  };
-
-  const goToSlide = (slideIndex) => {
-    if (swiperRef.current) {
-      //swiperRef.current.swiper.slideTo(slideIndex);
-      //swiperRef.current.slideTo(slideIndex);
-    }
-  };
-
-  // useEffect(() => {
-  //   goToSlide(currentSlide);
-  // }, [currentSlide]);
-
   return (
     <>
       <Swiper
@@ -51,23 +35,27 @@ const Gallery = ({ images, type = "fullscreen", currentSlide }) => {
           </SwiperSlide>
         ))}
 
-        <div class="swiper-next swiper-button-next outline-none absolute inset-y-0 right-0 bottom-0 z-10 flex justify-center items-center">
-          <button
-            class="text-4xl px-4 text-gray-700 "
-            onClick={() => swiperRef.current.swiper.slideNext()}
-          >
-            <span class="arrow hover:text-blue-500"> ⟶ </span>
-          </button>
-        </div>
+        {images.length > 1 && (
+          <>
+            <div class="swiper-next swiper-button-next outline-none absolute inset-y-0 right-0 bottom-0 z-10 flex justify-center items-center">
+              <button
+                class="text-4xl px-4 text-gray-700 "
+                onClick={() => swiperRef.current.swiper.slideNext()}
+              >
+                <span class="arrow hover:text-blue-500"> ⟶ </span>
+              </button>
+            </div>
 
-        <div className="swiper-prev  swiper-button-next outline-none absolute inset-y-0 left-0 bottom-0 z-10 flex justify-center items-center">
-          <button
-            class="text-4xl px-4 text-gray-700 "
-            onClick={() => swiperRef.current.swiper.slidePrev()}
-          >
-            <span class="arrow hover:text-blue-500"> ⟵ </span>
-          </button>
-        </div>
+            <div className="swiper-prev  swiper-button-next outline-none absolute inset-y-0 left-0 bottom-0 z-10 flex justify-center items-center">
+              <button
+                class="text-4xl px-4 text-gray-700 "
+                onClick={() => swiperRef.current.swiper.slidePrev()}
+              >
+                <span class="arrow hover:text-blue-500"> ⟵ </span>
+              </button>
+            </div>
+          </>
+        )}
       </Swiper>
     </>
   );

@@ -12,7 +12,7 @@ export default function Movie(props) {
     data: props.data,
   });
 
-  const type = "movies";
+  const type = "filmy";
   const itemsList = data.movieConnection.edges
     .map((item) => {
       return {
@@ -27,7 +27,7 @@ export default function Movie(props) {
 
   return (
     <Layout>
-      <ProjectEntries type="movies" itemsList={itemsList} />
+      <ProjectEntries itemsList={itemsList} />
     </Layout>
   );
 }

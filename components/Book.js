@@ -6,7 +6,7 @@ const Book = ({ slug, image, title, year }) => {
 
   return (
     <Link href={slug}>
-      <div>
+      <a className="block">
         <img
           loading="lazy"
           className="w-auto overflow-hidden shadow-lg mb-4 h-72"
@@ -18,7 +18,7 @@ const Book = ({ slug, image, title, year }) => {
           <p>{title}</p>
           <p className="text-gray-500">{year}</p>
         </div>
-      </div>
+      </a>
     </Link>
   );
 };

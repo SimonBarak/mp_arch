@@ -3,6 +3,7 @@ weight: 8
 title: Zahrady
 subtitle: Fotografie zahrad pro soukromé investory
 category: Stavba
+year: 2020
 size: ""
 price: ""
 images:
@@ -39,5 +40,4 @@ longitude:
 investor: ""
 visualization: ""
 slug: ""
-year:
 ---

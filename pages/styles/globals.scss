@@ -22,7 +22,7 @@ header {
   @media (min-width: 720px) {
     background: linear-gradient(
       to bottom,
-      rgba(242, 242, 242, 0.8) 60%,
+      rgba(242, 242, 242, 0.99) 20%,
       rgba(242, 242, 242, 0) 100%
     );
   }
@@ -204,4 +204,9 @@ nav {
     top: 75%;
     transform-origin: left center;
   }
+}
+
+.mapboxgl-popup-close-button {
+  padding: 2px 5px;
+  font-size: 1.5rem;
 }
