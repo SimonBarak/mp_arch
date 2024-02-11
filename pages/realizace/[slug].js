@@ -45,12 +45,9 @@ export default function Home(props) {
   };
 
   return (
-    <Layout>
+    <Layout image={images[0]} title={title}>
       <div className={isOpen ? "menu-is-open" : ""}>
-        <Hero
-          title={data.realisation.title}
-          subtitle={data.realisation.subtitle}
-        />
+        <Hero title={title} subtitle={subtitle} />
         <section className="pb-16 lg:pb-28">
           <div className="container mx-auto">
             <CldImage
