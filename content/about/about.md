@@ -1,6 +1,6 @@
 ---
 title: >-
-  Ateliér krajinářské architektury založili v roce 2004 Markéta a Petr
+  Ateliér krajinářské architektury založili v roce 2004 \n Markéta a Petr
   Veličkovi.
 description: >-
   Krajinářská architektura - „architektura beze stropu“ je svébytným oborem

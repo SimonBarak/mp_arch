@@ -36,6 +36,7 @@ const Gallery = ({ images, type = "fullscreen", currentSlide }) => {
         mousewheel={true}
         modules={[Pagination]}
         initialSlide={currentSlide} // Set the initial slide based on the currentSlide prop
+        loop={true}
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
@@ -64,7 +65,7 @@ const Gallery = ({ images, type = "fullscreen", currentSlide }) => {
             class="text-4xl px-4 text-gray-700 "
             onClick={() => swiperRef.current.swiper.slidePrev()}
           >
-            <span class="arrow"> ⟵ </span>
+            <span class="arrow hover:text-blue-500"> ⟵ </span>
           </button>
         </div>
       </Swiper>

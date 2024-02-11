@@ -2,7 +2,7 @@
  * @type {import('tinacms').Collection}
  */
 export default {
-  label: "Realizace",
+  label: "Staby",
   name: "realisation",
   path: "content/realisations",
   format: "md",
@@ -21,15 +21,14 @@ export default {
     {
       type: "number",
       name: "weight",
-      label: "Order",
-      description: "Enter a weight for post sorting",
+      label: "Pořadí",
       step: 1,
       defaultValue: 99,
     },
     {
       type: "string",
       name: "title",
-      label: "Title",
+      label: "Název",
     },
     {
       type: "string",
@@ -39,48 +38,48 @@ export default {
     {
       type: "string",
       name: "description",
-      label: "Description",
+      label: "Popis",
       ui: {
         component: "textarea",
       },
     },
     {
       name: "project",
-      label: "Návrh projektu",
+      label: "Odkaz na projekt",
       type: "reference",
       collections: ["project"],
     },
-    {
-      type: "object",
-      name: "awards",
-      label: "Awards",
-      list: true,
-      fields: [
-        {
-          type: "string",
-          name: "title",
-          label: "Title",
-        },
-        {
-          type: "string",
-          name: "placement",
-          label: "Placement",
-        },
-        {
-          type: "string",
-          name: "link",
-          label: "Link",
-        },
-        {
-          type: "number",
-          name: "year",
-          label: "Year",
-        },
-      ],
-    },
+    // {
+    //   type: "object",
+    //   name: "awards",
+    //   label: "Ocenění",
+    //   list: true,
+    //   fields: [
+    //     {
+    //       type: "string",
+    //       name: "title",
+    //       label: "Název",
+    //     },
+    //     {
+    //       type: "string",
+    //       name: "placement",
+    //       label: "Umístění",
+    //     },
+    //     {
+    //       type: "string",
+    //       name: "link",
+    //       label: "Link",
+    //     },
+    //     {
+    //       type: "number",
+    //       name: "year",
+    //       label: "Year",
+    //     },
+    //   ],
+    // },
     {
       name: "awardsx",
-      label: "Oceneni",
+      label: "Ocenění",
       type: "object",
       list: true,
       fields: [
@@ -109,22 +108,22 @@ export default {
     {
       type: "number",
       name: "year",
-      label: "Year",
+      label: "Rok",
     },
     {
       type: "string",
       name: "size",
-      label: "Size",
+      label: "Rozměr",
     },
     {
       type: "string",
       name: "price",
-      label: "Price",
+      label: "Cena",
     },
     {
       type: "image",
       name: "images",
-      label: "Images",
+      label: "Obrázky",
       list: true,
     },
     {
@@ -142,7 +141,7 @@ export default {
     {
       type: "string",
       name: "authors",
-      label: "Authors",
+      label: "Autoři",
     },
     {
       type: "string",
@@ -152,18 +151,18 @@ export default {
     {
       type: "string",
       name: "visualization",
-      label: "Visualization",
+      label: "Visualizace",
     },
     {
       type: "string",
       name: "collaborations",
-      label: "Collaborations",
+      label: "Spolupráce",
       list: true,
     },
     {
       type: "string",
       name: "photo",
-      label: "Photo",
+      label: "Fotografie",
     },
   ],
 };

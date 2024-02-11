@@ -15,23 +15,23 @@ export default {
     {
       type: "string",
       name: "title",
-      label: "title",
+      label: "Název",
     },
     {
       type: "image",
       name: "images",
-      label: "images",
+      label: "Obrázky",
       list: true,
     },
     {
       type: "number",
       name: "year",
-      label: "year",
+      label: "Rok",
     },
     {
       type: "string",
       name: "description",
-      label: "description",
+      label: "Description",
       ui: {
         component: "textarea",
       },
@@ -39,27 +39,27 @@ export default {
     {
       type: "string",
       name: "authors",
-      label: "authors",
+      label: "Aurtoři",
     },
     {
       type: "string",
       name: "publisher",
-      label: "publisher",
+      label: "Vydavatel",
     },
     {
       type: "number",
       name: "weight",
-      label: "priority",
+      label: "Pořadí",
     },
     {
       type: "string",
       name: "link",
-      label: "link",
+      label: "Link",
     },
     {
       type: "string",
       name: "isbn",
-      label: "isbn",
+      label: "Isbn",
     },
   ],
 };

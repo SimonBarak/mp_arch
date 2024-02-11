@@ -65,7 +65,7 @@ export default {
     {
       type: "number",
       name: "weight",
-      label: "weight",
+      label: "Pořadí",
     },
   ],
 };

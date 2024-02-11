@@ -10,27 +10,27 @@ export default {
     {
       type: "number",
       name: "weight",
-      label: "Weight",
+      label: "Pořadí",
     },
     {
       type: "string",
       name: "title",
-      label: "Title",
+      label: "Nazev",
     },
     {
       type: "string",
       name: "director",
-      label: "Director",
+      label: "Režisér",
     },
     {
       type: "number",
       name: "year",
-      label: "Year",
+      label: "Rok",
     },
     {
       type: "image",
       name: "images",
-      label: "Images",
+      label: "Obrazky",
       list: true,
     },
     {
@@ -49,7 +49,7 @@ export default {
     {
       type: "string",
       name: "description",
-      label: "Description",
+      label: "Popis",
       ui: {
         component: "textarea",
       },

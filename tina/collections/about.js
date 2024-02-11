@@ -10,12 +10,12 @@ export default {
   fields: [
     {
       name: "title",
-      label: "Title",
+      label: "Nazev",
       type: "string",
     },
     {
       name: "description",
-      label: "Description",
+      label: "Popis",
       type: "string",
       ui: {
         component: "textarea",
@@ -23,7 +23,7 @@ export default {
     },
     {
       name: "member",
-      label: "Member",
+      label: "Členové",
       type: "object",
       ui: {
         itemProps: (item) => {
@@ -36,22 +36,22 @@ export default {
         {
           type: "image",
           name: "photo",
-          label: "Photo",
+          label: "Fotka",
         },
         {
           type: "string",
           name: "name",
-          label: "Name",
+          label: "Jméno",
         },
         {
           type: "string",
           name: "position",
-          label: "Profession",
+          label: "Profese",
         },
         {
           type: "string",
           name: "phone",
-          label: "Phone",
+          label: "Telefon",
         },
         {
           type: "string",

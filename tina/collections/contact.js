@@ -20,27 +20,27 @@ export default {
     },
     {
       name: "street",
-      label: "Street",
+      label: "Ulice",
       type: "string",
     },
     {
       name: "city",
-      label: "City",
+      label: "Město",
       type: "string",
     },
     {
       name: "post_code",
-      label: "Post Code",
+      label: "PSČ",
       type: "string",
     },
     {
       name: "county",
-      label: "County",
+      label: "Země",
       type: "string",
     },
     {
       name: "studiopin",
-      label: "Studio Pin",
+      label: "Pin v mapě",
       type: "object",
       fields: [
         {

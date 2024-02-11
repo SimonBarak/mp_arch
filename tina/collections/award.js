@@ -27,17 +27,17 @@ export default {
     },
     {
       name: "year",
-      label: "Year",
+      label: "Rok",
       type: "number",
     },
     {
       name: "title",
-      label: "Title",
+      label: "Název",
       type: "string",
     },
     {
       name: "placement",
-      label: "Placement",
+      label: "Umístění",
       type: "string",
     },
     {

@@ -1,10 +1,10 @@
-import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { Layout } from "../components/Layout";
 import { Page } from "../components/Page";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { client } from "../tina/__generated__/client";
 import { CldImage } from "next-cloudinary";
 import Link from "next/link";
+import React from "react";
 
 export default function Home(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
@@ -23,10 +23,17 @@ export default function Home(props) {
       <Page>
         <section className="pb-12">
           <div className="max-w-2xl mx-auto text-2xl px-4 text-block">
-            {title}
+            <p>
+              {title.split("\\n").map((line, i) => (
+                <React.Fragment key={i}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
+            </p>
           </div>
         </section>
-        <section className="pb-16">
+        <section className="pb-20">
           <div className="max-w-2xl mx-auto px-4 grid grid-cols-2 gap-5">
             {data.about.member.map((member) => (
               <div className="">
@@ -42,42 +49,37 @@ export default function Home(props) {
                 </div>
 
                 <div>
-                  <p className="py-5 pr-2">{member.name},</p>
-                  <p className="pb-2 text-gray-500">{member.position}</p>
+                  <p className="pt-5 pb-2 pr-2">{member.name}</p>
+                  <p className=" text-gray-500">{member.position}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="pb-12">
+        <section className="pb-20">
           <div className="max-w-2xl px-4 mx-auto text-xl">
             <div className="border-2 rounded border-gray-400">
-
-              <Link
-
-                href="/oceneni"
-              >
-                <div className="flex px-5 py-3 border-b-2 border-gray-400 hover:bg-gray-300">
+              <Link href="/oceneni">
+                <a className="flex px-5 py-3 border-b-2 border-gray-400 hover:bg-gray-300">
                   <div className="flex-grow">Ocenění</div>
                   <div>⟶</div>
-                </div>
-
+                </a>
               </Link>
-              <Link
-                href="/spoluprace"
-              >
-                <div className="flex px-5 py-3 hover:bg-gray-300">
+              <Link href="/spoluprace">
+                <a className="flex px-5 py-3 hover:bg-gray-300">
                   <div className="flex-grow">Spolupráce</div>
                   <div>⟶</div>
-                </div>
+                </a>
               </Link>
             </div>
           </div>
         </section>
 
         <section className="pb-20">
-          <div className="max-w-2xl mx-auto text-lg px-4 text-block">
+
+          <div className="max-w-2xl mx-auto px-4 text-block">
+            <div className="max-w-2xl pb-5 text-xl">O krajinářské architektuře</div>
             {description}
           </div>
         </section>
@@ -98,9 +100,9 @@ export default function Home(props) {
                 </div>
 
                 <div>
-                  <p className="py-5 text-xl pr-2">{member.name}</p>
-                  <p className="pb-2 text-gray-500">{member.position}</p>
-                  <p className="pb-2 text-gray-500">{member.resume}</p>
+                  <p className="pt-5 pb-2 text-xl pr-2">{member.name}</p>
+                  <p className="pb-5">{member.position}</p>
+                  <p className="pb-2 ">{member.resume}</p>
                 </div>
               </div>
             ))}

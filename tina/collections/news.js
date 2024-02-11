@@ -21,14 +21,14 @@ export default {
     {
       type: "selection",
       name: "project",
-      label: "Projektu o kterém se mluví",
+      label: "Projekt o kterém se mluví",
       type: "reference",
       collections: ["realisation", "project"],
     },
     {
       type: "number",
       name: "year",
-      label: "Year",
+      label: "Rok",
     },
     {
       type: "image",

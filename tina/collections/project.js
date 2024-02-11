@@ -2,25 +2,25 @@
  * @type {import('tinacms').Collection}
  */
 export default {
-  label: "Projekty",
+  label: "Návrhy",
   name: "project",
   path: "content/project",
   format: "md",
   fields: [
-    {
-      type: "number",
-      name: "weight",
-      label: "Order",
-    },
+    // {
+    //   type: "number",
+    //   name: "weight",
+    //   label: "Pořadí",
+    // },
     {
       type: "string",
       name: "title",
-      label: "Title",
+      label: "Název",
     },
     {
       type: "string",
       name: "description",
-      label: "Description",
+      label: "Popis",
       ui: {
         component: "textarea",
       },
@@ -33,7 +33,7 @@ export default {
     {
       type: "object",
       name: "awards",
-      label: "Awards",
+      label: "Ocenění",
       list: true,
       fields: [
         {
@@ -84,22 +84,22 @@ export default {
     {
       type: "number",
       name: "year",
-      label: "Year",
+      label: "Rok",
     },
     {
       type: "string",
       name: "size",
-      label: "Size",
+      label: "Velikost",
     },
     {
       type: "string",
       name: "price",
-      label: "Price",
+      label: "Cena",
     },
     {
       type: "image",
       name: "images",
-      label: "Images",
+      label: "Obrázky",
       list: true,
     },
     {
@@ -115,7 +115,7 @@ export default {
     {
       type: "string",
       name: "authors",
-      label: "Authors",
+      label: "Autoři",
     },
     {
       type: "string",
@@ -125,12 +125,12 @@ export default {
     {
       type: "string",
       name: "visualization",
-      label: "Visualization",
+      label: "Visualizace",
     },
     {
       type: "string",
       name: "collaborations",
-      label: "Collaborations",
+      label: "Spolupráce",
       list: true,
     },
   ],
