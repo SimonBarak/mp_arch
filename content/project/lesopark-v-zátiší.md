@@ -131,8 +131,8 @@ longitude: 14.177252
 investor: Město Vodňany
 visualization: Jan Cyrany
 collaborations: []
-media: []
+
 odkaz_na_navrh: ""
-awards: []
+
 _template: project
 ---

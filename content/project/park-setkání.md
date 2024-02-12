@@ -17,7 +17,7 @@ description: >-
   a jsou podpořeny obsahovou náplní zóny  tři (pohyb) a čtyři (zrcadlo). Přímky
   jsou zde v souladu s tvary hřišť a jsou využity k estetickému účinku v rámci
   promenády koupaliště.
-awards: []
+
 category: Navrh
 size: ""
 price: ""

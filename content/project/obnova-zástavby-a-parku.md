@@ -15,7 +15,7 @@ description: >
 
   Původní, dnes zatrubněné potoky jsou připomenuty vodním prvkem - potokem - v
   místě jeho někdejšího průběhu.
-awards: []
+
 category: Navrh
 year: 2014
 size: ""

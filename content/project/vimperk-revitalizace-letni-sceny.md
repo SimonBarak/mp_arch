@@ -21,8 +21,7 @@ description: >+
   potenciální kavárny přístupná z ulice Podzámčí. Vegetaci sjednocujeme,
   doplňujeme typické prvky místní krajiny (louky, sad). Minimalizujeme údržbu.  
 
-awards: []
-media: []
+
 category: Navrh
 size: "0,75 ha"
 price: cca 15 mil. Kč

@@ -36,7 +36,7 @@ description: >
 
   V areálu jsou do svahu doplněny betonové stupně pro možnost vyhlídky na
   samotné hřiště.
-awards: []
+
 category: Navrh
 size: "9,26"
 price: ""

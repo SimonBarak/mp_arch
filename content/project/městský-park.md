@@ -15,7 +15,7 @@ description: >+
   jsou omezeny pouze na stávající rododendrony. Nové keřové výsadby nejsou
   užívány z důvodu bezpečného, přehledného veřejného prostoru. 
 
-awards: []
+
 category: Navrh
 size: "3,5 ha"
 price: ""

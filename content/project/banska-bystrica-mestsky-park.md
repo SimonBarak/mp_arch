@@ -25,7 +25,7 @@ awards:
     placement: 3. místo
     link: ""
     year: 2023
-media: []
+
 size: "8,5 ha"
 price: ""
 images:

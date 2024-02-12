@@ -6,7 +6,7 @@ authors: Markéta & Petr Veličkovi a Jan Cyrany
 title: "Chiampo, revitalizace mramorových lomů"
 subtitle: null
 description: ""
-awards: []
+
 category: Navrh
 size: ""
 price: ""

@@ -18,8 +18,7 @@ description: >
   stránke.
 category: Navrh
 odkaz_na_navrh: ""
-awards: []
-media: []
+
 size: 2 ha
 price: ""
 images:

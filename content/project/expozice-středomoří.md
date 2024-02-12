@@ -24,7 +24,7 @@ description: >-
   pramene, obraz klidné vodní hladiny v dubové nádrži má člověka přimět k
   zastavení. Prostřednictvím biblických rostlin se tak návštěvník vypraví za
   poznáním a připomene si věčné příběhy z knihy knih.
-awards: []
+
 category: Navrh
 size: ""
 price: ""

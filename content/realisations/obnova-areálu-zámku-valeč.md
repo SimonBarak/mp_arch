@@ -1,20 +1,10 @@
 ---
-weight: 8
-title: "Valeč u Třebíče, obnova areálu zámku Valeč"
-description: >-
+title: 'Valeč u Třebíče, obnova areálu zámku Valeč'
+subtitle: >-
   V roce 2010 jsme byli přizvání soukromým investorem k týmu krajinářských
   architektů Dušana Riedla a Kláry Dufkové k obnově zámeckého areálu Valeč u
-  Třebíče. Rekonstrukce a stavba budov probíhá dle návrhů pana architekta
-  Martíška. V průběhu 2 let se realizoval první finální návrh, který si přál
-  investor. V dalších letech jsme pokračovali v návrzích a dozorech využití
-  dalších pozemků v okolí zámecké zahrady. Mimo jiné jsme zde zrealizovali tzv.
-  Ha-Ha systém oplocení, abychom zachovali hlavní pohledové propojení mezi
-  zahradou a další částí parku. Areál se stále rozšiřuje a postupně se realizují
-  další etapy. Nový zámecký park již dnes hostí řadu firemních, soukromých i
-  společenských událostí.
-year: 2010
-size: ""
-price: ""
+  Třebíče.
+description: ' Rekonstrukce a stavba budov probíhá dle návrhů pana architekta Martíška. V průběhu 2 let se realizoval první finální návrh, který si přál investor. V dalších letech jsme pokračovali v návrzích a dozorech využití dalších pozemků v okolí zámecké zahrady. Mimo jiné jsme zde zrealizovali tzv. Ha-Ha systém oplocení, abychom zachovali hlavní pohledové propojení mezi zahradou a další částí parku. Areál se stále rozšiřuje a postupně se realizují další etapy. Nový zámecký park již dnes hostí řadu firemních, soukromých i společenských událostí.'
 images:
   - >-
     https://res.cloudinary.com/dhxmg9p4i/image/upload/v1576961652/archweb/DSC_0475_opussv.jpg
@@ -46,9 +36,15 @@ images:
     https://res.cloudinary.com/dhxmg9p4i/image/upload/v1576957387/archweb/Vale%C4%8D_Vizu3_i3orwe.jpg
   - >-
     https://res.cloudinary.com/dhxmg9p4i/image/upload/v1576957362/archweb/Vale%C4%8D_vizu1_hmllq0.jpg
-latitude: 49.147359
-longitude: 16.036007
+price: ''
+year: 2010
+size: ''
 authors: Markéta & Petr Veličkovi
 investor: soukromý investor
-visualization: "Jan Cyrany, Adam Kořistka"
+visualization: 'Jan Cyrany, Adam Kořistka'
+project: content/project/tempelhof.md
+latitude: 49.147359
+longitude: 16.036007
+weight: 99
 ---
+

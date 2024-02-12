@@ -17,7 +17,7 @@ description: >
   estetické kvality. Zároveň jsou na jednotlivé celky kladeny nároky vyplývající
   ze současných potřeb - využívání pro kulturní akce a výstavy, prezentace
   zahrady jako památky, udržitelnost  údržby.
-awards: []
+
 category: Navrh
 year: 2011
 size: "15,23 ha"

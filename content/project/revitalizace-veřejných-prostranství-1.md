@@ -11,7 +11,7 @@ description: >-
   prostranství pro kulturní akce na centrální louce pod Horním rybníkem,
   instalace mobiliáře, herních prvků i sportovního vybavení a celková podpora
   pobytu obyvatel i návštěvníků ve venkovním prostoru.
-awards: []
+
 category: Navrh
 size: "2,42 ha"
 price: ""

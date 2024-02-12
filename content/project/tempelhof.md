@@ -26,7 +26,7 @@ description: >
   bodem setkávání lidí. Navrh má ambici vytvořit srozumitelnou sponu mezi
   minulostí a současností za použití soudobého jazyka s akcentací kulturních i
   ekologických nároků.
-awards: []
+
 category: Navrh
 size: ""
 price: ""

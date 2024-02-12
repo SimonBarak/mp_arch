@@ -6,7 +6,7 @@ authors: "Markéta & Petr Veličkovi, Jan Cyrany, Susanne Spurna"
 title: "Lahr/ Schwarzwald, Landesgartenschau"
 subtitle: " "
 description: ""
-awards: []
+
 category: Navrh
 size: ""
 price: ""

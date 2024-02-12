@@ -22,15 +22,12 @@ export default function Home(props) {
 
   const { pins } = props;
 
-  const { images, description, title, subtitle } = data.realisation;
+  const { images, description, title, subtitle, testnews } = data.realisation;
   const table = data.realisation;
   const project = data.realisation.project;
 
-  const allnews = data.realisation.testnews?.map((x) => x.news);
-  const news = allnews ? allnews.sort((a, b) => b.year - a.year) : null;
-
   const allawards = data.realisation?.awardsx?.map((x) => x.award);
-  const awards = allawards ? allawards.sort((a, b) => b.year - a.year) : null;
+  const awards = allawards ? allawards.sort((a, b) => b.year - a.year) : [];
 
   const [slide, setSlide] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -98,7 +95,7 @@ export default function Home(props) {
           </table>
         </section>
 
-        {awards != null && (
+        {awards.length != 0 && (
           <section className="max-w-xl mx-auto pb-16">
             <Label title={"Ocenění projektu"} />
             <div className="grid grid-cols-1">
@@ -134,18 +131,18 @@ export default function Home(props) {
           </section>
         )}
 
-        {news != null && (
+        {testnews && (
           <section className="max-w-4xl mx-auto pb-20">
             <Label title={"Ve zprávách"} />
-            <div className="grid md:grid-cols-2 gap-4">
-              {news.map((item) => (
+            <div className={`grid gap-4 md:grid-cols-2 justify-center`}>
+              {testnews.map(({ news }) => (
                 <RowCard
-                  key={item.slug}
-                  title={item.title}
-                  source={item.source}
-                  link={item.link}
-                  image={item.thumb}
-                  year={new Date(item.date).getFullYear()}
+                  key={news.title}
+                  title={news.title}
+                  source={news.source}
+                  link={news.link}
+                  image={news.thumb}
+                  year={new Date(news.date).getFullYear()}
                 />
               ))}
             </div>

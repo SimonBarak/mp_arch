@@ -44,6 +44,6 @@ images:
   - https://res.cloudinary.com/dhxmg9p4i/image/upload/v1600771835/archweb/2_g45kzp.jpg
 investor: Město Luže
 visualization: ""
-media: []
+
 _template: project
 ---

@@ -19,13 +19,6 @@ export default {
   ],
   fields: [
     {
-      type: "number",
-      name: "weight",
-      label: "Pořadí",
-      step: 1,
-      defaultValue: 99,
-    },
-    {
       type: "string",
       name: "title",
       label: "Název",
@@ -44,66 +37,15 @@ export default {
       },
     },
     {
-      name: "project",
-      label: "Odkaz na projekt",
-      type: "reference",
-      collections: ["project"],
-    },
-    // {
-    //   type: "object",
-    //   name: "awards",
-    //   label: "Ocenění",
-    //   list: true,
-    //   fields: [
-    //     {
-    //       type: "string",
-    //       name: "title",
-    //       label: "Název",
-    //     },
-    //     {
-    //       type: "string",
-    //       name: "placement",
-    //       label: "Umístění",
-    //     },
-    //     {
-    //       type: "string",
-    //       name: "link",
-    //       label: "Link",
-    //     },
-    //     {
-    //       type: "number",
-    //       name: "year",
-    //       label: "Year",
-    //     },
-    //   ],
-    // },
-    {
-      name: "awardsx",
-      label: "Ocenění",
-      type: "object",
+      type: "image",
+      name: "images",
+      label: "Obrázky",
       list: true,
-      fields: [
-        {
-          type: "reference",
-          name: "award",
-          label: "Award",
-          collections: ["award"],
-        },
-      ],
     },
     {
-      name: "testnews",
-      label: "Projektu ve zpávách",
-      type: "object",
-      list: true,
-      fields: [
-        {
-          type: "reference",
-          name: "news",
-          label: "News",
-          collections: ["news"],
-        },
-      ],
+      type: "string",
+      name: "price",
+      label: "Cena",
     },
     {
       type: "number",
@@ -113,30 +55,7 @@ export default {
     {
       type: "string",
       name: "size",
-      label: "Rozměr",
-    },
-    {
-      type: "string",
-      name: "price",
-      label: "Cena",
-    },
-    {
-      type: "image",
-      name: "images",
-      label: "Obrázky",
-      list: true,
-    },
-    {
-      type: "number",
-      name: "latitude",
-      label: "Latitude",
-      description: "Najdete na latlong.net",
-    },
-    {
-      type: "number",
-      name: "longitude",
-      label: "Longitude",
-      description: "Najdete na latlong.net",
+      label: "Rozloha",
     },
     {
       type: "string",
@@ -163,6 +82,63 @@ export default {
       type: "string",
       name: "photo",
       label: "Fotografie",
+    },
+    {
+      name: "project",
+      label: "Odkaz na projekt",
+      type: "reference",
+      collections: ["project"],
+    },
+    {
+      name: "awardsx",
+      label: "Ocenění",
+      type: "object",
+      list: true,
+      fields: [
+        {
+          type: "reference",
+          name: "award",
+          label: "Award",
+          collections: ["award"],
+        },
+      ],
+    },
+    {
+      name: "testnews",
+      label: "Projektu ve zpávách",
+      type: "object",
+      list: true,
+      defaultItem: {
+        news: "content/news/vitezny-navrh-architektonicka-soutez.yaml",
+      },
+      fields: [
+        {
+          type: "reference",
+          name: "news",
+          label: "News",
+          collections: ["news"],
+        },
+      ],
+    },
+    {
+      type: "number",
+      name: "latitude",
+      label: "Latitude",
+      description: "Najdete na latlong.net",
+    },
+    {
+      type: "number",
+      name: "longitude",
+      label: "Longitude",
+      description: "Najdete na latlong.net",
+    },
+    {
+      type: "number",
+      name: "weight",
+      label: "Pořadí",
+      step: 1,
+      defaultValue: 99,
+      hidden: true,
     },
   ],
 };

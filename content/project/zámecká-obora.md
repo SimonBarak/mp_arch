@@ -31,7 +31,7 @@ description: >-
   krátké. Na cesty užíváme měkkého, vodu propustného povrchu s tradičním
   vzhledem mlatu. Některé trasy obnovujeme prostřednictvím vyšší intenzity
   kosení trávníku
-awards: []
+
 category: Navrh
 size: ""
 price: ""

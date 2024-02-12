@@ -13,7 +13,7 @@ description: >-
   opětovná zástavba zde není možná ani žádoucí. Přesto volně navazujeme na
   historii tím, že v nové formě obnovujeme náměstí sv. Šebestiána, jehož sochu
   navracíme do prostoru na důstojné místo
-awards: []
+
 category: Navrh
 year: 2010
 size: "0,46 ha"
@@ -28,6 +28,6 @@ longitude: 16.015303
 investor: Město Velké Meziříčí
 visualization: Jan Cyrany
 slug: ""
-media: []
+
 _template: project
 ---

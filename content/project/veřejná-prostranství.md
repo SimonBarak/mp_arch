@@ -36,7 +36,7 @@ description: |-
   ponechána zastávka a navrženo přechodové místo, které ústí na novou
   pěší lávku přimknutou ke stávajícímu mostu. Chodník je v jihovýchodní
   části trasován po levé straně.
-awards: []
+
 category: Navrh
 size: ""
 price: ""

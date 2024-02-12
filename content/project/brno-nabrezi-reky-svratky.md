@@ -29,8 +29,7 @@ description: >
   nábřežní piazzettě doplňujeme javory, v dalších místech pracujeme se stávající
   vegetací a doplňujeme domácími druhy listnatých stromů. Keřové patro
   nenavrhujeme z hlediska transparentnosti prostoru a jeho bezpečnosti.
-awards: []
-media: []
+
 category: Navrh
 size: ""
 price: ""

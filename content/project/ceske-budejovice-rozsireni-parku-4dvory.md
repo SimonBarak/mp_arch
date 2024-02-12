@@ -7,7 +7,7 @@ authors: "Markéta & Petr Veličkovi, David Prudík"
 
 title: "České Budějovice, rozšíření parku 4Dvory"
 description: "Návrh rozšíření parku v areálu bývalého vojenského cvičiště a kasáren, mezi sídlišti Máj a Vltava, které je v procesu přestavby na novou obytnou čtvrť s občanskou vybaveností. Nově řešené území navazuje na již existující Park 4 Dvory, jehož koncepce vznikla v rámci veřejné architektonické soutěže (2012). Na tuto etapu navazuje návrh pěší lávky a vyhlídky (hlásky) na hraně mezi krajinou volnou a městskou.\t\n"
-awards: []
+
 media:
   - image: ""
     title: Rozšíření Parku 4Dvory

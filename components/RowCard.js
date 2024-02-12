@@ -2,9 +2,7 @@ import React from "react";
 import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 
-const RowCard = ({ title, source, link, image, year }) => {
-
-  console.log(link);
+const RowCard = ({ title = "", source = "", link, image = "", year = "" }) => {
   if (link) {
     return (
       <Link href={link}>
@@ -14,7 +12,7 @@ const RowCard = ({ title, source, link, image, year }) => {
         >
           {/* Left side with text */}
           <div className="w-3/5 p-6 flex flex-col justify-between">
-            <h2 className="text-xl font-semibold mb-2">{title}</h2>
+            <h2 className="text-xl mb-2">{title}</h2>
             <div className="text-gray-500 md:text-md">
               <p className="mb-2">{source}</p>
               <p className="">{year}</p>

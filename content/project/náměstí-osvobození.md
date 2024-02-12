@@ -21,7 +21,7 @@ description: >-
   cyklistů a řidičů) se snažíme vytvořit autentický prostor, který v rámci
   požadavků klienta bude maximálně užitný, reprezentativní, trvanlivý. Výtvarné
   prvky vody jsou v návrhu užity s odkazem na historii a vývoj tohoto místa.
-awards: []
+
 category: Navrh
 size: ""
 price: ""

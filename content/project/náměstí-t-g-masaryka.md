@@ -137,7 +137,7 @@ description: >-
   dopouštění dle možností
 
   z vodovodního řadu nebo systému závlahy botanické zahrady či z rybníka.
-awards: []
+
 category: Navrh
 size: ""
 price: ""

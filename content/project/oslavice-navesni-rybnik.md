@@ -12,8 +12,7 @@ description: >-
   dřevěných dubových pilotech.
 category: Stavba
 odkaz_na_navrh: "https://mparch.cz/projekty/ve%C5%99ejn%C3%A1-prostranstv%C3%AD.html"
-awards: []
-media: []
+
 size: "0,27"
 price: ""
 images:

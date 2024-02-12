@@ -51,7 +51,7 @@ description: >+
   také veřejného WC.
 
 
-awards: []
+
 media:
   - image: ""
     title: ""
