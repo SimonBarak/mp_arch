@@ -9,7 +9,7 @@ export default {
   label: "Ocenění",
   ui: {
     router: ({ document }) => {
-      return `/oceneni/${document._sys.filename}`;
+      return `/oceneni`;
     },
   },
   ui: {

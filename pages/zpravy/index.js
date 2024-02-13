@@ -26,14 +26,14 @@ export default function News(props) {
 
   return (
     <Layout>
-      <div className="container mx-auto">
+      <div className="max-w-6xl mx-auto pb-20 px-5 mt-60 ">
         {/* <div className="mt-40 mb-8">
           <div className="flex">
             <BtnMd content={"Prioritně"} />
             <BtnMd content={"Chonologicky"} />
           </div>
         </div> */}
-        <div className="mt-60 grid grid-cols-2 gap-8">
+        <div className="grid gap-4 lg:gap-10 grid-cols-2 justify-center items-center">
           {itemsList.map((item) => (
             <RowCard
               key={item.slug}

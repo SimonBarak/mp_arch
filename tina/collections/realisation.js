@@ -94,6 +94,9 @@ export default {
       label: "Ocenění",
       type: "object",
       list: true,
+      defaultItem: {
+        award: "content/awards/default.yaml",
+      },
       fields: [
         {
           type: "reference",

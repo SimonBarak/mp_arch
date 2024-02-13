@@ -27,6 +27,7 @@ export default function Home(props) {
   const project = data.realisation.project;
 
   const allawards = data.realisation?.awardsx?.map((x) => x.award);
+
   const awards = allawards ? allawards.sort((a, b) => b.year - a.year) : [];
 
   const [slide, setSlide] = useState(0);
@@ -132,9 +133,15 @@ export default function Home(props) {
         )}
 
         {testnews && (
-          <section className="max-w-4xl mx-auto pb-20">
+          <section className="max-w-5xl mx-auto pb-20 px-5">
             <Label title={"Ve zprávách"} />
-            <div className={`grid gap-4 md:grid-cols-2 justify-center`}>
+            <div
+              className={`grid gap-4 ${
+                testnews.length === 1
+                  ? "justify-items-center"
+                  : "md:grid-cols-2"
+              }`}
+            >
               {testnews.map(({ news }) => (
                 <RowCard
                   key={news.title}
