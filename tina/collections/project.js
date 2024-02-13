@@ -7,15 +7,15 @@ export default {
   path: "content/project",
   format: "md",
   fields: [
-    // {
-    //   type: "number",
-    //   name: "weight",
-    //   label: "Pořadí",
-    // },
     {
       type: "string",
       name: "title",
       label: "Název",
+    },
+    {
+      type: "string",
+      name: "subtitle",
+      label: "Podtitulek",
     },
     {
       type: "string",
@@ -26,60 +26,15 @@ export default {
       },
     },
     {
+      type: "image",
+      name: "images",
+      label: "Obrázky",
+      list: true,
+    },
+    {
       type: "string",
-      name: "odkaz_na_navrh",
-      label: "Odkaz na realizaci/návrh",
-    },
-    {
-      type: "object",
-      name: "awards",
-      label: "Ocenění",
-      list: true,
-      fields: [
-        {
-          type: "string",
-          name: "title",
-          label: "Title",
-        },
-        {
-          type: "string",
-          name: "placement",
-          label: "Placement",
-        },
-        {
-          type: "string",
-          name: "link",
-          label: "Link",
-        },
-        {
-          type: "number",
-          name: "year",
-          label: "Year",
-        },
-      ],
-    },
-    {
-      type: "object",
-      name: "media",
-      label: "Projekt v mediích",
-      list: true,
-      fields: [
-        {
-          type: "image",
-          name: "image",
-          label: "Image",
-        },
-        {
-          type: "string",
-          name: "title",
-          label: "Title",
-        },
-        {
-          type: "string",
-          name: "link",
-          label: "Link",
-        },
-      ],
+      name: "price",
+      label: "Cena",
     },
     {
       type: "number",
@@ -89,28 +44,7 @@ export default {
     {
       type: "string",
       name: "size",
-      label: "Velikost",
-    },
-    {
-      type: "string",
-      name: "price",
-      label: "Cena",
-    },
-    {
-      type: "image",
-      name: "images",
-      label: "Obrázky",
-      list: true,
-    },
-    {
-      type: "number",
-      name: "latitude",
-      label: "Latitude",
-    },
-    {
-      type: "number",
-      name: "longitude",
-      label: "Longitude",
+      label: "Rozloha",
     },
     {
       type: "string",
@@ -133,6 +67,36 @@ export default {
       label: "Spolupráce",
       list: true,
     },
+    {
+      type: "string",
+      name: "photo",
+      label: "Fotografie",
+    },
+    // {
+    //   name: "realisation",
+    //   label: "Odkaz na stavbu",
+    //   type: "reference",
+    //   collections: ["realisation"],
+    // },
+    {
+      type: "number",
+      name: "latitude",
+      label: "Latitude",
+      description: "Najdete na latlong.net",
+    },
+    {
+      type: "number",
+      name: "longitude",
+      label: "Longitude",
+      description: "Najdete na latlong.net",
+    },
+    // {
+    //   type: "number",
+    //   name: "weight",
+    //   label: "Pořadí",
+    //   step: 1,
+    //   defaultValue: 99,
+    // },
   ],
   ui: {
     router: ({ document }) => {

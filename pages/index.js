@@ -53,7 +53,7 @@ export default function Home(props) {
       </section>
       <p className="text-gray-700 mb-4 px-4 uppercase">Mapa projektů</p>
       <Map items={pins} />
-      <NewsSection items={news} />
+      {/* <NewsSection items={news} /> */}
       <AwardsSection />
       <BooksSection items={books} title={"Knihy"} slug={"/books"} />
       <MovieSection items={movies} />
@@ -67,18 +67,6 @@ export default function Home(props) {
 }
 
 export const getStaticProps = async () => {
-  function addTransformationToCloudinaryURL(url, transformation) {
-    const parts = url.split("/upload/");
-
-    if (parts.length === 2) {
-      const modifiedURL = parts[0] + "/upload/" + transformation + parts[1];
-      return modifiedURL;
-    } else {
-      // Handle invalid URL format
-      return url;
-    }
-  }
-
   const { data, query, variables } = await client.queries.page({
     relativePath: "home.md",
   });
@@ -100,6 +88,8 @@ export const getStaticProps = async () => {
       };
     }
   );
+
+  //const projectPins = [];
 
   const realisationPins =
     realisationConnection.data.realisationConnection.edges.map((edge) => {

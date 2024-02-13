@@ -2,7 +2,7 @@
  * @type {import('tinacms').Collection}
  */
 export default {
-  label: "About",
+  label: "O studiu",
   type: "object",
   name: "about",
   path: "content/about",

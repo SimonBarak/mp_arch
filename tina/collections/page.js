@@ -2,7 +2,7 @@
  * @type {import('tinacms').Collection}
  */
 export default {
-  label: "Home Page",
+  label: "Hlavní stránka",
   type: "object",
   name: "page",
   path: "content/page",

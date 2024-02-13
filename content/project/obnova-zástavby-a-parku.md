@@ -1,22 +1,13 @@
 ---
 authors: "Markéta a Petr Veličkovi, David Prudík"
-
 weight: 99
-title: "Humpolec, obnova zástavby a parku"
-subtitle: null
-description: >
+title: Humpolec, obnova zástavby a parku
+subtitle:
   Konceptem řešení území je odclonění dopravy od klidového prostoru parku a
-  vytvoření tak „nové městské zahrady“ – parku Stromovka. Nová zástavba je
-  navržena ve stopě zástavby původní ze strany ulice Rašínovy a Jana Zábrany. Ze
-  strany ulice Kamarytovy je park odcloněn výsadbou nového živého plotu.
-
-  Podstatná je prostupnost parteru, zástavba je definována jako městský dům, kdy
-  je parter součástí města a ne soukromým pozemkem. 
-
-  Původní, dnes zatrubněné potoky jsou připomenuty vodním prvkem - potokem - v
-  místě jeho někdejšího průběhu.
-
-category: Navrh
+  vytvoření tak „nové městské zahrady“ – parku Stromovka.
+description: >
+  Nová zástavba je navržena ve stopě zástavby původní ze strany ulice Rašínovy a Jana Zábrany. Ze strany ulice Kamarytovy je park odcloněn výsadbou nového živého plotu.
+  Podstatná je prostupnost parteru, zástavba je definována jako městský dům, kdy je parter součástí města a ne soukromým pozemkem. Původní, dnes zatrubněné potoky jsou připomenuty vodním prvkem - potokem - v místě jeho někdejšího průběhu.
 year: 2014
 size: ""
 price: ""
@@ -33,5 +24,4 @@ longitude: 15.356749
 investor: Město Humpolec
 visualization: Jan Cyrany
 slug: ""
-_template: project
 ---

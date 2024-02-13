@@ -17,7 +17,8 @@ export default function Project(props) {
     data: props.data,
   });
   const { pins } = props;
-  const { title, images, description, subtitle } = data.project;
+  const { title, images, description, subtitle, realisation } = data.project;
+
   const table = data.project;
 
   const [slide, setSlide] = useState(0);
@@ -83,6 +84,17 @@ export default function Project(props) {
             </tbody>
           </table>
         </section>
+        {realisation != undefined && (
+          <section className="max-w-xl mx-auto pb-20">
+            <Label title={"Návrh"} />
+            <EntryCard
+              key={realisation.title}
+              title={realisation.title}
+              slug={`/projekty/${realisation._sys.filename}`}
+              image={realisation.images[0]}
+            />
+          </section>
+        )}
         <Map items={pins} />
       </div>
       {isOpen && (
