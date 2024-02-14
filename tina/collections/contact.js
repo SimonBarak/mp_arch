@@ -2,11 +2,17 @@
  * @type {import('tinacms').Collection}
  */
 export default {
-  label: "Contact",
+  label: "Kontakt",
   type: "object",
   name: "contact",
   path: "content/contact",
   format: "yaml",
+  ui: {
+    allowedActions: {
+      create: false,
+      delete: false,
+    },
+  },
   fields: [
     {
       name: "image",

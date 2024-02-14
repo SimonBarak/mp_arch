@@ -7,7 +7,7 @@ const ProjectLayout = (props) => {
   const router = useRouter();
 
   return (
-    <div className="container mx-auto px-2">
+    <div className="container mx-auto px-2 mb-20">
       <div className="mt-40 mb-8">
         <div className="flex flex-wrap">
           <BtnLg

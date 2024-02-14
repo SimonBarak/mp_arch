@@ -29,7 +29,6 @@ export const config = defineConfig({
   },
   schema: {
     collections: [
-      about,
       page,
       realisation,
       project,
@@ -38,6 +37,7 @@ export const config = defineConfig({
       publication,
       news,
       award,
+      about,
       contact,
     ],
   },

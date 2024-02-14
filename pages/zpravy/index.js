@@ -1,7 +1,7 @@
 import { Layout } from "../../components/Layout.js";
 import { useTina } from "tinacms/dist/react";
 import { client } from "../../tina/__generated__/client.js";
-import BtnMd from "../../components/btn-md.js";
+import Label from "../../components/Label-md";
 import RowCard from "../../components/RowCard.js";
 
 export default function News(props) {
@@ -17,7 +17,7 @@ export default function News(props) {
       return {
         title: item.node.title,
         source: item.node.source,
-        link: item.node.link,
+        link: item.node.copy ? item.node.copy : item.node.link,
         image: item.node.thumb,
         year: new Date(item.node.date).getFullYear(),
       };
@@ -27,6 +27,7 @@ export default function News(props) {
   return (
     <Layout>
       <div className="max-w-6xl mx-auto pb-20 px-5 mt-60 ">
+        <Label title={"M&P ve zprávách"} />
         {/* <div className="mt-40 mb-8">
           <div className="flex">
             <BtnMd content={"Prioritně"} />

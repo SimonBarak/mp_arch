@@ -3,8 +3,6 @@ import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 
 const RowCard = ({ title = "", source = "", link, image = "", year = "" }) => {
-  console.log("link", link);
-
   return (
     <Link href={link}>
       <div
@@ -12,7 +10,7 @@ const RowCard = ({ title = "", source = "", link, image = "", year = "" }) => {
           hover:border-blue-300 overflow-hidden cursor-pointer"
       >
         {/* Left side with text */}
-        <div className="w-3/5 p-6 flex flex-col">
+        <div className="w-3/5 p-6 flex flex-col justify-between">
           <h2 className="text-xl mb-2 lg:text-xl">{title}</h2>
           <div className="text-gray-500 md:text-md">
             <p className="mb-2">{source}</p>

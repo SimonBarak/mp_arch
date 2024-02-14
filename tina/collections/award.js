@@ -12,13 +12,6 @@ export default {
       return `/oceneni`;
     },
   },
-  ui: {
-    allowedActions: {
-      create: false,
-      delete: false,
-    },
-  },
-
   fields: [
     {
       name: "thumb",
