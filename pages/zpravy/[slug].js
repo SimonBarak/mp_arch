@@ -12,7 +12,7 @@ export default function Home(props) {
   });
 
   const item = data.news;
-  console.log(data.news);
+  console.log(data);
 
   return (
     <Layout>
@@ -33,8 +33,8 @@ export default function Home(props) {
 }
 
 export const getStaticPaths = async () => {
-  const { data } = await client.queries.bookConnection();
-  const paths = data.bookConnection.edges.map((x) => {
+  const { data } = await client.queries.newsConnection();
+  const paths = data.newsConnection.edges.map((x) => {
     return { params: { slug: x.node._sys.filename } };
   });
 
