@@ -90,7 +90,8 @@ export default function Home(props) {
               <TableRow title="Autoři" value={table.authors} />
               <TableRow title="Spolupráce" value={table.collaborations} />
               <TableRow title="Režisér" value={table.director} />
-              <TableRow title="Vydavatel" value={table.publisher} />
+              <TableRow title="Vizualizace" value={table.visualization} />
+              <TableRow title="ISBN" value={table.isbn} />
               <TableRow title="ISBN" value={table.isbn} />
             </tbody>
           </table>
