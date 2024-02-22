@@ -57,12 +57,14 @@ export default function Home(props) {
                         </div>
                         <div className="mb-4">{item.title}</div>
 
-                        <a
-                          className="block text-blue-300 hover:text-blue-400 mb-4"
-                          href={item.link}
-                        >
-                          Stránky ocenění
-                        </a>
+                        {item.link && (
+                          <a
+                            className="block text-blue-300 hover:text-blue-400 mb-4"
+                            href={item.link}
+                          >
+                            Stránky ocenění
+                          </a>
+                        )}
                       </div>
                     ))}
                   </div>
