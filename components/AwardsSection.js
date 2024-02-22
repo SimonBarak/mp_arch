@@ -4,7 +4,7 @@ import Label from "./Label-md";
 
 const AwardsSection = () => {
   return (
-    <section className="pb-10 pt-10 mx-2">
+    <section className="pb-32 pt-32 mx-2">
       <div className="max-w-4xl mx-auto">
         <div className="max-w-xl mx-auto">
           <div className="flex justify-between mx-10">
