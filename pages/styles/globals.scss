@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.container-xl {
+  max-width: 1800px;
+}
+
 /* CSS */
 :root {
   font-family: Inter, sans-serif;
