@@ -65,7 +65,7 @@ export default {
     },
     {
       name: "collaborations",
-      label: "Collaborations",
+      label: "Spolupráce",
       type: "object",
       ui: {
         itemProps: (item) => {
