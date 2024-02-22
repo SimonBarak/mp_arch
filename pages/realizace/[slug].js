@@ -92,7 +92,7 @@ export default function Home(props) {
               <TableRow title="Režisér" value={table.director} />
               <TableRow title="Vizualizace" value={table.visualization} />
               <TableRow title="ISBN" value={table.isbn} />
-              <TableRow title="ISBN" value={table.isbn} />
+              <TableRow title="Fotografie" value={table.photo} />
             </tbody>
           </table>
         </section>
