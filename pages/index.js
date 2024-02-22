@@ -48,14 +48,14 @@ export default function Home(props) {
           ))}
         </div>
         <div className="mx-2">
-          <BtnXl url={"/realisations"} text={"Projekty"} />
+          <BtnXl url={"/realizace"} text={"Projekty"} />
         </div>
       </section>
       <p className="text-gray-700 mb-4 px-4 uppercase">Mapa projektů</p>
       <Map items={pins} />
       {/* <NewsSection items={news} /> */}
       <AwardsSection />
-      <BooksSection items={books} title={"Knihy"} slug={"/books"} />
+      <BooksSection items={books} title={"Knihy"} slug={"/knihy"} />
       <MovieSection items={movies} />
       <BooksSection
         items={publications}
