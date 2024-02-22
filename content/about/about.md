@@ -49,11 +49,12 @@ member:
     phone: +420 603 713 838
     resume: "Markéta Veličková (1978, Třebíč) absolventka Gymnázia Třebíč, vystudovala krajinářskou architekturu na Mendelově univerzitě v\_Brně, Od roku 2008 autorizovaná architektka A3. V\_roce 2004 spoluzaložila s\_P. Veličkou ateliér M&P architekti–krajinářská architektura, ve kterém působí dodnes. K\_jejím realizovaným stavbám patří např. archeopark Mikulčice (s P. Veličkou a J. Cyranym, 2013), náměstí v\_Černošíně (s P. Veličkou a D. Prudíkem, 2010), Park 4Dvory v\_Českých Budějovicích (s P. Veličkou a D. Prudíkem, 2014), obnova náměstí ve Stříbře (s P. Veličkou, 2018) a další. Nositelka několika ocenění, např. Ceny kraje Vysočina za kulturní počin 2014, Nominace Česká cena za architekturu 2016 a 2019, German Design Awards 2020. Spoluautorka knih a filmových dokumentů ČT o krajině a zahradách v\_České republice. Spoluautorka Manifestu Krajinářské architektury (2017)."
 collaborations:
+  - name: Jaromír Test
+    profession: Designer
   - name: Kateřina Sapáková Záleská
     profession: krajinářská architektka
   - name: Tomáš Popelínský
     profession: krajinářský architekt
-    link: https://tpopelinsky.blogspot.com/
   - name: Adam Kořistka
     profession: krajinářský architekt
   - name: Kateřina Nečasová
@@ -87,3 +88,4 @@ collaborations:
   - name: Eva Teplická
     profession: krajinářská architektka
 ---
+
