@@ -135,13 +135,13 @@ export default {
       label: "Longitude",
       description: "Najdete na latlong.net",
     },
-    {
-      type: "number",
-      name: "weight",
-      label: "Pořadí",
-      step: 1,
-      defaultValue: 99,
-      hidden: true,
-    },
+    // {
+    //   type: "number",
+    //   name: "weight",
+    //   label: "Pořadí",
+    //   step: 1,
+    //   defaultValue: 99,
+    //   hidden: true,
+    // },
   ],
 };

@@ -62,10 +62,10 @@ export default {
       name: "isbn",
       label: "ISBN",
     },
-    {
-      type: "number",
-      name: "weight",
-      label: "Pořadí",
-    },
+    // {
+    //   type: "number",
+    //   name: "weight",
+    //   label: "Pořadí",
+    // },
   ],
 };

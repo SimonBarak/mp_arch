@@ -46,11 +46,11 @@ export default {
       name: "publisher",
       label: "Vydavatel",
     },
-    {
-      type: "number",
-      name: "weight",
-      label: "Pořadí",
-    },
+    // {
+    //   type: "number",
+    //   name: "weight",
+    //   label: "Pořadí",
+    // },
     {
       type: "string",
       name: "link",

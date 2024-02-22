@@ -90,13 +90,13 @@ export default {
       label: "Longitude",
       description: "Najdete na latlong.net",
     },
-    {
-      type: "number",
-      name: "weight",
-      label: "Pořadí",
-      step: 1,
-      defaultValue: 99,
-    },
+    // {
+    //   type: "number",
+    //   name: "weight",
+    //   label: "Pořadí",
+    //   step: 1,
+    //   defaultValue: 99,
+    // },
   ],
   ui: {
     router: ({ document }) => {
