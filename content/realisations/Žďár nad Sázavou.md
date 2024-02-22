@@ -15,8 +15,6 @@ images:
   - >-
     https://res.cloudinary.com/dhxmg9p4i/image/upload/v1635504242/archweb/DSCF4304_4_bxy7ja.jpg
   - >-
-    https://res.cloudinary.com/dhxmg9p4i/image/upload/v1708610814/MIT_DayNight_06_Night_Final_arkula.jpg
-  - >-
     https://res.cloudinary.com/dhxmg9p4i/image/upload/v1670696906/archweb/DSCF8296_aze8vg.jpg
   - >-
     https://res.cloudinary.com/dhxmg9p4i/image/upload/v1635504211/archweb/DSCF4310_jsgyb8.jpg
