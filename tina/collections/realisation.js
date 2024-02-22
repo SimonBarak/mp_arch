@@ -2,7 +2,7 @@
  * @type {import('tinacms').Collection}
  */
 export default {
-  label: "Staby",
+  label: "Stavby",
   name: "realisation",
   path: "content/realisations",
   format: "md",
