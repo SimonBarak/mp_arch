@@ -42,7 +42,7 @@ const Gallery = ({ images, type = "fullscreen", currentSlide }) => {
                 class="text-4xl px-4 text-gray-700 "
                 onClick={() => swiperRef.current.swiper.slideNext()}
               >
-                <span class="arrow hover:text-blue-500"> ⟶ </span>
+                <span class="arrow"> ⟶ </span>
               </button>
             </div>
 
@@ -51,7 +51,7 @@ const Gallery = ({ images, type = "fullscreen", currentSlide }) => {
                 class="text-4xl px-4 text-gray-700 "
                 onClick={() => swiperRef.current.swiper.slidePrev()}
               >
-                <span class="arrow hover:text-blue-500"> ⟵ </span>
+                <span class="arrow"> ⟵ </span>
               </button>
             </div>
           </>
