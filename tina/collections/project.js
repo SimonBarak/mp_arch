@@ -59,7 +59,7 @@ export default {
     {
       type: "string",
       name: "visualization",
-      label: "Visualizace",
+      label: "Vizualizace",
     },
     {
       type: "string",
