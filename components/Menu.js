@@ -21,7 +21,7 @@ const NavMenu = ({}) => {
           <li key={item.url}>
             <Link href={item.url}>
               <a
-                className={`block md:px-10 hover:bg-blue-200 border-b-2 text-3xl lg:text-4xl transition ${
+                className={`block md:px-10 hover:bg-blue-200 text-gray-800 border-b-2 text-3xl lg:text-4xl transition ${
                   item.url === navurl ? "current-page" : ""
                 }`}
                 style={{ borderColor: "rgb(197, 210, 221)" }}
