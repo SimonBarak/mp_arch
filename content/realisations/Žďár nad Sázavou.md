@@ -1,5 +1,4 @@
 ---
-weight: 2
 title: 'Žďár nad Sázavou, Kostel sv. Jana Nepomuckého na Zelené Hoře'
 subtitle: >-
   Úprava pole poutníků realizovaná společně s rekonstrukcí kostela. Vytvoření
@@ -12,12 +11,11 @@ description: >
   valů, náspů a pozůstatků hrobových míst, a vytvoření pozvolného travnatého
   svahu – pole poutníků – stoupajícího od ambitu ke kostelu sv. Jana
   Nepomuckého.
-year: 2021
-size: '0,41 ha'
-price: ''
 images:
   - >-
     https://res.cloudinary.com/dhxmg9p4i/image/upload/v1635504242/archweb/DSCF4304_4_bxy7ja.jpg
+  - >-
+    https://res.cloudinary.com/dhxmg9p4i/image/upload/v1708610814/MIT_DayNight_06_Night_Final_arkula.jpg
   - >-
     https://res.cloudinary.com/dhxmg9p4i/image/upload/v1670696906/archweb/DSCF8296_aze8vg.jpg
   - >-
@@ -46,10 +44,14 @@ images:
     https://res.cloudinary.com/dhxmg9p4i/image/upload/v1635504094/archweb/DSCF4232_njyzik.jpg
   - >-
     https://res.cloudinary.com/dhxmg9p4i/image/upload/v1635504202/archweb/DSCF4309_pjvyn1.jpg
-latitude: 49.580128
-longitude: 15.942002
+price: ''
+year: 2021
+size: '0,41 ha'
 authors: Markéta & Petr Veličkovi
 investor: Římskokatolická farnost Žďár nad Sázavou
 visualization: ''
+latitude: 49.580128
+longitude: 15.942002
+weight: 2
 ---
 
