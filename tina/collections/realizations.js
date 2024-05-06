@@ -25,7 +25,7 @@ export default {
       type: "object",
       list: true,
       defaultItem: {
-        item: "content/realisations/park-4Dvory.md",
+        item: "content/s/park-4Dvory.md",
       },
       ui: {
         itemProps: (item) => {

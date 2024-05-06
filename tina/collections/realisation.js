@@ -4,7 +4,7 @@
 export default {
   label: "Stavby",
   name: "realisation",
-  path: "content/realisations",
+  path: "content/s",
   format: "md",
   ui: {
     router: ({ document }) => {

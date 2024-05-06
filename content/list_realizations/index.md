@@ -1,22 +1,21 @@
 ---
 list:
-  - item: content/realisations/hrdejovice-zastavka.md
-  - item: content/realisations/park-4Dvory.md
-  - item: content/realisations/Žďár nad Sázavou.md
-  - item: content/realisations/masarykovo-namesti.md
-  - item: content/realisations/zahrady.md
-  - item: content/realisations/kříž.md
-  - item: content/realisations/oslavice-navesni-rybnik.md
-  - item: content/realisations/schodiště-v-zahradě-hradu-kámen.md
-  - item: content/realisations/archeopark-mikulcice.md
-  - item: content/realisations/revitalizace-brownfield-borovina.md
-  - item: content/realisations/náves.md
-  - item: content/realisations/krajina-karmelitánského-kláštera.md
-  - item: content/realisations/schodiště-a-rampy.md
-  - item: content/realisations/obnova-areálu-zámku-valeč.md
-  - item: content/realisations/záchrana-stromořadí.md
-  - item: content/realisations/náměstí.md
-  - item: content/realisations/krajinná-výstava-bez-hranic.md
-  - item: content/realisations/park-hirundo.md
+  - item: content/s/hrdejovice-zastavka.md
+  - item: content/s/park-4Dvory.md
+  - item: content/s/Žďár nad Sázavou.md
+  - item: content/s/masarykovo-namesti.md
+  - item: content/s/zahrady.md
+  - item: content/s/kříž.md
+  - item: content/s/oslavice-navesni-rybnik.md
+  - item: content/s/schodiště-v-zahradě-hradu-kámen.md
+  - item: content/s/archeopark-mikulcice.md
+  - item: content/s/revitalizace-brownfield-borovina.md
+  - item: content/s/náves.md
+  - item: content/s/krajina-karmelitánského-kláštera.md
+  - item: content/s/schodiště-a-rampy.md
+  - item: content/s/obnova-areálu-zámku-valeč.md
+  - item: content/s/záchrana-stromořadí.md
+  - item: content/s/náměstí.md
+  - item: content/s/krajinná-výstava-bez-hranic.md
+  - item: content/s/park-hirundo.md
 ---
-
