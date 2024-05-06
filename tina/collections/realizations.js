@@ -24,9 +24,9 @@ export default {
         "Nový navrh je třeba vytvořit v sekci Návrhy a přidat do seznamu.",
       type: "object",
       list: true,
-      // defaultItem: {
-      //   award: "content/realisations/park-4Dvory.md",
-      // },
+      defaultItem: {
+        item: "content/realisations/park-4Dvory.md",
+      },
       ui: {
         itemProps: (item) => {
           // Field values are accessed by item?.<Field name>

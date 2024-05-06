@@ -24,6 +24,9 @@ export default {
         "Nový navrh je třeba vytvořit v sekci Návrhy a přidat do seznamu.",
       type: "object",
       list: true,
+      defaultItem: {
+        item: "content/project/ceske-budejovice-rozsireni-parku-4dvory.md",
+      },
       ui: {
         itemProps: (item) => {
           // Field values are accessed by item?.<Field name>
