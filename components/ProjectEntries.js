@@ -16,7 +16,7 @@ const ProjectEntries = ({ itemsList, type }) => {
         {order === "date"
           ? dateList.map((item) => (
               <EntryCard
-                key={item.slug}
+                key={item.slug + Math.floor(Math.random() * 1000)}
                 title={item.title}
                 subtitle={item.subtitle}
                 slug={item.slug}
@@ -26,7 +26,7 @@ const ProjectEntries = ({ itemsList, type }) => {
             ))
           : priorityList.map((item) => (
               <EntryCard
-                key={item.slug}
+                key={item.slug + Math.floor(Math.random() * 1000)}
                 title={item.title}
                 subtitle={item.subtitle}
                 slug={item.slug}
