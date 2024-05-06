@@ -3,9 +3,9 @@ list:
   - item: content/realisations/hrdejovice-zastavka.md
   - item: content/realisations/park-4Dvory.md
   - item: content/realisations/Žďár nad Sázavou.md
+  - item: content/realisations/masarykovo-namesti.md
   - item: content/realisations/zahrady.md
   - item: content/realisations/kříž.md
-  - item: content/realisations/masarykovo-namesti.md
   - item: content/realisations/oslavice-navesni-rybnik.md
   - item: content/realisations/schodiště-v-zahradě-hradu-kámen.md
   - item: content/realisations/archeopark-mikulcice.md
