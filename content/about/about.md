@@ -85,7 +85,7 @@ collaborations:
     profession: sochař
   - name: Pavla Drbalová
     profession: krajinářská architektka
-  - name: Eva Teplická
+  - name: Eva Sušková (Teplická)
     profession: krajinářská architektka
 ---
 
