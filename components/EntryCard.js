@@ -14,11 +14,11 @@ const EntryCard = ({ title, slug, image, year }) => {
         >
           <div>
             <CldImage
-              width={1200}
-              height={1200}
+              width={900}
+              height={900}
               crop="fill"
               src={image}
-              size="100w"
+              size="33w"
               alt={title}
               className="bg-gray-200 shadow-lg"
             />

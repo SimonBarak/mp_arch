@@ -1,0 +1,34 @@
+---
+list:
+  - item: content/project/ceske-budejovice-rozsireni-parku-4dvory.md
+  - item: content/project/banska-bystrica-mestsky-park.md
+  - item: content/project/park-dukelska.md
+  - item: content/project/ceske-budejovice-senovazne-namesti.md
+  - item: content/project/vimperk-revitalizace-letni-sceny.md
+  - item: content/project/luze-navrsi-poutniho-kostela-na-chlumku.md
+  - item: content/project/revitalizace-náměstí-míru.md
+  - item: content/project/rekonstrukce-dopravního-hřiště.md
+  - item: content/project/zámecká-obora.md
+  - item: content/project/brno-nabrezi-reky-svratky.md
+  - item: content/project/expozice-středomoří.md
+  - item: content/project/městský-park.md
+  - item: content/project/oslavice-navesni-rybnik.md
+  - item: content/project/veřejná-prostranství.md
+  - item: content/project/banska-bystrica-obnova-vojenskeho-hrbitova-majeri.md
+  - item: content/project/historické-jádro-obce.md
+  - item: content/project/náměstí-osvobození.md
+  - item: content/project/palackého-náměstí.md
+  - item: content/project/lesopark-v-zátiší.md
+  - item: content/project/obnova-zástavby-a-parku.md
+  - item: content/project/prezentace-archeologických-nálezů.md
+  - item: content/project/landesgartenschau.md
+  - item: content/project/náměstí-t-g-masaryka.md
+  - item: content/project/revitalizace-veřejných-prostranství-1.md
+  - item: content/project/zámecký-park.md
+  - item: content/project/náměstíčko-sv-šebestiána.md
+  - item: content/project/obnova-arealu-zamku-valec.md
+  - item: content/project/tempelhof.md
+  - item: content/project/park-setkání.md
+  - item: content/project/revitalizace-krajiny-mramorových-lomů.md
+---
+

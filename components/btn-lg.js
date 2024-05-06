@@ -5,7 +5,7 @@ const BtnLg = ({ content, href, active }) => {
   return (
     <Link href={href}>
       <button
-        className={`lg:text-xl py-2 px-3 lg:px-10 mb-2 mr-2  hover:bg-blue-200 rounded-lg transition ${
+        className={`lg:text-xl py-2 px-3 lg:px-10 mb-2 mr-2 rounded-lg transition ${
           active ? "bg-blue-200" : "bg-gray-100"
         }`}
       >

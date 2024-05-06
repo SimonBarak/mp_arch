@@ -27,7 +27,7 @@ export default function Movie(props) {
 
   return (
     <Layout>
-      <ProjectEntries itemsList={itemsList} />
+      <ProjectEntries itemsList={itemsList} type="film" />
     </Layout>
   );
 }

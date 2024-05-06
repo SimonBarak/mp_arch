@@ -16,7 +16,7 @@ export default function Home(props) {
 
   const collaborations = data.about.collaborations;
 
-  console.log(data.about.collaborations);
+  //console.log(data.about.collaborations);
 
   return (
     <Layout>

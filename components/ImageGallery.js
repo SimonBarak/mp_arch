@@ -9,10 +9,10 @@ const ImageGallery = ({ images, nextSlide }) => {
     //setCurrentIndex(index);
   };
 
-  useEffect(() => {
-    console.log("nextSlide", nextSlide);
-    //etCurrentIndex(nextSlide);
-  }, [nextSlide]);
+  // useEffect(() => {
+  //   console.log("nextSlide", nextSlide);
+  //   //etCurrentIndex(nextSlide);
+  // }, [nextSlide]);
 
   const customLeftNav = (onClick, disabled) => (
     <button

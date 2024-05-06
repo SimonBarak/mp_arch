@@ -12,7 +12,6 @@ export default function Home(props) {
   });
 
   const item = data.news;
-  console.log(data);
 
   return (
     <Layout>

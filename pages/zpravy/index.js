@@ -3,6 +3,7 @@ import { useTina } from "tinacms/dist/react";
 import { client } from "../../tina/__generated__/client.js";
 import Label from "../../components/Label-md";
 import RowCard from "../../components/RowCard.js";
+import BtnMd from "../../components/btn-md";
 
 export default function News(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
@@ -27,14 +28,24 @@ export default function News(props) {
   return (
     <Layout>
       <div className="max-w-6xl mx-auto pb-20 px-5 mt-60 ">
-        <Label title={"M&P ve zprávách"} />
-        {/* <div className="mt-40 mb-8">
-          <div className="flex">
-            <BtnMd content={"Prioritně"} />
-            <BtnMd content={"Chonologicky"} />
+        <h1 class="text-2xl lg:text-4xl 2xl:text-5xl mb-8 2xl:mb-10 leading-10m text-gray-700">
+          M&P ve zprávách
+        </h1>
+        {/*<div className="mt-40 mb-8">
+           <div className="flex">
+            <BtnMd
+              content={"Prioritně"}
+              onClick={() => toggleOrder("rate")}
+              isSelected={order === "rate"}
+            />
+            <BtnMd
+              content={"Chronologicky"}
+              onClick={() => toggleOrder("date")}
+              isSelected={order === "date"}
+            />
           </div>
         </div> */}
-        <div className="grid gap-4 lg:gap-10 grid-cols-2 justify-center items-center">
+        <div className="grid gap-4 lg:gap-10 grid-cols-1 lg:grid-cols-2 justify-center items-center">
           {itemsList.map((item) => (
             <RowCard
               key={item.slug}

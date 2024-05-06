@@ -6,6 +6,11 @@ export default {
   name: "project",
   path: "content/project",
   format: "md",
+  ui: {
+    router: ({ document }) => {
+      return `/projekty/${document._sys.filename}`;
+    },
+  },
   fields: [
     {
       type: "string",
@@ -98,9 +103,4 @@ export default {
     //   defaultValue: 99,
     // },
   ],
-  ui: {
-    router: ({ document }) => {
-      return `/projekty/${document._sys.filename}`;
-    },
-  },
 };

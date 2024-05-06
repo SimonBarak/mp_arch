@@ -42,6 +42,9 @@ export default function Home(props) {
     setSlide(index);
   };
 
+  const heroImage = images[0];
+  const galleryImages = images.slice(1);
+
   return (
     <Layout image={images[0]} title={title}>
       <div className={isOpen ? "menu-is-open" : ""}>
@@ -52,21 +55,24 @@ export default function Home(props) {
               width={1600}
               height={1000}
               crop="fill"
-              src={images[0]}
+              src={heroImage}
               size="100w"
               alt={title}
-              className="bg-gray-200"
+              className="cursor-pointer bg-gray-200"
+              onClick={() => openModal(0)}
             />
           </div>
 
           <div className="container grid md:grid-cols-4 gap-5 m-5 mx-auto">
-            {images.map((image, index) => (
+            {galleryImages.map((image, index) => (
               <div key={index} className="relative">
-                <img
-                  loading="lazy"
+                <CldImage
+                  width={600}
+                  height={600}
+                  crop="fill"
                   src={image}
                   alt="Obrazek projektu"
-                  onClick={() => openModal(index)}
+                  onClick={() => openModal(index + 1)}
                   className="cursor-pointer bg-gray-200"
                 />
               </div>

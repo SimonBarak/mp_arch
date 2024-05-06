@@ -1,7 +1,9 @@
 import { defineConfig } from "tinacms";
 import page from "./collections/page";
 import realisation from "./collections/realisation";
+import realizations from "./collections/realizations";
 import project from "./collections/project";
+import projects from "./collections/projects";
 import movie from "./collections/movie";
 import book from "./collections/book";
 import publication from "./collections/publication";
@@ -31,7 +33,9 @@ export const config = defineConfig({
     collections: [
       page,
       realisation,
+      realizations,
       project,
+      projects,
       movie,
       book,
       publication,
