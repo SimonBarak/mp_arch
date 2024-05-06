@@ -21,7 +21,7 @@ description: >-
   a vytváří přirozenou tkáň území. Vzhledem k podmáčenosti území je cestní síť
   založena na nasypaném terénu. Násypy cest je pak členěna plocha území na dílčí
   plochy jednotlivých stupňů sukcese.
-project: content/project/ceske-budejovice-rozsireni-parku-4dvory.md
+project: content/p/ceske-budejovice-rozsireni-parku-4dvory.md
 awards:
   - title: German Design Award 2020
     placement: Winner

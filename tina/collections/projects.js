@@ -25,7 +25,7 @@ export default {
       type: "object",
       list: true,
       defaultItem: {
-        item: "content/project/ceske-budejovice-rozsireni-parku-4dvory.md",
+        item: "content/p/ceske-budejovice-rozsireni-parku-4dvory.md",
       },
       ui: {
         itemProps: (item) => {

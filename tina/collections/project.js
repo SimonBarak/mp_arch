@@ -4,7 +4,7 @@
 export default {
   label: "Návrhy",
   name: "project",
-  path: "content/project",
+  path: "content/p",
   format: "md",
   ui: {
     router: ({ document }) => {

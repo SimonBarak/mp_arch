@@ -1,5 +1,5 @@
 ---
-title: 'Mikulčice, Archeopark'
+title: "Mikulčice, Archeopark"
 subtitle: >-
   Pocit dříve prožitého, viděného, slyšeného. Východiskem je samotné místo.
   Koncept podporuje dodnes zachovanou historii.
@@ -45,11 +45,10 @@ investor: Jihomoravský kraj
 visualization: Jan Cyrany Jitka Daňková
 collaborations:
   - David Zbor
-project: content/project/banska-bystrica-mestsky-park.md
+project: content/p/banska-bystrica-mestsky-park.md
 awardsx:
   - award: content/awards/archeopark-mikulcice-1.yaml
 latitude: 48.804363
 longitude: 17.08574
 weight: 1
 ---
-
