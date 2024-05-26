@@ -1,36 +1,44 @@
-import React, { useState } from "react";
-import { CldImage } from "next-cloudinary";
+import React, { useRef, useEffect } from "react";
 
-const Modal = ({ imageUrl, setSlide }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openModal = () => {
-    setSlide(2);
-    //setIsOpen(true);
-  };
+const Modal = (props) => {
+  const { isOpen, setIsOpen } = props;
+  //const [slide, setSlide] = useState(0);
+  //const [isOpen, setIsOpen] = useState(false);
 
   const closeModal = () => {
     setIsOpen(false);
-    onClose();
   };
+
+  //   const openModal = (index) => {
+  //     setIsOpen(true);
+  //     setSlide(index);
+  //   };
 
   return (
     <div>
-      <img
-        loading="lazy"
-        src={imageUrl}
-        alt="Obrazek projektu"
-        onClick={openModal}
-        className="cursor-pointer"
-      />
-      {/* <div className="relative h-64 w-full bg-slate-200 " onClick={openModal}>
-        <CldImage
-          src={imageUrl} // Cloudinary URL
-          layout="fill"
-          objectFit="cover"
-          alt="Obrazek projektu"
-        />
-      </div> */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-50"
+          style={{ backgroundColor: "rgba(255, 255, 255, 0.7)" }}
+        >
+          <div className="modal-container">
+            {props.children}
+            <div className="absolute right-0">
+              <button
+                id="main-nav__button"
+                className={`nav-hamburger bg-white ${
+                  isOpen ? "open" : "closed"
+                }`}
+                onClick={closeModal}
+              >
+                <div></div>
+                <div></div>
+                <div></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -25,10 +25,6 @@ export default function Projekty(props) {
     };
   });
 
-  // itemsList.forEach((item) => {
-  //   console.log(item);
-  // });
-
   return (
     <Layout>
       <ProjectEntries type={type} itemsList={itemsList} />

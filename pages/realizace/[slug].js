@@ -7,8 +7,8 @@ import TableRow from "../../components/TableRow.js";
 import Map from "../../components/Mapbox.js";
 import Label from "../../components/Label-md.js";
 import RowCard from "../../components/RowCard.js";
-import Gallery from "../../components/Gallery.js";
-import Modal from "../../components/Modal.js";
+import Gallery from "../../components/Gallery";
+import Modal from "../../components/Modal";
 import { CldImage } from "next-cloudinary";
 import Hero from "../../components/hero";
 
@@ -32,10 +32,6 @@ export default function Home(props) {
 
   const [slide, setSlide] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
 
   const openModal = (index) => {
     setIsOpen(true);
@@ -169,29 +165,9 @@ export default function Home(props) {
           </section>
         )}
       </div>
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-50"
-          style={{ backgroundColor: "rgba(255, 255, 255, 0.7)" }}
-        >
-          <div className="modal-container">
-            <Gallery images={images} currentSlide={slide} />
-            <div className="absolute right-0">
-              <button
-                id="main-nav__button"
-                className={`nav-hamburger bg-white ${
-                  isOpen ? "open" : "closed"
-                }`}
-                onClick={closeModal}
-              >
-                <div></div>
-                <div></div>
-                <div></div>
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+        <Gallery images={images} currentSlide={slide} />
+      </Modal>
     </Layout>
   );
 }

@@ -133,9 +133,16 @@ header {
   }
 }
 
+.zoomed {
+  transform: scale(2); /* Zoom effect */
+  transition: transform 0.3s ease;
+  cursor: zoom-out;
+}
+
 .menu-is-open {
   filter: blur(10px);
-  overflow-y: hidden;
+  width: 100vh;
+  overflow: hidden;
 }
 
 nav {
