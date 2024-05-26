@@ -1,8 +1,8 @@
 import { TinaMarkdown } from "tinacms/dist/rich-text";
-import { Layout } from "../components/Layout";
+import { Layout } from "../../components/Layout";
 import { tinaField, useTina } from "tinacms/dist/react";
-import { client } from "../tina/__generated__/client";
-import { Page } from "../components/Page";
+import { client } from "../../tina/__generated__/client";
+import { Page } from "../../components/Page";
 
 const groupDataByYear = (originalData) => {
   const groupedData = {};
