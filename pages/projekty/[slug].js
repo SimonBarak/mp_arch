@@ -47,7 +47,8 @@ export default function Project(props) {
               src={heroImage}
               size="100w"
               alt={title}
-              className="bg-gray-200 "
+              className="cursor-pointer bg-gray-200"
+              onClick={() => openModal(0)}
             />
           </div>
 
