@@ -7,6 +7,8 @@ import Modal from "../../components/Modal";
 import TableRow from "../../components/TableRow";
 import Map from "../../components/Mapbox";
 import Hero from "../../components/hero";
+import Label from "../../components/Label-md";
+import EntryCard from "../../components/EntryCard";
 import { CldImage } from "next-cloudinary";
 
 export default function Project(props) {
@@ -88,11 +90,11 @@ export default function Project(props) {
         </section>
         {realisation != undefined && (
           <section className="max-w-xl mx-auto pb-20">
-            <Label title={"Návrh"} />
+            <Label title={"Stavba"} />
             <EntryCard
               key={realisation.title}
               title={realisation.title}
-              slug={`/projekty/${realisation._sys.filename}`}
+              slug={`/realizace/${realisation._sys.filename}`}
               image={realisation.images[0]}
             />
           </section>

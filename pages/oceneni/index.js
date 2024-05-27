@@ -52,19 +52,32 @@ export default function Home(props) {
                         className="border-b border-gray-400 mb-10 "
                         key={index}
                       >
-                        <div className="text-gray-500 mb-4">
+                        <div className=" mb-4">
                           {item.placement}
                         </div>
-                        <div className="mb-4">{item.title}</div>
+                        <div className="mb-4 text-2xl">{item.title}</div>
 
-                        {item.link && (
-                          <a
-                            className="block text-blue-300 hover:text-blue-400 mb-4"
-                            href={item.link}
-                          >
-                            Stránky ocenění
-                          </a>
-                        )}
+                        <div className="flex">
+
+                          {item.realisation && (
+                            <a
+                              className="text-blue-300 hover:text-blue-400"
+                              href={item.link}
+                            >{item.realisation.title}</a>
+                          )}
+                        </div>
+                        <div className="flex mb-4">
+
+                          {item.link && (
+                            <a
+                              className="text-blue-300 hover:text-blue-400"
+                              href={item.link}
+                            >
+                              Stránky ocenění
+                            </a>
+                          )}
+
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -74,7 +87,7 @@ export default function Home(props) {
           </div>
         </section>
       </Page>
-    </Layout>
+    </Layout >
   );
 }
 

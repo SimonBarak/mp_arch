@@ -77,12 +77,12 @@ export default {
       name: "photo",
       label: "Fotografie",
     },
-    // {
-    //   name: "realisation",
-    //   label: "Odkaz na stavbu",
-    //   type: "reference",
-    //   collections: ["realisation"],
-    // },
+    {
+      name: "realisation",
+      label: "Odkaz na stavbu",
+      type: "reference",
+      collections: ["realisation"],
+    },
     {
       type: "number",
       name: "latitude",
