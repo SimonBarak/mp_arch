@@ -7,8 +7,6 @@ import Modal from "../../components/Modal";
 import ResponsiveImage from "../../components/Responsive-image";
 import TableRow from "../../components/TableRow";
 
-
-
 export default function Home(props) {
   // data passes though in production mode and data is updated to the sidebar data in edit-mode
   const { data } = useTina({
@@ -38,7 +36,7 @@ export default function Home(props) {
             <ResponsiveImage src={heroImage} alt={title} height={"100%"} />
           </div>
 
-          <div class="absolute w-full h-full top-0 flex justify-center items-center">
+          <div className="absolute w-full h-full top-0 flex justify-center items-center">
             <button
               className={`lg:text-xl py-2 px-3 lg:px-10 lg:py-4 rounded-lg transition bg-blue-100 shadow`}
               onClick={() => openModal(1)}
