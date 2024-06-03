@@ -26,9 +26,7 @@ const Modal = (props) => {
             <div className="absolute right-0">
               <button
                 id="main-nav__button"
-                className={`nav-hamburger bg-white ${
-                  isOpen ? "open" : "closed"
-                }`}
+                className={`nav-hamburger  ${isOpen ? "open" : "closed"}`}
                 onClick={closeModal}
               >
                 <div></div>

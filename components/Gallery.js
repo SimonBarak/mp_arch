@@ -45,7 +45,7 @@ const Gallery = ({ images, type = "fullscreen", currentSlide }) => {
           <>
             <div class="swiper-next swiper-button-next outline-none absolute inset-y-0 right-0 bottom-0 z-10 flex justify-center items-center">
               <button
-                class="text-4xl mx-5 px-2 py-4 text-gray-700 bg-white rounded"
+                class="text-3xl mx-4 px-2 py-3 text-gray-700 bg-white rounded"
                 onClick={() => swiperRef.current.swiper.slideNext()}
               >
                 <span class="arrow"> ⟶ </span>
@@ -54,7 +54,7 @@ const Gallery = ({ images, type = "fullscreen", currentSlide }) => {
 
             <div className="swiper-prev  swiper-button-next outline-none absolute inset-y-0 left-0 bottom-0 z-10 flex justify-center items-center">
               <button
-                class="text-4xl mx-5 px-2 py-4 text-gray-700 bg-white rounded"
+                class="text-3xl mx-4 px-2 py-3 text-gray-700 bg-white rounded"
                 onClick={() => swiperRef.current.swiper.slidePrev()}
               >
                 <span class="arrow"> ⟵ </span>
