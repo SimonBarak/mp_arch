@@ -25,8 +25,8 @@ export default function Home(props) {
 }
 
 export const getStaticPaths = async () => {
-  const { data } = await client.queries.newsConnection();
-  const paths = data.newsConnection.edges.map((x) => {
+  const { data } = await client.queries.awardConnection();
+  const paths = data.awardConnection.edges.map((x) => {
     return { params: { slug: x.node._sys.filename } };
   });
 
