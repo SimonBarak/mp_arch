@@ -27,22 +27,23 @@ const Map = ({ items }) => {
 
     items.forEach((item) => {
       // create a marker for each item
+      // create a marker for each item
       const markerElement = document.createElement("div");
-      markerElement.innerHTML = `
-        <div className="z-0 h-5 w-5 rounded-full cursor-pointer border border-gray-800 shadow-md pin"></div>
-      `;
+      markerElement.className =
+        "z-0 h-5 w-5 rounded-full cursor-pointer border border-gray-800 bg-gray-200 hover:bg-blue-500 shadow-md pin";
 
       const marker = new mapboxgl.Marker({ element: markerElement })
         .setLngLat(item.coordinates)
         .addTo(map.current);
 
       // create a popup for each item
-      const popup = new mapboxgl.Popup({ offset: 40 }).setHTML(
-        `<a className="block text-blue-500 hover:text-blue-600 text-xl px-2 py-4 border-0" href="${item.slug}">${item.title}</a>`
+      const popup = new mapboxgl.Popup({ offset: 12 }).setHTML(
+        `<a class="block text-blue-500 hover:text-blue-700 text-xl px-2 py-4 border-0 mr-5 outline-none" href="${item.slug}">${item.title}</a>`
       );
 
-      // add the popup to the marker
-      marker.setPopup(popup);
+      popup.className =
+        // add the popup to the marker
+        marker.setPopup(popup);
     });
   }, [items]);
 
