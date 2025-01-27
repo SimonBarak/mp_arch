@@ -1,12 +1,12 @@
 ---
 list:
+  - item: content/p/revitalizace-náměstí-míru.md
   - item: content/p/ceske-budejovice-rozsireni-parku-4dvory.md
   - item: content/p/banska-bystrica-mestsky-park.md
   - item: content/p/park-dukelska.md
   - item: content/p/ceske-budejovice-senovazne-namesti.md
   - item: content/p/vimperk-revitalizace-letni-sceny.md
   - item: content/p/luze-navrsi-poutniho-kostela-na-chlumku.md
-  - item: content/p/revitalizace-náměstí-míru.md
   - item: content/p/rekonstrukce-dopravního-hřiště.md
   - item: content/p/zámecká-obora.md
   - item: content/p/brno-nabrezi-reky-svratky.md
@@ -31,3 +31,4 @@ list:
   - item: content/p/park-setkání.md
   - item: content/p/revitalizace-krajiny-mramorových-lomů.md
 ---
+
