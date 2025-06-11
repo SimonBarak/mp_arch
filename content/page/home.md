@@ -1,5 +1,5 @@
 ---
-title: Konkrétní místo je vždy \n základem  naší tvorby
+title: Konkrétní místo je vždy základem \n naší tvorby
 subtitle: >-
   Opakovaně se pokoušíme přečíst prostor, nalézat významy, neničit, citlivě
   zacházet. Jsme architekti, kteří se prioritně věnují krajinářské architektuře.

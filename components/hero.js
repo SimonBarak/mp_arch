@@ -4,7 +4,7 @@ const Hero = ({ title, subtitle }) => {
   return (
     <section className="h-half flex items-center">
       <div className="max-w-2xl 2xl:max-w-4xl mx-auto text-gray-700 px-4">
-        <h1 className="text-2xl lg:text-4xl xl:text-5xl 2xl:text-6xl mb-8 md:mb-10 lg:mb-12 2xl:mb-14">
+        <h1 className="text-2xl lg:text-3xl xl:text-4xl mb-8 md:mb-10 lg:mb-12 2xl:mb-14">
           <p>
             {title.split("\\n").map((line, i) => (
               <React.Fragment key={i}>
