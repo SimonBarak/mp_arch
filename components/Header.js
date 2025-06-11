@@ -15,12 +15,9 @@ const Header = () => {
         className="w-full fixed flex flex-col md:flex-row top-0 z-50 pt-6 pb-8 px-4"
         role="banner"
       >
-        <div className="w-full md:w-1/5 mb-4 md:md-0">
+        <div className="w-full md:w-1/5">
           <Link href="/">
-            <a
-              className="text-2xl text-semibold text-gray-600 hover:text-blue-300"
-              alt="go to homepage"
-            >
+            <a className="t" alt="go to homepage">
               <img
                 loading="lazy"
                 className="w-12 md:w-16"
@@ -32,15 +29,33 @@ const Header = () => {
         </div>
         {isOpen}
         <div className="fixed md:w-1/5 md:text-right right-0 mx-2">
-          <button
-            id="main-nav__button"
-            className={`nav-hamburger ${isOpen ? "open" : "closed"}`}
-            onClick={handleOpenMenu}
-          >
-            <div></div>
-            <div></div>
-            <div></div>
-          </button>
+          <div className="p-2">
+            <button
+              id="main-nav__button"
+              className="w-10 h-10 relative focus:outline-none"
+              onClick={handleOpenMenu}
+            >
+              <div
+                className={`block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2`}
+              >
+                <span
+                  className={`block absolute h-0.5 w-5 bg-gray-600 transform transition duration-500 ease-in-out ${
+                    isOpen ? "rotate-45" : "-translate-y-1.5"
+                  }`}
+                ></span>
+                <span
+                  className={`block absolute h-0.5 w-5 bg-gray-600 transform transition duration-500 ease-in-out ${
+                    isOpen ? "opacity-0" : ""
+                  }`}
+                ></span>
+                <span
+                  className={`block absolute h-0.5 w-5 bg-gray-600 transform transition duration-500 ease-in-out ${
+                    isOpen ? "-rotate-45" : "translate-y-1.5"
+                  }`}
+                ></span>
+              </div>
+            </button>
+          </div>
         </div>
       </header>
       {isOpen && <Menu />}

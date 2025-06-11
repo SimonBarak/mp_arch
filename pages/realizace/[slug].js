@@ -77,11 +77,11 @@ export default function Home(props) {
         </section>
 
         {description && (
-          <section className=" pb-20">
+          <section className="pb-20 px-4">
             <div className="max-w-xl mx-auto text-lg">{description}</div>
           </section>
         )}
-        <section className="pb-28">
+        <section className="pb-28 px-4">
           <table className="max-w-xl mx-auto px-5 align-top table-auto w-full text-lg">
             <tbody>
               <TableRow title="Lokace" value={table.location} />
@@ -100,7 +100,7 @@ export default function Home(props) {
         </section>
 
         {awards.length != 0 && (
-          <section className="max-w-xl mx-auto pb-16">
+          <section className="max-w-xl mx-auto pb-16 px-4">
             <Label title={"Ocenění projektu"} />
             <div className="grid grid-cols-1">
               {awards.map((item) => (

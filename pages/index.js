@@ -30,21 +30,28 @@ export default function Home(props) {
       <section>
         <div className="container-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
           {realisations.map((item) => (
-            <Link href={"/realizace/" + item._sys.filename}>
-              <a className="" key={item.title}>
-                <CldImage
-                  width={1200}
-                  height={1200}
-                  crop="fill"
-                  src={item.images[0]}
-                  size="50w"
-                  alt={item.title}
-                />
-                <div className="py-5 px-3">
-                  <p className="text-xl h-16">{item.title}</p>
+            <div>
+              <Link href={"/realizace/" + item._sys.filename}>
+                <a className="" key={item.title}>
+                  <CldImage
+                    width={1200}
+                    height={1200}
+                    crop="fill"
+                    src={item.images[0]}
+                    size="50w"
+                    alt={item.title}
+                  />
+                </a>
+              </Link>
+              <div className="py-5 px-3 flex items-center justify-between">
+                <div className="flex-grow">
+                  <p className="text-xl">{item.title}</p>
                 </div>
-              </a>
-            </Link>
+                <div className="flex-shrink-0">
+                  <p className="text-gray-500">{item.year}</p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
         <div className="mx-2">

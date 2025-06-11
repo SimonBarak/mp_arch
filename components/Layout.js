@@ -44,10 +44,10 @@ export const Layout = ({
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
       <header
-        className="w-full fixed flex flex-col md:flex-row top-0 z-50 pt-6 pb-8 px-4"
+        className="w-screen fixed flex items-center justify-between md:flex-row top-0 z-50 py-4 px-4 lg:px-6 bg-white/50 backdrop-blur-md"
         role="banner"
       >
-        <div className="w-full md:w-1/5 mb-4 md:md-0">
+        <div className="w-full md:w-1/5">
           <Link href="/">
             <a
               className="text-2xl text-semibold text-gray-600 hover:text-blue-300"
@@ -63,16 +63,36 @@ export const Layout = ({
             </a>
           </Link>
         </div>
-        <div className="fixed md:w-1/5 md:text-right right-0 mx-2">
-          <button
-            id="main-nav__button"
-            className={`nav-hamburger ${isOpen ? "open" : "closed"}`}
-            onClick={handleOpenMenu}
-          >
-            <div></div>
-            <div></div>
-            <div></div>
-          </button>
+        <div className="">
+          <div>
+            <div className="">
+              <button
+                id="main-nav__button"
+                className="w-6 h-6 lg:w-10 lg:h-10 relative focus:outline-none"
+                onClick={handleOpenMenu}
+              >
+                <div
+                  className={`block w-8 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2`}
+                >
+                  <span
+                    className={`block absolute h-0.5 w-6 lg:w-8 bg-gray-500 transform transition duration-500 ease-in-out ${
+                      isOpen ? "rotate-45" : "-translate-y-2.5"
+                    }`}
+                  ></span>
+                  <span
+                    className={`block absolute h-0.5 w-6 lg:w-8 bg-gray-500 transform transition duration-500 ease-in-out ${
+                      isOpen ? "opacity-0" : ""
+                    }`}
+                  ></span>
+                  <span
+                    className={`block absolute h-0.5 w-6 lg:w-8 bg-gray-500 transform transition duration-500 ease-in-out ${
+                      isOpen ? "-rotate-45" : "translate-y-2.5"
+                    }`}
+                  ></span>
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </header>
       {isOpen && <Menu />}

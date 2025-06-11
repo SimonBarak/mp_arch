@@ -22,10 +22,10 @@ export default function Home(props) {
       <section className="pb-16 lg:pb-24">
         <Gallery images={images} />
       </section>
-      <section className="pb-16">
+      <section className="pb-16 px-4">
         <div className="max-w-xl mx-auto text-lg px-5">{description}</div>
       </section>
-      <section className="pb-16">
+      <section className="pb-16 px-4">
         <table className="max-w-xl mx-auto px-5 align-top table-auto w-full text-lg">
           <tbody>
             <TableRow title="Název" value={table.title} />

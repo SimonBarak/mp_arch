@@ -69,10 +69,10 @@ export default function Project(props) {
             ))}
           </div>
         </section>
-        <section className="pb-16">
+        <section className="pb-16 px-4">
           <div className="max-w-xl mx-auto text-lg px-5">{description}</div>
         </section>
-        <section className="pb-16">
+        <section className="pb-16 px-4">
           <table className="max-w-xl mx-auto px-5 align-top table-auto w-full text-lg">
             <tbody>
               <TableRow title="Název" value={table.title} />

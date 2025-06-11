@@ -9,8 +9,8 @@ const ProjectLayout = (props) => {
   const { order, toggleOrder } = useOrder();
   return (
     <div className="container mx-auto px-2 mb-20">
-      <div className="mt-40 mb-8">
-        <div className="flex flex-wrap">
+      <div className="mt-36 md:mt-48 mb-8">
+        <div className="flex flex-wrap mb-4">
           <BtnLg
             content={"Stavby"}
             href={"/realizace"}
