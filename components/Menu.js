@@ -28,7 +28,6 @@ const NavMenu = ({}) => {
               >
                 <div className="max-w-4xl mx-auto flex py-8 px-4">
                   <div className="flex-grow">{item.title}</div>
-                  <div>⟶</div>
                 </div>
               </a>
             </Link>

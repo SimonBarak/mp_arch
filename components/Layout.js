@@ -64,35 +64,42 @@ export const Layout = ({
           </Link>
         </div>
         <div className="">
-          <div>
+          <button
+            id="main-nav__button"
+            className="focus:outline-none py-2 px-2"
+            onClick={handleOpenMenu}
+          >
             <div className="">
-              <button
-                id="main-nav__button"
-                className="w-6 h-6 lg:w-10 lg:h-10 relative focus:outline-none"
-                onClick={handleOpenMenu}
-              >
-                <div
-                  className={`block w-8 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2`}
+              {isOpen ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="23"
+                  fill="currentColor"
+                  class="bi bi-x-lg"
+                  viewBox="0 0 16 16"
                 >
-                  <span
-                    className={`block absolute h-0.5 w-6 lg:w-8 bg-gray-500 transform transition duration-500 ease-in-out ${
-                      isOpen ? "rotate-45" : "-translate-y-2.5"
-                    }`}
-                  ></span>
-                  <span
-                    className={`block absolute h-0.5 w-6 lg:w-8 bg-gray-500 transform transition duration-500 ease-in-out ${
-                      isOpen ? "opacity-0" : ""
-                    }`}
-                  ></span>
-                  <span
-                    className={`block absolute h-0.5 w-6 lg:w-8 bg-gray-500 transform transition duration-500 ease-in-out ${
-                      isOpen ? "-rotate-45" : "translate-y-2.5"
-                    }`}
-                  ></span>
-                </div>
-              </button>
+                  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                </svg>
+              ) : (
+                <>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    class="bi bi-list"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                    />
+                  </svg>
+                </>
+              )}
             </div>
-          </div>
+          </button>
         </div>
       </header>
       {isOpen && <Menu />}

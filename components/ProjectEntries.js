@@ -12,7 +12,7 @@ const ProjectEntries = ({ itemsList, type }) => {
   const { order } = useOrder();
   return (
     <ProjectLayout withOrder={type === "film" ? false : true}>
-      <div className="grid grid-cols-3 gap-1 md:gap-2 lg:gap-5 xl:gap-10 items-stretch">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-2 lg:gap-4 items-stretch">
         {order === "date"
           ? dateList.map((item) => (
               <EntryCard

@@ -4,11 +4,11 @@ import { CldImage } from "next-cloudinary";
 
 const EntryCard = ({ title, slug, image, year }) => {
   return (
-    <>
+    <div>
       <Link href={slug} className="block">
         <CldImage
-          width={900}
-          height={900}
+          width={800}
+          height={1000}
           crop="fill"
           src={image}
           size="33w"
@@ -16,11 +16,11 @@ const EntryCard = ({ title, slug, image, year }) => {
           className="block bg-gray-200"
         />
       </Link>
-      <div className="hidden md:block py-2 min-h-20">
-        <p className="text-lg mb-2">{title}</p>
+      <div className="text-sm md:text-base lg:text-lg mt-2 mb-4 pr-4 min-h-20">
+        <p className=" mb-2">{title}</p>
         <p className="text-gray-500">{year}</p>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -32,7 +32,7 @@ export default function Home(props) {
           {realisations.map((item) => (
             <div>
               <Link href={"/realizace/" + item._sys.filename}>
-                <a className="" key={item.title}>
+                <a className="block" key={item.title}>
                   <CldImage
                     width={1200}
                     height={1200}
@@ -43,7 +43,7 @@ export default function Home(props) {
                   />
                 </a>
               </Link>
-              <div className="py-5 px-3 flex items-center justify-between">
+              <div className="py-8 px-4 mb-8 flex items-center justify-between">
                 <div className="flex-grow">
                   <p className="text-xl">{item.title}</p>
                 </div>
