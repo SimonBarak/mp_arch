@@ -104,7 +104,7 @@ export const Layout = ({
       </header>
       {isOpen && <Menu />}
       <main className={isOpen ? "menu-is-open" : ""}>{children}</main>
-      <footer className="bg-gray-900 text-gray-800 text-center py-48">
+      <footer className="bg-gray-900 text-gray-400 text-center py-48">
         <p className=" mb-5">M&P Architekti</p>
         <p className="text-sm">
           <a href="https://simon-barak.link/">Šimon Bařák</a>
