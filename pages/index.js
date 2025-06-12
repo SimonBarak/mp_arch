@@ -43,12 +43,12 @@ export default function Home(props) {
                   />
                 </a>
               </Link>
-              <div className="py-8 px-4 mb-8 flex items-center justify-between">
+              <div className="py-8 px-4 mb-8 flex gap-4 justify-between text-lg md:text-lg lg:text-xl">
                 <div className="flex-grow">
-                  <p className="text-xl">{item.title}</p>
+                  <p className="">{item.title}</p>
                 </div>
                 <div className="flex-shrink-0">
-                  <p className="text-gray-500">{item.year}</p>
+                  <p className="text-gray-500 ">{item.year}</p>
                 </div>
               </div>
             </div>
