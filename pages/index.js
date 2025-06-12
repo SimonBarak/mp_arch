@@ -58,7 +58,7 @@ export default function Home(props) {
           <BtnXl url={"/realizace"} text={"Projekty"} />
         </div>
       </section>
-      <p className="text-gray-700 mb-4 px-4 uppercase">Mapa projektů</p>
+      <p className="text-gray-800 mb-4 px-4 uppercase">Mapa projektů</p>
       <Map items={pins} />
       {/* <NewsSection items={news} /> */}
       <AwardsSection />

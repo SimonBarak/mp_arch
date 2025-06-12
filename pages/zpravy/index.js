@@ -28,7 +28,7 @@ export default function News(props) {
   return (
     <Layout>
       <div className="max-w-6xl mx-auto pb-20 px-5 mt-60 ">
-        <h1 className="text-2xl lg:text-4xl 2xl:text-5xl mb-8 2xl:mb-10 leading-10m text-gray-700">
+        <h1 className="text-2xl lg:text-4xl 2xl:text-5xl mb-8 2xl:mb-10 leading-10m text-gray-800">
           M&P ve zprávách
         </h1>
         {/*<div className="mt-40 mb-8">
