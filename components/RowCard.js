@@ -6,7 +6,7 @@ const RowCard = ({ title = "", source = "", link, image = "", year = "" }) => {
   return (
     <Link href={link}>
       <div
-        className="max-w-lg w-full flex flex-col bg-white rounded-lg border-2 border-gray-300
+        className="bg-white rounded-lg border-2 border-gray-300
           hover:border-blue-300 overflow-hidden cursor-pointer"
       >
         <div className="">

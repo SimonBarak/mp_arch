@@ -44,7 +44,7 @@ export const Layout = ({
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
       <header
-        className="w-screen fixed flex items-center justify-between md:flex-row top-0 z-50 py-4 px-4 lg:px-6 bg-white/50 backdrop-blur-md"
+        className="w-screen fixed flex items-center justify-between md:flex-row top-0 z-50 py-4 px-4 lg:px-6 bg-white/20 backdrop-blur-md"
         role="banner"
       >
         <div className="w-full md:w-1/5">
@@ -55,7 +55,7 @@ export const Layout = ({
             >
               <img
                 loading="lazy"
-                className="w-12 md:w-16"
+                className="w-10 md:w-12"
                 //src={`/v1625134770/archweb/logo.png`}
                 src={`https://res.cloudinary.com/dhxmg9p4i/image/upload/v1625134770/archweb/logo.png`}
                 alt=""

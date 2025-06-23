@@ -52,7 +52,7 @@ export default function Project(props) {
             />
           </div>
 
-          <div className="container grid md:grid-cols-4 gap-5 m-5 mx-auto">
+          <div className="container grid md:grid-cols-4 gap-1 md:gap-2 m-2 mx-auto">
             {galleryImages.map((image, index) => (
               <div key={index} className="relative">
                 <CldImage

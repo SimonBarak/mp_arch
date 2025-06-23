@@ -59,19 +59,18 @@ export default function Home(props) {
             />
           </div>
 
-          <div className="container grid md:grid-cols-4 gap-5 m-5 mx-auto">
+          <div className="container grid md:grid-cols-4 gap-1 md:gap-2 mx-auto">
             {galleryImages.map((image, index) => (
-              <div key={index} className="relative">
-                <CldImage
-                  width={600}
-                  height={600}
-                  crop="fill"
-                  src={image}
-                  alt="Obrazek projektu"
-                  onClick={() => openModal(index + 1)}
-                  className="cursor-pointer bg-gray-200"
-                />
-              </div>
+              <CldImage
+                key={index}
+                width={600}
+                height={600}
+                crop="fill"
+                src={image}
+                alt="Obrazek projektu"
+                onClick={() => openModal(index + 1)}
+                className="cursor-pointer bg-gray-200"
+              />
             ))}
           </div>
         </section>

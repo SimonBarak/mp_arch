@@ -45,7 +45,7 @@ export default function News(props) {
             />
           </div>
         </div> */}
-        <div className="grid gap-4 lg:gap-10 grid-cols-1 lg:grid-cols-2 justify-center items-center">
+        <div className="grid gap-4 lg:gap-10 grid-cols-1 lg:grid-cols-2 justify-center items-start">
           {itemsList.map((item) => (
             <RowCard
               key={item.slug}
